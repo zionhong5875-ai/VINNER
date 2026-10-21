@@ -21,7 +21,7 @@ const initialCount = terms.filter(term => selectedId === "all" || term.category 
         <ul class="glossary-list">
           {terms.map(term => <li hidden={selectedId !== "all" && term.category !== selectedId} data-term data-category={term.category} data-letter={term.title.en[0].toUpperCase()} data-search={`${term.title.en} ${term.title.zh} ${term.summary.en} ${term.summary.zh}`.toLowerCase()}>
             <div>
-              <h3>{term.slug ? <a href={glossaryPath(term.slug)}>{term.title[language]} <span aria-hidden="true">↗</span></a> : term.title[language]}</h3>
+              <h3>{term.slug ? <a href={glossaryPath(term.slug, language)}>{term.title[language]} <span aria-hidden="true">↗</span></a> : term.title[language]}</h3>
               {!en && term.title.zh !== term.title.en && <span class="term-english">{term.title.en}</span>}
               <p>{term.summary[language]}</p>
               {term.sample && <small>{t("示例术语 · 详情待补充", "Sample term · Details coming soon")}</small>}

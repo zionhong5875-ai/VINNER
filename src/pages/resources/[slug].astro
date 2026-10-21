@@ -6,8 +6,9 @@ import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
 import resources from "../../data/site/resources.json" with { type: "json" };
 import authors from "../../data/site/authors.json";
 import products from "../../data/site/products.json" with { type: "json" };
-import { text, attrs, imageAttrs, localizedPath } from "../../utils/i18n";
-import { sortResourcesByDate } from "../../utils/resources.js";
+import { text, attrs, imageAttrs, ariaAttrs, localizedPath } from "../../utils/i18n";
+import { sortResourcesByDate, resourceDisplayDate } from "../../utils/resources.js";
+import { getProductLinePublicSlug, resolveProductLineMedia } from "../../utils/productLines.js";
 import { absoluteUrl, resourceDate, schemaIds, buildAuthorNode } from "../../utils/schema";
 
 const entries = [
@@ -21,10 +22,14 @@ if (!entry) {
 }
 
 const { item, type, meta } = entry;
+const sections = (Array.isArray(item.sections) ? item.sections : []).map((section) => ({
+  ...section,
+  ...(section.pageWindow ? { pageWindow: resolveProductLineMedia(section.pageWindow) } : {})
+}));
 const related = entries.filter((candidate) => candidate.item.slug !== item.slug).slice(0, 3);
 const resourceSeo = {
   "vinner-personal-cleansing-care-line": {
-    title: { zh: "维尼个人清洁护理产品线发布 | VINNER", en: "VINNER Personal Cleansing & Care Line Launch" },
+    title: { zh: "维尼个人清洁护理产品线发布 | 维尼健康", en: "VINNER Personal Cleansing & Care Line Launch" },
     description: {
       zh: "了解 VINNER 面向住院、老年照护、新生儿与日常肌肤护理推出的免冲洗沐浴、洗发、失禁护理和婴儿湿巾产品。",
       en: "Discover VINNER's rinse-free bathing, shampoo, incontinence-care, and baby wipes for hospitals, elderly care, newborns, and everyday skin cleansing."
@@ -38,35 +43,35 @@ const resourceSeo = {
     }
   },
   "vinner-gama-healthcare-strategic-discussion": {
-    title: { zh: "维尼健康访问 GAMA Healthcare | VINNER", en: "VINNER Visits GAMA Healthcare" },
+    title: { zh: "维尼健康访问 GAMA Healthcare | 维尼健康", en: "VINNER Visits GAMA Healthcare" },
     description: {
       zh: "维尼健康董事长刘春静女士访问 GAMA Healthcare，双方围绕长期合作与未来业务发展机会开展战略交流。",
       en: "VINNER chairwoman Liu Chunjing visited GAMA Healthcare for strategic discussions on long-term cooperation and future opportunities."
     }
   },
   "rinse-free-bathing-products-us-care-market": {
-    title: { zh: "美国医疗养老免冲洗沐浴产品与合规 | VINNER", en: "Rinse-Free Bathing Products in U.S. Care | VINNER" },
+    title: { zh: "美国医疗养老免冲洗沐浴产品与合规 | 维尼健康", en: "Rinse-Free Bathing Products in U.S. Care | VINNER" },
     description: {
       zh: "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
       en: "Explore demand for rinse-free bathing products in U.S. healthcare and elderly care, including infection control, procurement, compliance, and dignity."
     }
   },
   "bacterial-outbreaks-environmental-infection-control": {
-    title: { zh: "细菌暴发与医疗环境感染控制 | VINNER", en: "Bacterial Outbreaks & Environmental Infection Control" },
+    title: { zh: "细菌暴发与医疗环境感染控制 | 维尼健康", en: "Bacterial Outbreaks & Environmental Infection Control" },
     description: {
-      zh: "结合 MRAB、MRSA 与耐碳青霉烯肺炎克雷伯菌暴发调查，说明环境表面清洁消毒在感染控制中的作用。",
-      en: "Review MRAB, MRSA, and carbapenem-resistant Klebsiella outbreaks and the role of environmental surface disinfection in infection control."
+      zh: "近期发表的三项细菌暴发调查分别发生在医院 ICU、社区服务场所和大型综合医院，耐药菌正在持续给医疗机构和公共卫生系统带来挑战。这些调查一次又一次将感染传播与患者周边环境、医疗设备、高频接触表面以及感染控制措施联系在一起。",
+      en: "Explore three bacterial outbreak investigations linking drug-resistant infections to healthcare surfaces, equipment, and environmental hygiene."
     }
   },
   "how-to-choose-compliant-us-cosmetics-oem-supplier": {
-    title: { zh: "美国化妆品 OEM/ODM 合规检查清单 | VINNER", en: "U.S. Cosmetics OEM/ODM Compliance Checklist | VINNER" },
+    title: { zh: "美国化妆品 OEM/ODM 合规检查清单 | 维尼健康", en: "U.S. Cosmetics OEM/ODM Compliance Checklist | VINNER" },
     description: {
       zh: "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
       en: "A practical checklist for evaluating MoCRA readiness, facility registration, quality systems, and supply capability in a U.S. cosmetics OEM/ODM partner."
     }
   },
   "eu-forced-labour-regulation-preparation": {
-    title: { zh: "欧盟强迫劳动条例实施准备 | VINNER", en: "Preparing for the EU Forced Labour Regulation | VINNER" },
+    title: { zh: "欧盟强迫劳动条例实施准备 | 维尼健康", en: "Preparing for the EU Forced Labour Regulation | VINNER" },
     description: {
       zh: "解读欧盟《禁止强迫劳动产品条例》的适用范围、判断标准、进口商准备事项及供应商证据体系。",
       en: "An overview of the EU Forced Labour Regulation, its scope, forced-labour indicators, importer preparation and supplier evidence."
@@ -74,17 +79,17 @@ const resourceSeo = {
   },
 };
 const seo = item.meta || resourceSeo[item.slug] || {
-  title: { zh: `${text(item.title, "zh")} | VINNER`, en: `${text(item.title, "en")} | VINNER` },
+  title: { zh: `${text(item.title, "zh")} | 维尼健康`, en: `${text(item.title, "en")} | VINNER` },
   description: item.body
 };
 const title = seo.title;
 const description = seo.description;
 const articleParagraphs = [
   item.body,
-  ...item.sections.flatMap((section) => [section.body, ...(section.paragraphs || []), ...(section.paragraphsAfter || [])])
+  ...sections.flatMap((section) => [section.body, ...(section.paragraphs || []), ...(section.paragraphsAfter || [])])
 ].filter(Boolean);
 const gallery = Array.isArray(item.gallery) ? item.gallery : [];
-const hasRichSections = Array.isArray(item.sections) && item.sections.length > 0;
+const hasRichSections = sections.length > 0;
 const isReferenceSection = (section) => {
   const headingZh = text(section.heading, "zh");
   const headingEn = text(section.heading, "en");
@@ -111,10 +116,11 @@ const ids = schemaIds(siteUrl);
 const pageUrl = absoluteUrl(localizedPath(`/resources/${item.slug}/`, language), siteUrl);
 const articleId = `${pageUrl}#article`;
 const author = item.authorId ? authors[item.authorId] : undefined;
+const articleAuthorIds = [...new Set([item.authorId, ...(item.coauthorIds || [])])].filter(id => id && authors[id]);
 if (type.zh === "博客" && !author) throw new Error(`Missing author for ${item.slug}`);
 const publishedAt = resourceDate(item.date);
 const modifiedAt = resourceDate(item.updatedAt);
-const mentionedProducts = [...new Set(item.sections.flatMap((section) => productSlugsForSection(section)))]
+const mentionedProducts = [...new Set(sections.flatMap((section) => productSlugsForSection(section)))]
   .map((slug) => productBySlug.get(slug))
   .filter((product) => product && !product.comingSoon)
   .map((product) => ({
@@ -130,9 +136,11 @@ const articleSchema = {
   mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
   datePublished: publishedAt,
   ...(modifiedAt ? { dateModified: modifiedAt } : {}),
-  author: author ? buildAuthorNode(item.authorId, siteUrl, language) : { "@id": ids.organization },
+  author: articleAuthorIds.length > 1
+    ? articleAuthorIds.map(id => buildAuthorNode(id, siteUrl, language))
+    : author ? buildAuthorNode(item.authorId, siteUrl, language) : { "@id": ids.organization },
   publisher: { "@id": ids.organization },
-  articleSection: item.category || text(type, language),
+  articleSection: item.category ? text(item.category, language) : text(type, language),
   inLanguage: language === "en" ? "en" : "zh-CN",
   isAccessibleForFree: true,
   ...(mentionedProducts.length ? { mentions: mentionedProducts } : {})
@@ -163,13 +171,13 @@ const articleSchema = {
           <span>{text(item.title)}</span>
           {item.subtitle && <span class="resource-detail-title-line" {...attrs(item.subtitle)}>{text(item.subtitle)}</span>}
         </h1>
-        <p class="resource-detail-meta"><time datetime={publishedAt}>{meta}</time>{modifiedAt && <><br /><span data-zh="更新于 " data-en="Updated ">更新于 </span><time datetime={modifiedAt}>{modifiedAt}</time></>}</p>
-        {author && (
+        <p class="resource-detail-meta"><time datetime={publishedAt}>{resourceDisplayDate(meta, language)}</time>{modifiedAt && <><br /><span data-zh="更新于 " data-en="Updated ">更新于 </span><time datetime={modifiedAt}>{modifiedAt}</time></>}</p>
+        {articleAuthorIds.map(authorId => (
           <div class="resource-detail-author">
-            <strong><a href={`/contact/#${item.authorId}`} rel="author" {...attrs(author.name)}>{text(author.name)}</a></strong>
-            <span {...attrs(author.role)}>{text(author.role)}</span>
+            <strong><a href={`/contact/#${authorId}`} rel="author" {...attrs(authors[authorId].name)}>{text(authors[authorId].name)}</a></strong>
+            <span {...attrs(authors[authorId].role)}>{text(authors[authorId].role)}</span>
           </div>
-        )}
+        ))}
         <p class="resource-detail-summary"><GlossaryLinkedText value={item.body} context="hero" /></p>
       </div>
       <figure class="resource-detail-image">
@@ -178,30 +186,32 @@ const articleSchema = {
       </figure>
     </header>
 
-    <section class="resource-article-body resource-article-story" id="article" aria-label="Article body">
+    <section class="resource-article-body resource-article-story" id="article" {...ariaAttrs({ zh: "文章正文", en: "Article body" })}>
       <div class="resource-article-content">
         {hasRichSections ? (
           <>
-            <p class="resource-article-lead"><GlossaryLinkedText value={item.body} context="paragraph" /></p>
-            {item.sections.map((section) => (
+            {item.repeatSummaryInBody !== false && (
+              <p class="resource-article-lead"><GlossaryLinkedText value={item.body} context="paragraph" /></p>
+            )}
+            {sections.map((section) => (
               <section class:list={["resource-day-entry", section.level === 2 && "resource-day-entry-subsection"]}>
                 <div class="resource-day-copy">
-                  {section.level === 1 ? (
+                  {section.heading && (section.level === 1 ? (
                     <h2 {...attrs(section.heading)}>{text(section.heading)}</h2>
                   ) : section.level === 2 ? (
                     <h3 {...attrs(section.heading)}>{text(section.heading)}</h3>
                   ) : (
                     <h4 {...attrs(section.heading)}>{text(section.heading)}</h4>
-                  )}
+                  ))}
                   {section.body && <p><GlossaryLinkedText value={section.body} context="body" /></p>}
                   {Array.isArray(section.paragraphs) && section.paragraphs.map((paragraph) => (
                     <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
                   ))}
                   {section.pageWindow && (
-                    <div class="resource-page-window" aria-label="Related page">
+                    <div class="resource-page-window" {...ariaAttrs({ zh: "关联页面", en: "Related page" })}>
                       <a class="article-product-window article-page-window" href={section.pageWindow.href}>
                         <figure class="article-product-window-media">
-                          <img src={section.pageWindow.image} {...imageAttrs(section.pageWindow.alt)} loading="lazy" />
+                          <img src={section.pageWindow.image} {...imageAttrs(section.pageWindow.alt)} width={section.pageWindow.imageWidth} height={section.pageWindow.imageHeight} loading="lazy" decoding="async" />
                         </figure>
                         <span class="article-product-window-copy">
                           <span class="article-product-window-kicker" {...attrs(section.pageWindow.kicker)}>{text(section.pageWindow.kicker)}</span>
@@ -227,7 +237,7 @@ const articleSchema = {
                   {Array.isArray(section.bullets) && (
                     <ul class="resource-article-list">
                       {section.bullets.map((bullet) => (
-                        <li>{isReferenceSection(section) ? text(bullet) : <GlossaryLinkedText value={bullet} context="bullet" />}</li>
+                        <li>{isReferenceSection(section) ? text(bullet, language) : <GlossaryLinkedText value={bullet} context="bullet" />}</li>
                       ))}
                     </ul>
                   )}
@@ -253,7 +263,7 @@ const articleSchema = {
                       ))}
                     </div>
                   ))}
-                  {section.table && (
+                  {Array.isArray(section.table?.headers) && Array.isArray(section.table?.rows) && (
                     <div class="resource-data-table-wrap">
                       <table class="resource-data-table">
                         <thead>
@@ -266,25 +276,26 @@ const articleSchema = {
                         </tbody>
                       </table>
                       {section.table.caption && <MediaCaption caption={section.table.caption} />}
+                      {section.table.download && <a class="resource-table-download" href={section.table.download.href} download {...attrs(section.table.download.label)}>{text(section.table.download.label)}</a>}
                     </div>
                   )}
                   {productSlugsForSection(section).map((productSlug) => productBySlug.has(productSlug) && (() => {
                     const product = productBySlug.get(productSlug);
                     const productLine = productLineBySlug.get(product.slug);
                     const productHref = product.comingSoon
-                      ? `/products/series/${productLine?.slug || "medikeep"}/#products`
+                      ? `/products/series/${getProductLinePublicSlug(productLine?.slug || "medikeep", language)}/#products`
                       : `/products/${product.slug}/`;
                     const productImage = product.comingSoon && productLine?.slug !== "oem-odm"
-                      ? "/assets/coming-soon.png"
+                      ? product.image
                       : product.image;
                     return (
                       <a class="article-product-window" href={productHref}>
                         <figure class="article-product-window-media">
-                          <img src={productImage} alt={product.comingSoon ? "敬请期待 / Coming Soon" : product.alt} loading="lazy" />
+                          <img src={productImage} {...imageAttrs(product.alt)} loading="lazy" />
                         </figure>
                         <span class="article-product-window-copy">
                           <span class="article-product-window-kicker" data-zh="关联产品" data-en="Related product">关联产品</span>
-                          <strong>{product.title}</strong>
+                          <strong {...attrs(product.displayName || product.title)}>{text(product.displayName || product.title)}</strong>
                           <span class="article-product-window-description" {...attrs(product.body)}>{text(product.body)}</span>
                           <span
                             class="article-product-window-link"
@@ -300,9 +311,9 @@ const articleSchema = {
                   {section.productLineSlug && lineBySlug.has(section.productLineSlug) && (() => {
                     const productLine = lineBySlug.get(section.productLineSlug);
                     return (
-                      <a class="article-product-window article-product-line-window" href={`/products/series/${productLine.slug}/`}>
+                      <a class="article-product-window article-product-line-window" href={`/products/series/${getProductLinePublicSlug(productLine.slug, language)}/`}>
                         <figure class="article-product-window-media">
-                          <img src={productLine.image} alt={productLine.alt} loading="lazy" />
+                          <img src={productLine.image} {...imageAttrs(productLine.alt)} width={productLine.imageWidth} height={productLine.imageHeight} loading="lazy" decoding="async" />
                         </figure>
                         <span class="article-product-window-copy">
                           <span class="article-product-window-kicker" data-zh="关联产品线" data-en="Related product line">关联产品线</span>
@@ -323,7 +334,7 @@ const articleSchema = {
                 {Array.isArray(section.media) && section.media.length > 0 && (
                   <div class:list={["resource-day-media", resourceMediaLayoutClass(section.media.length)]}>
                     {section.media.map((media) => (
-                      <figure>
+                      <figure class:list={[media.image === "/assets/blog/blog5/eu-packaging-waste-2023.png" && "resource-diagram"]}>
                         <img src={media.image} {...imageAttrs(media.alt)} />
                         <MediaCaption caption={media.caption} source={media.source} />
                       </figure>
@@ -350,7 +361,7 @@ const articleSchema = {
     {gallery.length > 0 && (
       <section
         class:list={["resource-article-gallery", resourceMediaLayoutClass(gallery.length)]}
-        aria-label="Article gallery"
+        {...ariaAttrs({ zh: "文章图片画廊", en: "Article gallery" })}
       >
         {gallery.map((media) => (
           <figure>
@@ -374,7 +385,7 @@ const articleSchema = {
           <figure>
             <img src={entry.item.image} {...imageAttrs(entry.item.alt)} />
           </figure>
-            <span>{entry.meta}</span>
+            <span>{resourceDisplayDate(entry.meta, language)}</span>
             <h3 {...attrs(entry.item.title)}>{text(entry.item.title)}</h3>
           </a>
         ))}

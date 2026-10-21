@@ -1,17 +1,20 @@
 {
   "meta": {
     "title": {
-      "zh": "VINNER | 感染控制、清洁护理、工业擦拭与定制开发",
-      "en": "Wet Wipes Manufacturer & OEM/ODM | VINNER"
+      "zh": "维尼健康（深圳）股份有限公司 | 中国专业湿巾制造商",
+      "en": "Professional Wet Wipes Manufacturer in China | VINNER"
     },
     "description": {
-      "zh": "VINNER 为感染控制、清洁护理、工业擦拭与定制开发提供专业湿巾及擦拭解决方案。",
-      "en": "VINNER provides professional wipe solutions across Infection Control, Cleansing & Care, Industrial Wiping, and OEM/ODM."
+      "zh": "维尼健康（深圳）股份有限公司，具有20余年专业湿巾制造经验，为感染控制、清洁护理、工业擦拭等领域湿巾提供自有品牌产品及OEM/ODM服务。",
+      "en": "With 20+ years in wet wipes manufacturing and R&D, VINNER offers own brands and OEM/ODM solutions for infection control, personal care and industrial wiping."
     }
   },
   "hero": {
     "image": "/assets/home-carousel/carousel-1.png",
-    "alt": "VINNER 首页专业擦拭系统场景",
+    "alt": {
+      "zh": "VINNER 首页专业擦拭系统场景",
+      "en": "VINNER professional wiping systems"
+    },
     "eyebrow": {
       "zh": "",
       "en": ""
@@ -27,7 +30,10 @@
     "slides": [
       {
         "image": "/assets/home-carousel/carousel-1.png",
-        "alt": "VINNER 首页专业擦拭系统场景",
+        "alt": {
+          "zh": "VINNER 首页专业擦拭系统场景",
+          "en": "VINNER professional wiping systems"
+        },
         "eyebrow": {
           "zh": "",
           "en": ""
@@ -42,8 +48,26 @@
         }
       },
       {
+        "productLine": "carekeep",
+        "eyebrow": {
+          "zh": "",
+          "en": ""
+        },
+        "title": {
+          "zh": "探索维尼健康OBM品牌产品",
+          "en": "Explore VINNER’s OBM Brand Products"
+        },
+        "body": {
+          "zh": "面向老人与病患护理、个人卫生清洁与皮肤屏障防护的完整解决方案。",
+          "en": "Complete solutions for elderly and patient care, personal hygiene, and skin barrier protection."
+        }
+      },
+      {
         "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
-        "alt": "医疗实验与专业健康场景",
+        "alt": {
+          "zh": "医疗实验与专业健康场景",
+          "en": "Healthcare laboratory and professional care setting"
+        },
         "eyebrow": {
           "zh": "",
           "en": ""
@@ -59,7 +83,10 @@
       },
       {
         "image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=2400&q=80",
-        "alt": "制造现场与工业生产协作场景",
+        "alt": {
+          "zh": "制造现场与工业生产协作场景",
+          "en": "Industrial manufacturing and teamwork"
+        },
         "eyebrow": {
           "zh": "",
           "en": ""
@@ -102,7 +129,10 @@
       },
       "dark": true,
       "image": "/assets/wipes-pack.jpg",
-      "alt": "简洁白色护理包装与洁净产品细节",
+      "alt": {
+        "zh": "简洁白色护理包装与洁净产品细节",
+        "en": "White care product packaging and product details"
+      },
       "body": {
         "zh": "面向医院、诊所、实验室和公共卫生设施的感染控制擦拭产品。强调接触面清洁、材料兼容和稳定供应。",
         "en": "Wiping systems for hospitals, clinics, labs, and public health facilities, focused on clean contact surfaces, material compatibility, and dependable supply."
@@ -123,12 +153,11 @@
         "en": "Cosmetic, Personal Care and Cleansing"
       },
       "dark": false,
-      "image": "/assets/carekeep-hands.jpg",
-      "alt": "浅色自然光下的个人护理与手部清洁场景",
       "body": {
         "zh": "覆盖家庭、母婴、成人护理与外出便携场景。触感温和、使用直觉清晰，让日常护理更从容。",
         "en": "For home, maternal, adult-care, and on-the-go routines, with gentle touch, clear usage logic, and calmer daily care."
-      }
+      },
+      "productLine": "carekeep"
     },
     {
       "index": "03 / INDUSTRIAL WIPING",
@@ -146,7 +175,10 @@
       },
       "dark": true,
       "image": "/assets/indukeep-industrial.jpg",
-      "alt": "工业生产环境中的洁净维护与设备作业",
+      "alt": {
+        "zh": "工业生产环境中的洁净维护与设备作业",
+        "en": "Equipment operations and cleaning in an industrial setting"
+      },
       "body": {
         "zh": "服务制造、设备维护、喷涂、电子与精密加工环境。为油污、粉尘、溶剂和高频作业提供耐用擦拭方案。",
         "en": "For manufacturing, maintenance, coating, electronics, and precision processing, with durable wiping performance for oil, dust, solvents, and repetitive tasks."
@@ -156,23 +188,28 @@
   "gallery": [
     {
       "image": "/assets/gallery-infection.jpg",
-      "alt": "医疗与实验室感染控制应用场景",
+      "alt": {
+        "zh": "医疗与实验室感染控制应用场景",
+        "en": "Infection control in healthcare and laboratory settings"
+      },
       "caption": {
         "zh": "感染控制",
         "en": "INFECTION CONTROL"
       }
     },
     {
-      "image": "/assets/gallery-care.jpg",
-      "alt": "个人护理产品在浅色自然光中的使用场景",
       "caption": {
         "zh": "清洁护理",
         "en": "CLEANSING & CARE"
-      }
+      },
+      "productLine": "carekeep"
     },
     {
       "image": "/assets/gallery-industrial.jpg",
-      "alt": "工业制造环境中的设备维护擦拭场景",
+      "alt": {
+        "zh": "工业制造环境中的设备维护擦拭场景",
+        "en": "Equipment maintenance and wiping in an industrial setting"
+      },
       "caption": {
         "zh": "工业擦拭",
         "en": "INDUSTRIAL WIPING"
@@ -180,7 +217,10 @@
     },
     {
       "image": "/assets/gallery-product.jpg",
-      "alt": "专业擦拭产品包装与洁净产品细节",
+      "alt": {
+        "zh": "专业擦拭产品包装与洁净产品细节",
+        "en": "Professional wiping product packaging and details"
+      },
       "caption": {
         "zh": "VINNER / Product Formats",
         "en": "VINNER / Product Formats"
@@ -219,13 +259,77 @@
       }
     ],
     "videoSrc": "https://www.youtube.com/embed/ITKhuZj8qho",
-    "videoTitle": "Vinner Factory Promotional Video",
+    "videoTitle": {
+      "zh": "维尼工厂宣传视频",
+      "en": "VINNER factory promotional video"
+    },
     "stats": [
-      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": { "zh": "20+", "en": "20+" }, "body": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
-      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": { "zh": "15+", "en": "15+" }, "body": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
-      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": { "zh": "95%+", "en": "95%+" }, "body": { "zh": "自动化率", "en": "automation rate" } },
-      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": { "zh": "80亿+", "en": "8B+" }, "body": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } }
-    ]
+      {
+        "icon": "clock",
+        "label": {
+          "zh": "我们的经验",
+          "en": "Experience"
+        },
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "body": {
+          "zh": "年湿巾研发与生产经验",
+          "en": "years of wet wipes R&D and manufacturing experience"
+        }
+      },
+      {
+        "icon": "clock",
+        "label": {
+          "zh": "我们的经验",
+          "en": "Experience"
+        },
+        "number": {
+          "zh": "15+",
+          "en": "15+"
+        },
+        "body": {
+          "zh": "年医疗消毒湿巾生产经验",
+          "en": "years of medical disinfectant wipes manufacturing experience"
+        }
+      },
+      {
+        "icon": "capacity",
+        "label": {
+          "zh": "我们的工厂",
+          "en": "Factory"
+        },
+        "number": {
+          "zh": "95%+",
+          "en": "95%+"
+        },
+        "body": {
+          "zh": "自动化率",
+          "en": "automation rate"
+        }
+      },
+      {
+        "icon": "capacity",
+        "label": {
+          "zh": "我们的工厂",
+          "en": "Factory"
+        },
+        "number": {
+          "zh": "80亿+",
+          "en": "8B+"
+        },
+        "body": {
+          "zh": "片以上湿巾年产能",
+          "en": "wipes annual capacity"
+        }
+      }
+    ],
+    "videoPoster": "/assets/footer/vinner-logo-footer.png",
+    "videoPosterAlt": {
+      "zh": "维尼健康 VINNER 标志",
+      "en": "VINNER Health logo"
+    }
   },
   "productLinesSection": {
     "kicker": {
@@ -255,11 +359,61 @@
       "en": "Through R&D investment, in-house laboratories and external partnerships, Vinner has developed an extensive portfolio of proven wet wipe formulations and secured dozens of patents."
     },
     "metrics": [
-      { "icon": "investment", "number": { "zh": "3%+", "en": "3%+" }, "body": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
-      { "icon": "formula", "number": { "zh": "500+", "en": "500+" }, "body": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
-      { "icon": "network", "number": { "zh": "20+", "en": "20+" }, "body": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
-      { "icon": "patent", "number": { "zh": "30+", "en": "30+" }, "body": { "zh": "知识产权专利", "en": "intellectual property patents" } },
-      { "icon": "lab", "number": { "zh": "3", "en": "3" }, "body": { "zh": "个独立实验室", "en": "independent laboratories" } }
+      {
+        "icon": "investment",
+        "number": {
+          "zh": "3%+",
+          "en": "3%+"
+        },
+        "body": {
+          "zh": "以上销售额投入研发",
+          "en": "of sales invested in R&D"
+        }
+      },
+      {
+        "icon": "formula",
+        "number": {
+          "zh": "500+",
+          "en": "500+"
+        },
+        "body": {
+          "zh": "成熟湿巾配方",
+          "en": "mature wipe formulas"
+        }
+      },
+      {
+        "icon": "network",
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "body": {
+          "zh": "家合作实验室与大学",
+          "en": "partner laboratories and universities"
+        }
+      },
+      {
+        "icon": "patent",
+        "number": {
+          "zh": "30+",
+          "en": "30+"
+        },
+        "body": {
+          "zh": "知识产权专利",
+          "en": "intellectual property patents"
+        }
+      },
+      {
+        "icon": "lab",
+        "number": {
+          "zh": "3",
+          "en": "3"
+        },
+        "body": {
+          "zh": "个独立实验室",
+          "en": "independent laboratories"
+        }
+      }
     ]
   },
   "insights": {
@@ -294,26 +448,86 @@
       "en": "Serving brand customers and channel partners worldwide."
     },
     "items": [
-      { "name": "Bluesail", "logo": "/assets/partners/buyers/bluesail.png" },
-      { "name": "Breeze", "logo": "/assets/partners/buyers/breeze.png" },
-      { "name": "C&S", "logo": "/assets/partners/buyers/c-and-s.png" },
-      { "name": "Dr. Brown's", "logo": "/assets/partners/buyers/dr-browns.png" },
-      { "name": "Dr. E.J. Swabb", "logo": "/assets/partners/buyers/dr-e-j-swabb.png" },
-      { "name": "GAMA Healthcare", "logo": "/assets/partners/buyers/gama.png" },
-      { "name": "Medicom", "logo": "/assets/partners/buyers/medicom.png" },
-      { "name": "NUPCO", "logo": "/assets/partners/buyers/nupco.png" },
-      { "name": "Optimum Medical", "logo": "/assets/partners/buyers/optimum-medical.png" },
-      { "name": "Pharmavest", "logo": "/assets/partners/buyers/pharmavest.png" },
-      { "name": "Walmart", "logo": "/assets/partners/buyers/walmart.png" },
-      { "name": "Winner Medical", "logo": "/assets/partners/buyers/winner-medical.png" },
-      { "name": "3M", "logo": "/assets/partners/buyers/3m.png" },
-      { "name": "Duskin", "logo": "/assets/partners/buyers/duskin.png" },
-      { "name": "MINISO", "logo": "/assets/partners/buyers/miniso.png" },
-      { "name": "Vanguard", "logo": "/assets/partners/buyers/vanguard.png" },
-      { "name": "Saky", "logo": "/assets/partners/buyers/shuke.png" },
-      { "name": "Want Want", "logo": "/assets/partners/buyers/want-want.png" },
-      { "name": "Rainbow", "logo": "/assets/partners/buyers/rainbow.png" },
-      { "name": "BYD", "logo": "/assets/partners/buyers/byd.png" }
+      {
+        "name": "Bluesail",
+        "logo": "/assets/partners/buyers/bluesail.png"
+      },
+      {
+        "name": "Breeze",
+        "logo": "/assets/partners/buyers/breeze.png"
+      },
+      {
+        "name": "C&S",
+        "logo": "/assets/partners/buyers/c-and-s.png"
+      },
+      {
+        "name": "Dr. Brown's",
+        "logo": "/assets/partners/buyers/dr-browns.png"
+      },
+      {
+        "name": "Dr. E.J. Swabb",
+        "logo": "/assets/partners/buyers/dr-e-j-swabb.png"
+      },
+      {
+        "name": "GAMA Healthcare",
+        "logo": "/assets/partners/buyers/gama.png"
+      },
+      {
+        "name": "Medicom",
+        "logo": "/assets/partners/buyers/medicom.png"
+      },
+      {
+        "name": "NUPCO",
+        "logo": "/assets/partners/buyers/nupco.png"
+      },
+      {
+        "name": "Optimum Medical",
+        "logo": "/assets/partners/buyers/optimum-medical.png"
+      },
+      {
+        "name": "Pharmavest",
+        "logo": "/assets/partners/buyers/pharmavest.png"
+      },
+      {
+        "name": "Walmart",
+        "logo": "/assets/partners/buyers/walmart.png"
+      },
+      {
+        "name": "Winner Medical",
+        "logo": "/assets/partners/buyers/winner-medical.png"
+      },
+      {
+        "name": "3M",
+        "logo": "/assets/partners/buyers/3m.png"
+      },
+      {
+        "name": "Duskin",
+        "logo": "/assets/partners/buyers/duskin.png"
+      },
+      {
+        "name": "MINISO",
+        "logo": "/assets/partners/buyers/miniso.png"
+      },
+      {
+        "name": "Vanguard",
+        "logo": "/assets/partners/buyers/vanguard.png"
+      },
+      {
+        "name": "Saky",
+        "logo": "/assets/partners/buyers/shuke.png"
+      },
+      {
+        "name": "Want Want",
+        "logo": "/assets/partners/buyers/want-want.png"
+      },
+      {
+        "name": "Rainbow",
+        "logo": "/assets/partners/buyers/rainbow.png"
+      },
+      {
+        "name": "BYD",
+        "logo": "/assets/partners/buyers/byd.png"
+      }
     ]
   }
 }

@@ -1,0 +1,33 @@
+/* Match the heading rail, spacing and rules of the adjacent product modules. */
+.product-detail-section.product-faq-section {
+  grid-template-columns: minmax(180px, .28fr) minmax(0, 1fr);
+  gap: var(--spacing-68);
+  min-height: 0;
+  padding: var(--spacing-119) clamp(22px, 5vw, 68px);
+  border-top: 0;
+}
+.product-faq-section .faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+  border-top: 0;
+}
+.product-faq-section details {
+  min-width: 0;
+  border-top: 1px solid rgba(142, 142, 149, .48);
+  border-bottom: 0;
+}
+.product-faq-section details:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.product-faq-section summary { min-height: 100px; box-sizing: border-box; }
+.product-faq-section summary h3 { font-size: clamp(18px, 1.35vw, 22px); }
+.product-faq-section .faq-question-number { margin-right: .45em; color: #007c7a; }
+.product-faq-section .faq-answer { padding-right: 0; font-size: clamp(16px, 1.1vw, 18px); }
+@media (max-width: 1040px) {
+  .product-detail-section.product-faq-section { grid-template-columns: 1fr; gap: 34px; }
+}
+@media (max-width: 640px) {
+  .product-detail-section.product-faq-section { padding-block: 76px; }
+  .product-faq-section .faq-list { grid-template-columns: 1fr; }
+  .product-faq-section summary { min-height: 0; }
+}

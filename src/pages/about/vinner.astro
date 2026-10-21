@@ -3,11 +3,12 @@ import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHero from "../../components/PageHero.astro";
 import PartnersSection from "../../components/PartnersSection.astro";
+import FaqSection from "../../components/FaqSection.astro";
 import MediaCaption from "../../components/MediaCaption.astro";
 import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
 import about from "../../data/site/aboutVinner.json";
 import factory from "../../data/site/factory.json";
-import { text, attrs } from "../../utils/i18n";
+import { text, attrs, imageAttrs } from "../../utils/i18n";
 import { schemaIds } from "../../utils/schema";
 
 const siteUrl = searchConfig.siteUrl;
@@ -55,8 +56,8 @@ const supportAreas = manufacturingFlow.slice(3);
         ))}
       </div>
       <figure class="about-location-media">
-        <img src={about.headquartersSection.image} alt={about.headquartersSection.imageAlt} loading="lazy" />
-        <MediaCaption caption={{ zh: about.headquartersSection.imageAlt, en: "Vinner Health headquarters in Shenzhen, China" }} />
+        <img src={about.headquartersSection.image} {...imageAttrs(about.headquartersSection.imageAlt)} loading="lazy" />
+        <MediaCaption caption={about.headquartersSection.imageAlt} />
       </figure>
     </section>
 
@@ -69,8 +70,8 @@ const supportAreas = manufacturingFlow.slice(3);
         ))}
       </div>
       <figure class="about-location-media">
-        <img src={about.facilitySection.image} alt={about.facilitySection.imageAlt} loading="lazy" />
-        <MediaCaption caption={{ zh: about.facilitySection.imageAlt, en: "Vinner Health wet wipes manufacturing facility in Huanggang, China" }} />
+        <img src={about.facilitySection.image} {...imageAttrs(about.facilitySection.imageAlt)} loading="lazy" />
+        <MediaCaption caption={about.facilitySection.imageAlt} />
       </figure>
     </section>
 
@@ -83,7 +84,7 @@ const supportAreas = manufacturingFlow.slice(3);
         {productionAreas.map((area, index) => (
           <article class="about-factory-area-card">
             <figure>
-              <img src={area.image} alt={area.alt} loading="lazy" />
+              <img src={area.image} {...imageAttrs(area.alt)} loading="lazy" />
             </figure>
             <div>
               <span>{String(index + 1).padStart(2, "0")}</span>
@@ -104,7 +105,7 @@ const supportAreas = manufacturingFlow.slice(3);
         {supportAreas.map((area, index) => (
           <article class="about-factory-area-card">
             <figure>
-              <img src={area.image} alt={area.alt} loading="lazy" />
+              <img src={area.image} {...imageAttrs(area.alt)} loading="lazy" />
             </figure>
             <div>
               <span>{String(index + 4).padStart(2, "0")}</span>
@@ -120,6 +121,7 @@ const supportAreas = manufacturingFlow.slice(3);
       <div class="about-section-heading">
         <p class="section-kicker" {...attrs(about.businessSection.kicker)}>{text(about.businessSection.kicker)}</p>
         <h2 id="about-business-title" {...attrs(about.businessSection.title)}>{text(about.businessSection.title)}</h2>
+        <p {...attrs(about.businessSection.brandSummary)}>{text(about.businessSection.brandSummary)}</p>
       </div>
       <div class="about-business-copy-grid">
         {about.businessSection.items.map((item, index) => (
@@ -205,6 +207,7 @@ const supportAreas = manufacturingFlow.slice(3);
     </section>
 
     <PartnersSection section={about.partnersSection} id="partner-title" />
+    <FaqSection />
   </div>
 </BaseLayout>
 

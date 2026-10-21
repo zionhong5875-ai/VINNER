@@ -1,5 +1,8 @@
 import fs from "node:fs";
 import { parse } from "parse5";
+import { getProductLinePublicSlug } from "../src/utils/productLines.js";
+import { glossaryPublicSlug } from "../src/utils/glossary.mjs";
+import { validateBlogAuthors } from "./seo-audit-rules.mjs";
 
 const baseUrl = process.env.AUDIT_BASE_URL || "http://127.0.0.1:4321";
 const products = JSON.parse(fs.readFileSync(new URL("../src/data/site/products.json", import.meta.url)));
@@ -21,8 +24,8 @@ const routes = [...new Set([
   "/resources/files/",
   "/resources/glossary/",
   ...Object.keys(policies).map((slug) => `/${slug}/`),
-  ...products.lines.map((line) => `/products/series/${line.slug}/`),
-  ...products.lines.flatMap((line) => line.skus.filter((sku) => !sku.comingSoon).map((sku) => `/products/${sku.slug}/`)),
+  ...products.lines.map((line) => `/products/series/${getProductLinePublicSlug(line.slug)}/`),
+  ...products.lines.flatMap((line) => (Array.isArray(line.skus) ? line.skus : []).filter((sku) => !sku.comingSoon).map((sku) => `/products/${sku.slug}/`)),
   ...resources.news.map((item) => `/resources/${item.slug}/`),
   ...resources.blogs.map((item) => `/resources/${item.slug}/`),
   ...glossary.map((term) => `/resources/glossary/${term.slug}/`)
@@ -40,7 +43,11 @@ const content = (node) => descendants(node, (child) => child.nodeName === "#text
   .join(" ")
   .replace(/\s+/g, " ")
   .trim();
-const pathForLanguage = (route, language) => language === "en" ? `/en${route}` : route;
+const pathForLanguage = (route, language) => {
+  if (language !== "en") return route;
+  const term = route.match(/^\/resources\/glossary\/([^/]+)\/$/);
+  return term ? `/en/resources/glossary/${glossaryPublicSlug(term[1], language)}/` : `/en${route}`;
+};
 const hasAncestor = (node, predicate) => {
   let current = node.parentNode;
   while (current) {
@@ -110,8 +117,8 @@ for (const language of ["zh", "en"]) {
     const alternateCodes = new Set(alternates.map((item) => item.language));
     const expectedAlternatePaths = {
       "zh-CN": route,
-      en: `/en${route}`,
-      "x-default": route
+      en: pathForLanguage(route, "en"),
+      "x-default": pathForLanguage(route, "en")
     };
     const invalidAlternates = alternates.filter((item) =>
       !expectedAlternatePaths[item.language] || new URL(item.href).pathname !== expectedAlternatePaths[item.language]
@@ -171,20 +178,14 @@ for (const language of ["zh", "en"]) {
     const organizationId = organizationSchema?.["@id"];
     const referenceId = (value) => value?.["@id"];
     const blog = resources.blogs.find(item => `/resources/${item.slug}/` === route);
-    const expectedAuthor = blog && authors[blog.authorId];
-    const visibleAuthor = first(document, node => attr(node, "class") === "resource-detail-author");
-    const authorErrors = [];
-    if (blog) {
-      if (!expectedAuthor) authorErrors.push("blog has no registered author");
-      else {
-        const person = articleSchema?.author;
-        const authorUrl = `${new URL(canonical).origin}${pathForLanguage("/contact/", language)}#${blog.authorId}`;
-        if (person?.["@type"] !== "Person" || person.name !== expectedAuthor.name[language] || person.jobTitle !== expectedAuthor.role[language]) authorErrors.push("incorrect author name, type or job title");
-        if (person?.["@id"] !== `${new URL(canonical).origin}/#person-${blog.authorId}` || person?.url !== authorUrl || referenceId(person?.worksFor) !== organizationId) authorErrors.push("author identity or affiliation mismatch");
-        if (content(first(visibleAuthor || {}, node => node.tagName === "strong") || {}) !== expectedAuthor.name[language] || content(first(visibleAuthor || {}, node => node.tagName === "span") || {}) !== expectedAuthor.role[language]) authorErrors.push("visible byline differs from author schema");
-        if (metaContent("name", "author") !== expectedAuthor.name[language]) authorErrors.push("author meta mismatch");
-      }
-    }
+    const bylines = descendants(document, node => attr(node, "class") === "resource-detail-author").map(node => ({
+      name: content(first(node, child => child.tagName === "strong") || {}),
+      role: content(first(node, child => child.tagName === "span") || {})
+    }));
+    const authorErrors = blog ? validateBlogAuthors({
+      blog, authors, language, origin: new URL(canonical).origin, organizationId,
+      schemaAuthor: articleSchema?.author, bylines, metaAuthor: metaContent("name", "author")
+    }) : [];
     const glossaryTermSchema = isGlossaryTerm ? schemaByType("DefinedTerm") : undefined;
     const definitionSection = isGlossaryTerm ? first(document, node => attr(node, "aria-labelledby") === "definition-title") : undefined;
     const errors = [
@@ -215,8 +216,8 @@ for (const language of ["zh", "en"]) {
       !Array.isArray(schemaDocuments[0]?.["@graph"]) && "structured data is not an @graph",
       duplicateGraphIds.length > 0 && `duplicate schema @id values: ${[...new Set(duplicateGraphIds)].join(", ")}`,
       !organizationSchema && "missing Organization structured data",
-      organizationSchema?.name !== "Vinner" && `Organization name is ${organizationSchema?.name || "missing"}`,
-      organizationSchema?.legalName !== "Vinner (Shenzhen) Health Products Limited" && `Organization legalName is ${organizationSchema?.legalName || "missing"}`,
+      organizationSchema?.name !== (language === "en" ? "Vinner" : "维尼健康") && `Organization name is ${organizationSchema?.name || "missing"}`,
+      organizationSchema?.legalName !== (language === "en" ? "Vinner (Shenzhen) Health Products Limited" : "维尼健康（深圳）股份有限公司") && `Organization legalName is ${organizationSchema?.legalName || "missing"}`,
       !organizationId?.endsWith("/#organization") && "Organization does not use the canonical @id",
       !schemaTypes.has("WebSite") && "missing WebSite structured data",
       !pageSchema && `missing ${expectedPageType} structured data`,
@@ -264,7 +265,7 @@ const sitemap = await sitemapResponse.text();
 const sitemapLocations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 const sitemapAlternates = [...sitemap.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)]
   .map((match) => ({ language: match[1], href: match[2] }));
-const expectedPaths = new Set(routes.flatMap((route) => [route, `/en${route}`]));
+const expectedPaths = new Set(routes.flatMap((route) => [route, pathForLanguage(route, "en")]));
 const sitemapPaths = new Set(sitemapLocations.map((location) => new URL(location).pathname));
 const sitemapErrors = [
   sitemapResponse.status !== 200 && `HTTP ${sitemapResponse.status}`,

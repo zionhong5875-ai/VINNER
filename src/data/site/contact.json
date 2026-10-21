@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": {
-      "zh": "湿巾 OEM/ODM、产品采购与样品开发联系 | VINNER",
+      "zh": "湿巾代工、产品采购与样品开发联系 | 维尼健康",
       "en": "Contact for Wet Wipes OEM/ODM & Product Supply | VINNER"
     },
     "description": {
-      "zh": "联系 VINNER 维尼健康，咨询湿巾产品采购、OEM/ODM 定制、样品开发和品牌代理，并查看深圳总部与黄冈工厂联系方式。",
+      "zh": "联系维尼健康，咨询湿巾产品采购、OEM/ODM 定制、样品开发和品牌代理，并查看深圳总部与黄冈工厂联系方式。",
       "en": "Contact VINNER for wet wipes supply, OEM/ODM customization, sample development, brand distribution, and Shenzhen or Huanggang business details."
     }
   },
@@ -23,7 +23,10 @@
       "en": "Whether you need product customization, sample development, or brand distribution,<br />please contact us by phone, WhatsApp, email, or the contact form."
     },
     "image": "/assets/resource-news-meeting.jpg",
-    "alt": "业务沟通与项目会议"
+    "alt": {
+      "zh": "业务沟通与项目会议",
+      "en": "Business discussions and project meeting"
+    }
   },
   "directory": {
     "logo": "/assets/contact/vinner-logo-white-cn.png",
@@ -37,16 +40,10 @@
     },
     "people": [
       {
-        "name": "石万明 Jack Shi",
-        "role": {
-          "zh": "总经理",
-          "en": "General Manager"
+        "name": {
+          "zh": "洪梓豪",
+          "en": "Zion Hong"
         },
-        "phone": "+86 18620314077",
-        "email": "shiwanming@vinnercare.cn"
-      },
-      {
-        "name": "洪梓豪 Zion Hong",
         "authorId": "zion-hong",
         "role": {
           "zh": "业务开发与市场经理",
@@ -56,7 +53,10 @@
         "email": "hongzihao@vinnercare.cn"
       },
       {
-        "name": "石穆朗 Lanny Shi",
+        "name": {
+          "zh": "石穆朗",
+          "en": "Lanny Shi"
+        },
         "authorId": "lanny-shi",
         "role": {
           "zh": "业务开发与市场经理",
@@ -64,15 +64,6 @@
         },
         "phone": "+86 18476699022",
         "email": "shimulang@vinnercare.cn"
-      },
-      {
-        "name": "刘芳芳 Juanna Liu",
-        "role": {
-          "zh": "国际销售经理",
-          "en": "International Sales Manager"
-        },
-        "phone": "+86 17371303344",
-        "email": "juanna@vinnercare.cn"
       }
     ]
   },

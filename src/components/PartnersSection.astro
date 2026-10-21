@@ -1,5 +1,5 @@
 ---
-import { text, attrs } from "../utils/i18n";
+import { text, attrs, imageAttrs, ariaAttrs } from "../utils/i18n";
 
 const {
   section,
@@ -10,16 +10,17 @@ const {
 
 <section
   class:list={["partner-section", "partner-section-showcase", className]}
+  id="partners"
   aria-labelledby={id}
 >
   <div class="about-section-heading">
     <p class="section-kicker" {...attrs(section.kicker)}>{text(section.kicker)}</p>
     <h2 id={id} {...attrs(section.title)}>{text(section.title)}</h2>
   </div>
-  <div class="partner-wall" aria-label="Partner brands">
+  <div class="partner-wall" {...ariaAttrs({ zh: "合作伙伴品牌", en: "Partner brands" })}>
     {section.items.map((partner) => (
       <span>
-        <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
+        <img src={partner.logo} {...imageAttrs({ zh: `${partner.name} 合作伙伴标志`, en: `${partner.name} partner logo` })} loading="lazy" />
       </span>
     ))}
   </div>

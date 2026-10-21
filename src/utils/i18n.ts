@@ -35,6 +35,16 @@ export function imageAttrs(value: Localized) {
   };
 }
 
+export function ariaAttrs(value: Localized) {
+  return {
+    "aria-label": text(value),
+    ...(typeof value === "string" ? {} : {
+      "data-aria-label-zh": value.zh,
+      "data-aria-label-en": value.en
+    })
+  };
+}
+
 export function stripLanguagePrefix(pathname: string): string {
   if (pathname === "/en" || pathname === "/en/") {
     return "/";

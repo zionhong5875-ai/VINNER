@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import { getSearchConfig, canIndexRequest, robotsText, INDEXNOW_KEY } from "../src/utils/search-config.mjs";
 import { buildSitemap, canonicalPath, localizedSearchPaths } from "../src/utils/search-routes.mjs";
 import { createSubmission, submitIndexNow, endpoint } from "./indexnow.mjs";
+import { getProductLineHref } from "../src/utils/productLines.js";
 
-const production = { PUBLIC_SITE_URL: "https://www.example.com", VERCEL_ENV: "production" };
+const production = { PUBLIC_SITE_URL: "https://www.example.com", SITE_INDEXING_ENABLED: "true" };
 
 test("only the configured production host is indexable; preview always stays blocked", () => {
   assert.equal(getSearchConfig({}).indexingEnabled, false);
@@ -12,8 +13,10 @@ test("only the configured production host is indexable; preview always stays blo
   assert.equal(canIndexRequest(new URL("https://www.example.com/en/"), config), true);
   assert.equal(canIndexRequest(new URL("https://preview.example.com/"), config), false);
   assert.equal(getSearchConfig({ ...production, SITE_INDEXING_ENABLED: "false" }).indexingEnabled, false);
-  assert.equal(getSearchConfig({ ...production, VERCEL_ENV: "preview", SITE_INDEXING_ENABLED: "true" }).indexingEnabled, false);
-  assert.throws(() => getSearchConfig({ VERCEL_ENV: "production" }), /explicitly/);
+  assert.equal(canIndexRequest(new URL("https://preview.example.com/"), getSearchConfig(production)), false);
+  assert.equal(canIndexRequest(new URL("http://127.0.0.1:4321/"), getSearchConfig(production)), false);
+  assert.equal(getSearchConfig({ PUBLIC_SITE_URL: production.PUBLIC_SITE_URL }).indexingEnabled, true);
+  assert.throws(() => getSearchConfig({ SITE_INDEXING_ENABLED: "true" }), /explicitly/);
   for (const url of ["http://example.com", "https://example.com/path", "https://example.com/?q=x", "https://localhost", "https://127.0.0.1"]) {
     assert.throws(() => getSearchConfig({ PUBLIC_SITE_URL: url }));
   }
@@ -38,6 +41,37 @@ test("sitemap emits only clean localized URLs with reciprocal language alternati
   assert.doesNotMatch(xml, /<priority>|<changefreq>/);
   assert.equal(canonicalPath("/en/products"), "/en/products/");
   assert.equal(canonicalPath("/not-a-page"), null);
+});
+
+test("product series share the same public slug across languages and omit legacy URLs from the sitemap", () => {
+  const xml = buildSitemap(production.PUBLIC_SITE_URL);
+  for (const [legacy, slug] of [["carekeep", "cleansing-care"], ["indukeep", "industrial-wiping"], ["medikeep", "infection-control"]]) {
+    const path = `/products/series/${slug}/`;
+    assert.equal(getProductLineHref({ slug: legacy }, "zh"), path);
+    assert.equal(getProductLineHref({ slug: legacy }, "en"), path);
+    assert.equal(canonicalPath(path), path);
+    assert.equal(canonicalPath(`/en${path}`), `/en${path}`);
+    assert.ok(xml.includes(new URL(path, production.PUBLIC_SITE_URL).href));
+    assert.ok(xml.includes(new URL(`/en${path}`, production.PUBLIC_SITE_URL).href));
+    assert.ok(!xml.includes(`/products/series/${legacy}/`));
+  }
+});
+
+test("every sitemap x-default uses its current English equivalent, including different language slugs", () => {
+  const xml = buildSitemap(production.PUBLIC_SITE_URL);
+  const urls = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)];
+  assert.equal(urls.length, localizedSearchPaths.length);
+  for (const [, block] of urls) {
+    const en = block.match(/hreflang="en" href="([^"]+)"/)?.[1];
+    const fallback = block.match(/hreflang="x-default" href="([^"]+)"/)?.[1];
+    assert.equal(fallback, en);
+    const url = new URL(fallback);
+    assert.equal(url.protocol, "https:");
+    assert.ok(localizedSearchPaths.includes(url.pathname));
+    assert.ok(url.pathname.startsWith("/en/"));
+  }
+  const gsm = urls.find(([, block]) => block.includes('<loc>https://www.example.com/resources/glossary/basis-weight/</loc>'))?.[1];
+  assert.ok(gsm?.includes('hreflang="x-default" href="https://www.example.com/en/resources/glossary/gsm/"'));
 });
 
 test("IndexNow rejects noncanonical, unpublished and foreign URLs before network access", () => {

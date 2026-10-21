@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { parse } from "parse5";
 import { glossaryAliasEntries, glossaryLinkTargets } from "../src/utils/glossary-links.mjs";
 import { localizedSearchPaths } from "../src/utils/search-routes.mjs";
+import { glossaryPath } from "../src/utils/glossary.mjs";
 
 const base = process.env.AUDIT_BASE_URL || "http://127.0.0.1:4321";
 const walk = (node) => [node, ...(node.childNodes || []).flatMap(walk)];
@@ -34,7 +35,7 @@ for (const language of ["zh", "en"]) {
     for (const link of links) {
       const slug = attr(link, "data-glossary-link");
       assert.ok(glossaryLinkTargets.has(slug), `${pathname}: unknown glossary target ${slug}`);
-      assert.equal(attr(link, "href"), `${prefix}/resources/glossary/${slug}/`, `${pathname}: wrong target for ${slug}`);
+      assert.equal(attr(link, "href"), `${prefix}${glossaryPath(slug, language)}`, `${pathname}: wrong target for ${slug}`);
       const normalizedText = language === "en" ? nodeText(link).toLocaleLowerCase("en-US") : nodeText(link);
       assert.ok([...aliases.values()].some((entry) => entry.slug === slug && entry.language === language && entry.normalized === normalizedText), `${pathname}: unregistered link text ${nodeText(link)}`);
       for (const parent of ancestors(link)) {

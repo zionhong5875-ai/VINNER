@@ -2,20 +2,22 @@
 import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
+import HomeVideo from "../components/HomeVideo.astro";
 import PartnersSection from "../components/PartnersSection.astro";
+import FaqSection from "../components/FaqSection.astro";
 import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
 import home from "../data/site/home.json";
 import about from "../data/site/aboutVinner.json";
 import products from "../data/site/products.json" with { type: "json" };
 import resources from "../data/site/resources.json" with { type: "json" };
-import { text, attrs, htmlAttrs, imageAttrs, localizedPath } from "../utils/i18n";
-import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js";
-import { sortResourcesByDate } from "../utils/resources.js";
+import { text, attrs, htmlAttrs, imageAttrs, ariaAttrs, localizedPath } from "../utils/i18n";
+import { getProductLineHref, getProductLineMeta, resolveProductLineMedia } from "../utils/productLines.js";
+import { sortResourcesByDate, resourceDisplayDate } from "../utils/resources.js";
 import { absoluteUrl, schemaIds } from "../utils/schema";
 
 const companyStats = home.company.stats;
 const rdMetrics = home.rd.metrics;
-const heroSlides = home.hero.slides?.length ? home.hero.slides : [home.hero];
+const heroSlides = (home.hero.slides?.length ? home.hero.slides : [home.hero]).map((slide) => resolveProductLineMedia(slide));
 
 const metricIcons = {
   clock: ["M24 8a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z", "M24 15v10l8 5", "M15 7l-5 6", "M33 7l5 6"],
@@ -44,7 +46,7 @@ const homeSchema = {
   numberOfItems: products.lines.length,
   itemListElement: products.lines.map((line, index) => {
     const meta = getProductLineMeta(line);
-    const url = absoluteUrl(localizedPath(`/products/series/${meta.slug}/`, language), siteUrl);
+    const url = absoluteUrl(localizedPath(getProductLineHref(line, language), language), siteUrl);
     return {
       "@type": "ListItem",
       position: index + 1,
@@ -65,6 +67,7 @@ const homeSchema = {
   title={home.meta.title}
   description={home.meta.description}
   image={heroSlides[0].image}
+  imageAlt={heroSlides[0].alt}
   schema={homeSchema}
   mainEntityId={ids.organization}
   pageProperties={{
@@ -72,11 +75,21 @@ const homeSchema = {
     hasPart: { "@id": productLinesId }
   }}
 >
-  <section class="hero hero-carousel" id="top" aria-labelledby="hero-title" data-home-carousel>
-    <div class="hero-slide-track">
+  <section class="hero hero-carousel" id="top" aria-labelledby="hero-title" aria-roledescription={language === "en" ? "carousel" : "轮播图"} data-home-carousel>
+    <div class="hero-carousel-controls">
+      <button class="hero-carousel-control" type="button" data-home-rotation hidden {...ariaAttrs({ zh: "暂停自动轮播", en: "Pause automatic rotation" })}><span aria-hidden="true" data-home-rotation-icon>Ⅱ</span></button>
+      <button class="hero-carousel-control" type="button" data-home-prev {...ariaAttrs({ zh: "上一张轮播图", en: "Previous slide" })}><span aria-hidden="true">‹</span></button>
+      <div class="hero-carousel-dots" role="tablist" {...ariaAttrs({ zh: "首页轮播图", en: "Home carousel" })}>
+        {heroSlides.map((_, index) => (
+          <button class:list={["hero-carousel-dot", index === 0 && "is-active"]} id={`home-tab-${index + 1}`} type="button" role="tab" data-home-dot={index} aria-controls={`home-panel-${index + 1}`} aria-selected={index === 0 ? "true" : "false"} tabindex={index === 0 ? 0 : -1} {...ariaAttrs({ zh: `第 ${index + 1} 张，共 ${heroSlides.length} 张`, en: `Slide ${index + 1} of ${heroSlides.length}` })}></button>
+        ))}
+      </div>
+      <button class="hero-carousel-control" type="button" data-home-next {...ariaAttrs({ zh: "下一张轮播图", en: "Next slide" })}><span aria-hidden="true">›</span></button>
+    </div>
+    <div class="hero-slide-track" aria-live="off" aria-atomic="false" data-home-panels>
       {heroSlides.map((slide, index) => (
-        <article class:list={["hero-slide", index === 0 && "is-active"]} data-home-slide aria-hidden={index === 0 ? "false" : "true"}>
-          <img class="hero-image" src={slide.image} {...imageAttrs(slide.alt)} />
+        <article class:list={["hero-slide", index === 0 && "is-active"]} id={`home-panel-${index + 1}`} role="tabpanel" aria-labelledby={`home-tab-${index + 1}`} tabindex="0" data-home-slide hidden={index !== 0} inert={index !== 0} aria-hidden={index === 0 ? "false" : "true"}>
+          <img class="hero-image" src={slide.image} {...imageAttrs(slide.alt)} width={slide.imageWidth} height={slide.imageHeight} loading={index === 0 ? "eager" : "lazy"} fetchpriority={index === 0 ? "high" : "auto"} decoding="async" />
           <div class="hero-scrim"></div>
           <div class:list={["hero-content", !text(slide.eyebrow) && "hero-content-no-eyebrow"]}>
             {text(slide.eyebrow) && <p class="eyebrow" {...attrs(slide.eyebrow)}>{text(slide.eyebrow)}</p>}
@@ -98,17 +111,6 @@ const homeSchema = {
         <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
       </div>
     </div>
-    <div class="hero-carousel-dots" role="tablist" aria-label="Home carousel">
-      {heroSlides.map((_, index) => (
-        <button
-          class:list={["hero-carousel-dot", index === 0 && "is-active"]}
-          type="button"
-          data-home-dot={index}
-          aria-label={`Show slide ${index + 1}`}
-          aria-selected={index === 0 ? "true" : "false"}
-        ></button>
-      ))}
-    </div>
   </section>
 
   <section class="home-company section-pad" aria-labelledby="home-company-hq-title">
@@ -129,25 +131,14 @@ const homeSchema = {
       </div>
     </div>
 
-    <div class="home-company-video" aria-label="VINNER video">
-      <iframe
-        width="560"
-        height="315"
-        src={home.company.videoSrc}
-        title={home.company.videoTitle}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-    </div>
+    <HomeVideo video={home.company} />
 
-    <div class="home-stat-groups" aria-label="VINNER key figures">
+    <div class="home-stat-groups" {...ariaAttrs({ zh: "维尼核心数据", en: "VINNER key figures" })}>
       {companyStats.map((item) => (
         <article class="home-stat-card">
           <span class="metric-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" focusable="false">
-              {metricIcons[item.icon].map((path) => <path d={path} />)}
+              {(metricIcons[item.icon] || []).map((path) => <path d={path} />)}
             </svg>
           </span>
           <div>
@@ -173,11 +164,11 @@ const homeSchema = {
           <a
             class="product-line-tile"
             data-line-slug={meta.slug}
-            href={getProductLineHref(line)}
-            aria-label={`View ${meta.name.en}`}
+            href={getProductLineHref(line, language)}
+            {...ariaAttrs({ zh: `查看${meta.name.zh}`, en: `View ${meta.name.en}` })}
           >
             <span class="product-line-tile-media" aria-hidden="true">
-              <img src={meta.image} alt={meta.alt} loading="lazy" />
+              <img src={meta.image} {...imageAttrs(meta.alt)} width={meta.imageWidth} height={meta.imageHeight} loading="lazy" decoding="async" />
             </span>
             <span class="product-line-tile-copy">
               <span {...attrs(meta.indexLabel)}>{text(meta.indexLabel)}</span>
@@ -198,12 +189,12 @@ const homeSchema = {
       <p><GlossaryLinkedText value={home.rd.body} context="body" /></p>
     </div>
 
-    <div class="home-rd-metrics" aria-label="R&D metrics">
+    <div class="home-rd-metrics" {...ariaAttrs({ zh: "研发数据", en: "R&D metrics" })}>
       {rdMetrics.map((metric) => (
         <article>
           <span class="metric-icon rd-metric-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" focusable="false">
-              {metricIcons[metric.icon].map((path) => <path d={path} />)}
+              {(metricIcons[metric.icon] || []).map((path) => <path d={path} />)}
             </svg>
           </span>
           <div>
@@ -215,23 +206,23 @@ const homeSchema = {
     </div>
   </section>
 
-  <section class="home-insights" id="insights" aria-label="VINNER resources">
+  <section class="home-insights" id="insights" {...ariaAttrs({ zh: "维尼资源", en: "VINNER resources" })}>
     <div class="home-insight-panel home-news-section" id="news" aria-labelledby="news-title">
       <div class="home-insight-heading">
         <p class="section-kicker" {...attrs(home.insights.news.kicker)}>{text(home.insights.news.kicker)}</p>
         <h2 id="news-title" {...attrs(home.insights.news.title)}>{text(home.insights.news.title)}</h2>
       </div>
-      <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" aria-label="首页新闻横向滚动列表">
+      <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" {...ariaAttrs({ zh: "首页新闻横向滚动列表", en: "Home news carousel" })}>
         <div class="home-compact-article-grid">
           {newsItems.map((item) => (
             <article class="article-card compact-resource-card">
-              <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+              <a class="article-card-media-link" href={`/resources/${item.slug}/`} {...ariaAttrs({ zh: `阅读${text(item.title, "zh")}`, en: `Read ${text(item.title, "en")}` })}>
                 <figure>
                   <img src={item.image} {...imageAttrs(item.alt)} loading="lazy" />
                 </figure>
               </a>
               <div class="article-card-copy">
-                <span>{item.date}</span>
+                <span>{resourceDisplayDate(item.date, language)}</span>
                 <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
                 <p><GlossaryLinkedText value={item.body} context="body" /></p>
                 <a href={`/resources/${item.slug}/`} data-zh="阅读更新" data-en="Read update">阅读更新</a>
@@ -247,17 +238,17 @@ const homeSchema = {
         <p class="section-kicker" {...attrs(home.insights.blog.kicker)}>{text(home.insights.blog.kicker)}</p>
         <h2 id="blog-title" {...attrs(home.insights.blog.title)}>{text(home.insights.blog.title)}</h2>
       </div>
-      <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" aria-label="首页博客横向滚动列表">
+      <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" {...ariaAttrs({ zh: "首页博客横向滚动列表", en: "Home blog carousel" })}>
         <div class="home-compact-article-grid home-compact-article-grid-blog">
           {blogItems.map((item) => (
             <article class="article-card compact-resource-card">
-              <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+              <a class="article-card-media-link" href={`/resources/${item.slug}/`} {...ariaAttrs({ zh: `阅读${text(item.title, "zh")}`, en: `Read ${text(item.title, "en")}` })}>
                 <figure>
                   <img src={item.image} {...imageAttrs(item.alt)} loading="lazy" />
                 </figure>
               </a>
               <div class="article-card-copy">
-                <span>{item.date || item.category}</span>
+                <span>{resourceDisplayDate(item.date, language) || text(item.category, language)}</span>
                 <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
                 <p><GlossaryLinkedText value={item.body} context="body" /></p>
                 <a href={`/resources/${item.slug}/`} data-zh="阅读文章" data-en="Read article">阅读文章</a>
@@ -274,6 +265,8 @@ const homeSchema = {
     id="partners-title"
     className="home-partner-section"
   />
+
+  <FaqSection />
 
   <ContactForm kicker={{ zh: "联系表单", en: "Contact Form" }} />
 </BaseLayout>

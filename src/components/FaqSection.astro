@@ -1,0 +1,24 @@
+---
+import faq from "../data/site/faq.json";
+import FaqAccordion from "./FaqAccordion.astro";
+import "../styles/faq.css";
+import { text, attrs, localizedPath } from "../utils/i18n";
+
+const language = Astro.locals.language === "en" ? "en" : "zh";
+const links = {
+  about: { href: localizedPath("/about/vinner/", language), label: { zh: "关于维尼", en: "About Vinner" } },
+  qualifications: { href: localizedPath("/about/factory-qualification/", language), label: { zh: "工厂资质", en: "Factory qualifications" } },
+  partners: { href: "#partners", label: { zh: "维尼健康与全球顶级医疗与快消品牌合作", en: "VINNER Health works with leading global healthcare and fast-moving consumer goods brands" } },
+  form: { href: `${localizedPath("/", language)}#contact`, label: { zh: "联系表单", en: "contact form" } },
+  contacts: { href: `${localizedPath("/contact/", language)}#contacts`, label: { zh: "邮箱或WhatsApp", en: "email or WhatsApp contact details" } },
+  contact: { href: localizedPath("/contact/", language), label: { zh: "联系我们", en: "Contact us" } }
+};
+---
+
+<section class="faq-section section-pad" id="faq" aria-labelledby="faq-title">
+  <div class="faq-heading">
+    <p class="section-kicker" data-zh="常见问题" data-en="FAQ">{language === "en" ? "FAQ" : "常见问题"}</p>
+    <h2 id="faq-title" {...attrs(faq.title)}>{text(faq.title, language)}</h2>
+  </div>
+  <FaqAccordion items={faq.items} links={links} openFirst />
+</section>

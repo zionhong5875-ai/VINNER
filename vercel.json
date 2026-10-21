@@ -1,9 +1,0 @@
-{
-  "framework": "astro",
-  "buildCommand": "npm run build",
-  "headers": [
-    { "source": "/admin/:path*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
-    { "source": "/api/:path*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
-    { "source": "/oauth/:path*", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
-  ]
-}

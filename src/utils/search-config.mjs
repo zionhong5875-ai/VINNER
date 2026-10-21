@@ -10,17 +10,18 @@ export function getSearchConfig(env = {}) {
     url.hostname.startsWith("[") || /(?:^|\.)(?:localhost|local|internal|test|invalid)$/.test(url.hostname)) {
     throw new Error("PUBLIC_SITE_URL must use a public production hostname.");
   }
-  if (env.VERCEL_ENV === "production" && !env.PUBLIC_SITE_URL) {
-    throw new Error("Set PUBLIC_SITE_URL explicitly before a production deployment.");
-  }
   const mode = env.SITE_INDEXING_ENABLED || "auto";
   if (!["auto", "true", "false"].includes(mode)) {
     throw new Error("SITE_INDEXING_ENABLED must be auto, true, or false.");
   }
+  if (mode === "true" && !env.PUBLIC_SITE_URL) {
+    throw new Error("Set PUBLIC_SITE_URL explicitly before enabling production indexing.");
+  }
   return {
     siteUrl: url.origin,
-    indexingEnabled: env.VERCEL_ENV !== "preview" && env.VERCEL_ENV !== "development" &&
-      (mode === "true" || (mode === "auto" && env.VERCEL_ENV === "production"))
+    // EdgeOne preview/local requests remain blocked by canIndexRequest's host
+    // check, even when they share the production build's environment variables.
+    indexingEnabled: mode === "true" || (mode === "auto" && Boolean(env.PUBLIC_SITE_URL))
   };
 }
 

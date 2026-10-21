@@ -1,0 +1,35 @@
+---
+import { text, attrs } from "../utils/i18n";
+import GlossaryLinkedText from "./GlossaryLinkedText.astro";
+const { items, links = {}, openFirst = false, numbered = false, glossaryAnswers = false, idPrefix = "faq" } = Astro.props;
+const language = Astro.locals.language === "en" ? "en" : "zh";
+const parts = (paragraph) => text(paragraph, language).split(/(\{\{\w+\}\})/g).filter(Boolean).map(value => {
+  const key = value.match(/^\{\{(\w+)\}\}$/)?.[1];
+  return key && links[key] ? links[key] : value;
+});
+---
+<div class="faq-list" data-faq-accordion>
+  {items.map((item, index) => (
+    <details open={openFirst && index === 0} data-expanded={openFirst && index === 0 ? "true" : "false"}>
+      <summary id={`${idPrefix}-question-${index + 1}`} aria-controls={`${idPrefix}-answer-${index + 1}`}>
+        <h3>{numbered && <span class="faq-question-number">Q{index + 1}.</span>}<span {...attrs(item.question)}>{text(item.question, language)}</span></h3>
+        <svg class="faq-toggle-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 10h14M10 3v14" /></svg>
+      </summary>
+      <div class="faq-panel" id={`${idPrefix}-answer-${index + 1}`}>
+        <div class="faq-answer">
+          {item.paragraphs.map(paragraph => (
+            <p>{parts(paragraph).map(part => typeof part === "string"
+              ? (glossaryAnswers ? <GlossaryLinkedText value={part} context="paragraph" /> : part)
+              : <a href={part.href}>{text(part.label, language)}</a>)}</p>
+          ))}
+          {item.related && links[item.related] && <a class="faq-related" href={links[item.related].href} {...attrs(links[item.related].label)}>{text(links[item.related].label, language)}<span aria-hidden="true"> ↗</span></a>}
+        </div>
+      </div>
+    </details>
+  ))}
+</div>
+
+<script>
+  import { initFaqAccordion } from "../utils/faq-accordion.mjs";
+  document.querySelectorAll("[data-faq-accordion]").forEach(root => initFaqAccordion(root));
+</script>

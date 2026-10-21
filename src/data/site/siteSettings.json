@@ -2,7 +2,10 @@
   "brand": {
     "name": "VINNER",
     "logo": "/assets/footer/vinner-logo-footer.png",
-    "logoAlt": "VINNER 维尼健康"
+    "logoAlt": {
+      "zh": "VINNER 维尼健康",
+      "en": "VINNER Health logo"
+    }
   },
   "navigation": {
     "home": {
@@ -68,7 +71,10 @@
       "en": "WeChat"
     },
     "wechatQr": "/assets/footer/wechat-qr.jpg",
-    "wechatAlt": "维尼健康微信公众号二维码",
+    "wechatAlt": {
+      "zh": "维尼健康微信公众号二维码",
+      "en": "VINNER Health WeChat QR code"
+    },
     "wechatText": {
       "zh": "扫码关注维尼健康",
       "en": "Scan to follow VINNER"

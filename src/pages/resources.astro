@@ -1,12 +1,13 @@
 ---
 import { glossaryCategories, glossaryTerms, glossaryPath } from "../utils/glossary.mjs";
+import { cloudPosition } from "../utils/glossary-cloud.mjs";
 import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
 import resources from "../data/site/resources.json" with { type: "json" };
-import { text, attrs, imageAttrs, localizedPath } from "../utils/i18n";
-import { isDirectDownloadResource, sortResourcesByAccessAndName, sortResourcesByDate } from "../utils/resources.js";
+import { text, attrs, imageAttrs, ariaAttrs, localizedPath } from "../utils/i18n";
+import { isDirectDownloadResource, sortResourcesByAccessAndName, sortResourcesByDate, resourceDisplayDate } from "../utils/resources.js";
 import { absoluteUrl, resourceDate, schemaIds, buildAuthorNode } from "../utils/schema";
 
 const newsItems = sortResourcesByDate(resources.news);
@@ -16,7 +17,7 @@ const digitalItems = downloadItems.filter((item) => [
   "Product Brochure",
   "Product Manual",
   "Safety Data Sheet"
-].includes(item.label));
+].includes(text(item.label, "en")));
 const glossaryClouds = glossaryCategories.map((category) => ({
   category,
   terms: glossaryTerms
@@ -76,23 +77,6 @@ const cloudSize = (term, index) => {
   const base = [0.78, 0.9, 1.02, 0.84, 0.96][(term.slug.length + index * 3) % 5];
   return `${Math.max(0.62, Math.min(base, 1.1 - length * 0.026)).toFixed(2)}rem`;
 };
-const cloudPosition = (index, total, categoryId) => {
-  const spots = categoryId === "fundamentals"
-    ? [
-        [18, 17], [53, 15], [84, 18],
-        [18, 43], [53, 40], [84, 44],
-        [18, 69], [53, 67], [84, 70],
-        [36, 89], [69, 89]
-      ]
-    : [
-        [22, 17], [53, 15], [80, 18],
-        [22, 43], [53, 40], [80, 44],
-        [22, 69], [53, 67], [80, 70],
-        [36, 89], [69, 89]
-      ];
-  const [x, y] = spots[index % Math.min(total, spots.length)];
-  return { x: `${x.toFixed(2)}%`, y: `${y.toFixed(2)}%` };
-};
 const cloudStyle = (term, index, total, categoryId) => {
   const position = cloudPosition(index, total, categoryId);
   return `--cloud-size:${cloudSize(term, index)};--cloud-x:${position.x};--cloud-y:${position.y}`;
@@ -132,7 +116,7 @@ const downloadNodes = downloadItems
   .map((item) => ({
     "@type": "DigitalDocument",
     "@id": `${absoluteUrl(item.href, siteUrl)}#document`,
-    name: item.title,
+    name: text(item.title, language),
     description: text(item.body, language),
     url: absoluteUrl(item.href, siteUrl),
     encodingFormat: "application/pdf",
@@ -179,23 +163,23 @@ const resourceSchema = [
 
   <section class="resource-section" id="news" aria-labelledby="news-title">
     <div class="resource-heading">
-      <p class="section-kicker">News</p>
+      <p class="section-kicker" data-zh="新闻" data-en="News">新闻</p>
       <div>
         <h2 id="news-title" data-zh="新闻" data-en="News">新闻</h2>
         <p data-zh="关于产品线、产能、质量体系和行业合作的最新更新。" data-en="Updates on product lines, capacity, quality systems, and industry collaboration.">关于产品线、产能、质量体系和行业合作的最新更新。</p>
       </div>
     </div>
-    <div class="resource-scroll" data-scroll-region="x" tabindex="0" aria-label="新闻横向滚动列表">
+    <div class="resource-scroll" data-scroll-region="x" tabindex="0" {...ariaAttrs({ zh: "新闻横向滚动列表", en: "News carousel" })}>
       <div class="article-grid">
         {newsItems.map((item) => (
           <article class="article-card compact-resource-card">
-            <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+            <a class="article-card-media-link" href={`/resources/${item.slug}/`} {...ariaAttrs({ zh: `阅读${text(item.title, "zh")}`, en: `Read ${text(item.title, "en")}` })}>
               <figure>
                 <img src={item.image} {...imageAttrs(item.alt)} />
               </figure>
             </a>
             <div class="article-card-copy">
-              <span>{item.date}</span>
+              <span>{resourceDisplayDate(item.date, language)}</span>
               <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
               <p><GlossaryLinkedText value={item.body} context="body" /></p>
               <a href={`/resources/${item.slug}/`} data-zh="阅读更新" data-en="Read update">阅读更新</a>
@@ -209,23 +193,23 @@ const resourceSchema = [
 
   <section class="resource-section resource-section-dark" id="blog" aria-labelledby="blog-title">
     <div class="resource-heading">
-      <p class="section-kicker">Blog</p>
+      <p class="section-kicker" data-zh="博客" data-en="Blog">博客</p>
       <div>
         <h2 id="blog-title" data-zh="博客" data-en="Blog">博客</h2>
         <p data-zh="面向采购、产品经理、护理机构和工业现场的擦拭产品知识。" data-en="Wiping product knowledge for procurement teams, product managers, care operators, and industrial sites.">面向采购、产品经理、护理机构和工业现场的擦拭产品知识。</p>
       </div>
     </div>
-    <div class="resource-scroll resource-scroll-dark" data-scroll-region="x" tabindex="0" aria-label="博客横向滚动列表">
+    <div class="resource-scroll resource-scroll-dark" data-scroll-region="x" tabindex="0" {...ariaAttrs({ zh: "博客横向滚动列表", en: "Blog carousel" })}>
       <div class="article-grid">
         {blogItems.map((item) => (
           <article class="article-card compact-resource-card">
-            <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+            <a class="article-card-media-link" href={`/resources/${item.slug}/`} {...ariaAttrs({ zh: `阅读${text(item.title, "zh")}`, en: `Read ${text(item.title, "en")}` })}>
               <figure>
                 <img src={item.image} {...imageAttrs(item.alt)} />
               </figure>
             </a>
             <div class="article-card-copy">
-              <span>{item.date || item.category}</span>
+              <span>{resourceDisplayDate(item.date, language) || text(item.category, language)}</span>
               <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
               <p><GlossaryLinkedText value={item.body} context="body" /></p>
               <a href={`/resources/${item.slug}/`} data-zh="阅读文章" data-en="Read article">阅读文章</a>
@@ -258,7 +242,7 @@ const resourceSchema = [
             {terms.map((term, termIndex) => (
               <a
                 class="knowledge-cloud-term"
-                href={glossaryPath(term.slug)}
+                href={glossaryPath(term.slug, language)}
                 style={cloudStyle(term, termIndex, terms.length, category.id)}
                 data-term-slug={term.slug}
                 data-term-title-zh={term.title.zh}
@@ -285,7 +269,7 @@ const resourceSchema = [
 
   <section class="resource-section" id="downloads" aria-labelledby="digital-title">
     <div class="resource-heading">
-      <p class="section-kicker">Digital Resources</p>
+      <p class="section-kicker" data-zh="数字资源" data-en="Digital Resources">数字资源</p>
       <div>
         <h2 id="digital-title" data-zh="数字资源" data-en="Digital Resources">数字资源</h2>
         <p data-zh="产品手册可直接下载；SDS 请联系我们获取。" data-en="Download product manuals; contact us for SDS files.">产品手册可直接下载；SDS 请联系我们获取。</p>
@@ -293,23 +277,23 @@ const resourceSchema = [
     </div>
     <div class="download-grid">
       <figure class="download-feature">
-        <img src="/assets/resource-manuals.jpg" alt="产品说明书和数字资料文件" />
+        <img src="/assets/resource-manuals.jpg" {...imageAttrs({ zh: "产品说明书和数字资料文件", en: "Product manuals and digital resources" })} />
       </figure>
-      <div class="download-scroll" data-scroll-region="y" tabindex="0" aria-label="数字资源纵向滚动列表">
+      <div class="download-scroll" data-scroll-region="y" tabindex="0" {...ariaAttrs({ zh: "数字资源纵向滚动列表", en: "Digital resources list" })}>
         <div class="download-list">
           {digitalItems.map((item) => (
             <article class="resource-download">
               <div class="resource-file">{item.type}</div>
               <div>
-                <span>{item.label}</span>
-                <h3>{item.title}</h3>
+                <span {...attrs(item.label)}>{text(item.label)}</span>
+                <h3 {...attrs(item.title)}>{text(item.title)}</h3>
                 {isDirectDownloadResource(item) ? (
                   <a
                     href={item.href}
                     download
-                    data-zh={item.label === "Product Manual" ? "下载手册" : "下载 Brochure"}
-                    data-en={item.label === "Product Manual" ? "Download manual" : "Download brochure"}
-                  >{item.label === "Product Manual" ? "下载手册" : "下载 Brochure"}</a>
+                    data-zh={text(item.label, "en") === "Product Manual" ? "下载手册" : "下载产品手册"}
+                    data-en={text(item.label, "en") === "Product Manual" ? "Download manual" : "Download brochure"}
+                  >{text(item.label, "en") === "Product Manual" ? "下载手册" : "下载产品手册"}</a>
                 ) : (
                   <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
                 )}
@@ -715,6 +699,7 @@ const resourceSchema = [
     // Fit measured glyph widths, including the maximum hover enlargement.
     // Percentage positions alone cannot prevent collisions on narrow cards.
     const fitCloud = () => {
+      if (!viewport.clientWidth || !viewport.clientHeight) return;
       viewport.style.setProperty("--cloud-fit", "1");
       const states = getSphereState();
       const boxes = states.map(({ tag, depth, x, y }) => ({

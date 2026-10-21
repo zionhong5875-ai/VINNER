@@ -1,0 +1,14 @@
+---
+import { youtubeEmbed } from '../utils/video.mjs';
+import { text, ariaAttrs, imageAttrs } from '../utils/i18n';
+const { video } = Astro.props;
+const language = Astro.locals.language === 'en' ? 'en' : 'zh';
+const target = youtubeEmbed(video.videoSrc);
+const label = { zh: '播放维尼工厂视频', en: 'Play VINNER factory video' };
+---
+<div class="home-company-video" data-home-video data-video-src={target.src} data-video-title={text(video.videoTitle, language)}>
+  <a class="home-video-poster" href={target.watch} target="_blank" rel="noopener noreferrer" data-video-play {...ariaAttrs(label)}>
+    <img src={video.videoPoster} {...imageAttrs(video.videoPosterAlt)} width="965" height="440" loading="lazy" decoding="async" />
+    <span class="home-video-play-label" aria-hidden="true"><span class="home-video-play-icon">▶</span></span>
+  </a>
+</div>

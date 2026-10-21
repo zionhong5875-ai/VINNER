@@ -3,7 +3,7 @@ import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import qualification from "../../data/site/factoryQualification.json" with { type: "json" };
 import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
-import { text, attrs, localizedPath } from "../../utils/i18n";
+import { text, attrs, imageAttrs, localizedPath } from "../../utils/i18n";
 import { absoluteUrl, schemaIds, credentialAnchor, credentialId } from "../../utils/schema";
 
 const siteUrl = searchConfig.siteUrl;
@@ -19,7 +19,7 @@ const credentialType = (item) => {
 const credentialNodes = qualification.certificatesSection.items.map((item) => ({
   "@type": credentialType(item),
   "@id": credentialId(item, siteUrl),
-  name: item.title,
+  name: text(item.displayTitle || item.title, language),
   description: text(item.description, language),
   url: `${pageUrl}#${credentialAnchor(item)}`,
   image: absoluteUrl(item.thumb, siteUrl),
@@ -77,10 +77,10 @@ const qualificationSchema = [
       {qualification.certificatesSection.items.map((certificate) => (
         <article class="certification-card" id={credentialAnchor(certificate)}>
           <figure class="certification-thumb">
-            <img src={certificate.thumb} alt={`VINNER ${certificate.title} factory qualification certificate preview`} loading="lazy" />
+            <img src={certificate.thumb} {...imageAttrs({ zh: `维尼健康${text(certificate.displayTitle || certificate.title, "zh")}资质文件预览`, en: `VINNER ${text(certificate.displayTitle || certificate.title, "en")} credential preview` })} loading="lazy" />
           </figure>
-          <span>{certificate.type}</span>
-          <h3>{certificate.title}</h3>
+          <span {...attrs(certificate.typeLabel || certificate.type)}>{text(certificate.typeLabel || certificate.type)}</span>
+          <h3 {...attrs(certificate.displayTitle || certificate.title)}>{text(certificate.displayTitle || certificate.title)}</h3>
           <p><GlossaryLinkedText value={certificate.description} context="body" /></p>
           <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
         </article>

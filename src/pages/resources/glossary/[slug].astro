@@ -4,19 +4,24 @@ import GlossaryBrowser from "../../../components/GlossaryBrowser.astro";
 import GlossaryParagraphs from "../../../components/GlossaryParagraphs.astro";
 import MediaCaption from "../../../components/MediaCaption.astro";
 import { searchConfig } from "../../../utils/search-config.mjs";
-import { glossaryMetaDescription, publishedTerms, glossaryTerms, glossaryCategories, glossaryPath } from "../../../utils/glossary.mjs";
+import { glossaryMetaDescription, glossarySchemaDescription, publishedTerms, glossaryTerms, glossaryCategories, glossaryPath, glossaryPublicSlug } from "../../../utils/glossary.mjs";
 import backlinks from "../../../generated/glossary-backlinks.json";
 import { absoluteUrl } from "../../../utils/schema";
 import { localizedPath } from "../../../utils/i18n";
-const term = publishedTerms.find(item => item.slug === Astro.params.slug);
-if (!term) return new Response("Glossary term not found", { status: 404 });
 const language = Astro.locals.language === "en" ? "en" : "zh";
+const requestedSlug = Astro.params.slug;
+const term = publishedTerms.find(item => item.slug === requestedSlug || glossaryPublicSlug(item.slug, language) === requestedSlug);
+if (!term) return new Response("Glossary term not found", { status: 404 });
+const publicSlug = glossaryPublicSlug(term.slug, language);
+if (requestedSlug !== publicSlug) {
+  return Astro.redirect(localizedPath(glossaryPath(term.slug, language), language), 301);
+}
 const en = language === "en";
 const t = (zh: string, english: string) => en ? english : zh;
 const category = glossaryCategories.find(item => item.id === term.category)!;
 const relatedPages = backlinks[language][term.slug] || [];
 const siteUrl = searchConfig.siteUrl;
-const pageUrl = absoluteUrl(localizedPath(glossaryPath(term.slug), language), siteUrl);
+const pageUrl = absoluteUrl(localizedPath(glossaryPath(term.slug, language), language), siteUrl);
 const termId = `${pageUrl}#defined-term`;
 const termSetUrl = absoluteUrl(localizedPath("/resources/glossary/", language), siteUrl);
 const termSchema = {
@@ -24,7 +29,7 @@ const termSchema = {
   "@id": termId,
   name: term.title[language],
   alternateName: [...new Set([term.title.zh, term.title.en])],
-  description: glossaryMetaDescription(term, language),
+  description: glossarySchemaDescription(term, language),
   url: pageUrl,
   inLanguage: language === "en" ? "en" : "zh-CN",
   inDefinedTermSet: { "@id": `${termSetUrl}#glossary` },
@@ -33,7 +38,7 @@ const termSchema = {
 };
 ---
 <BaseLayout
-  title={{zh: `${term.title.zh} | VINNER`, en: `${term.title.en} | Glossary | VINNER`}}
+  title={{zh: `${term.title.zh} | 维尼健康`, en: `${term.slug === "basis-weight" ? "GSM" : term.title.en} | Glossary | VINNER`}}
   description={{zh: glossaryMetaDescription(term, "zh"), en: glossaryMetaDescription(term, "en")}}
   image={term.illustration?.src || "/assets/resource-library.jpg"}
   pageType="ItemPage"
@@ -43,7 +48,7 @@ const termSchema = {
     {name:{zh:"首页",en:"Home"},path:"/"},
     {name:{zh:"资源",en:"Resources"},path:"/resources/"},
     {name:{zh:"知识与术语",en:"Glossary"},path:"/resources/glossary/"},
-    {name:term.title,path:glossaryPath(term.slug)}
+    {name:term.title,path:glossaryPath(term.slug, language)}
   ]}
 >
   <div class="term-page">

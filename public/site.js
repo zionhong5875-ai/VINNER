@@ -6,6 +6,11 @@ const getInitialLanguage = () => {
 };
 
 const localizedLanguageUrl = (language) => {
+  const alternate = document.querySelector(`link[rel="alternate"][hreflang="${language === "zh" ? "zh-CN" : "en"}"]`);
+  if (alternate?.href) {
+    const target = new URL(alternate.href);
+    return `${target.pathname}${window.location.search}${window.location.hash}`;
+  }
   const currentPath = window.location.pathname;
   const basePath = currentPath === "/en" || currentPath === "/en/"
     ? "/"
@@ -366,10 +371,31 @@ if (toggle && nav) {
   });
 }
 
+document.querySelectorAll("[data-home-video]").forEach((container) => {
+  container.querySelector("[data-video-play]")?.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const iframe = document.createElement("iframe");
+    iframe.title = container.dataset.videoTitle;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.src = container.dataset.videoSrc;
+    event.preventDefault();
+    container.replaceChildren(iframe);
+    iframe.focus();
+  });
+});
+
 document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
   const slides = Array.from(homeCarousel.querySelectorAll("[data-home-slide]"));
   const dots = Array.from(homeCarousel.querySelectorAll("[data-home-dot]"));
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const rotation = homeCarousel.querySelector("[data-home-rotation]");
+  const panels = homeCarousel.querySelector("[data-home-panels]");
+  const dotList = homeCarousel.querySelector(".hero-carousel-dots");
+  const english = document.documentElement.lang === "en";
+  let paused = motionPreference.matches;
+  let hovered = false;
   let activeIndex = 0;
   let timer = null;
   let pointerStartX = 0;
@@ -382,10 +408,13 @@ document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
 
   const showSlide = (index) => {
     activeIndex = (index + slides.length) % slides.length;
+    dotList.style.setProperty("--home-active-index", String(activeIndex));
 
     slides.forEach((slide, slideIndex) => {
       const isActive = slideIndex === activeIndex;
       slide.classList.toggle("is-active", isActive);
+      slide.hidden = !isActive;
+      slide.inert = !isActive;
       slide.setAttribute("aria-hidden", String(!isActive));
     });
 
@@ -393,7 +422,17 @@ document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
       const isActive = dotIndex === activeIndex;
       dot.classList.toggle("is-active", isActive);
       dot.setAttribute("aria-selected", String(isActive));
+      dot.tabIndex = isActive ? 0 : -1;
     });
+  };
+
+  const updateControls = () => {
+    const running = timer !== null;
+    rotation.setAttribute("aria-label", english
+      ? (running ? "Pause automatic rotation" : "Start automatic rotation")
+      : (running ? "暂停自动轮播" : "开始自动轮播"));
+    rotation.querySelector("[data-home-rotation-icon]").textContent = running ? "Ⅱ" : "▶";
+    panels.setAttribute("aria-live", running ? "off" : "polite");
   };
 
   const stopAutoplay = () => {
@@ -401,27 +440,75 @@ document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
       window.clearInterval(timer);
       timer = null;
     }
+    updateControls();
   };
 
   const startAutoplay = () => {
-    if (reduceMotion || timer) {
+    if (paused || hovered || document.hidden || timer) {
+      updateControls();
       return;
     }
 
     timer = window.setInterval(() => {
       showSlide(activeIndex + 1);
     }, 5600);
+    updateControls();
   };
+
+  const pause = () => { paused = true; stopAutoplay(); };
+  rotation.hidden = false;
+  rotation.addEventListener("click", () => {
+    if (timer !== null) pause();
+    else { paused = false; hovered = false; startAutoplay(); }
+  });
+  homeCarousel.addEventListener("focusin", pause);
+  homeCarousel.addEventListener("mouseenter", () => { hovered = true; stopAutoplay(); });
+  homeCarousel.addEventListener("mouseleave", () => { hovered = false; startAutoplay(); });
+  document.addEventListener("visibilitychange", () => { if (document.hidden) stopAutoplay(); else startAutoplay(); });
+  motionPreference.addEventListener("change", (event) => { if (event.matches) pause(); });
+  homeCarousel.querySelector("[data-home-prev]").addEventListener("click", () => { pause(); showSlide(activeIndex - 1); });
+  homeCarousel.querySelector("[data-home-next]").addEventListener("click", () => { pause(); showSlide(activeIndex + 1); });
 
   dots.forEach((dot) => {
     dot.addEventListener("click", () => {
-      stopAutoplay();
+      pause();
       showSlide(Number(dot.dataset.homeDot || 0));
-      startAutoplay();
+    });
+    dot.addEventListener("keydown", (event) => {
+      const current = dots.indexOf(dot);
+      const target = event.key === "ArrowRight" ? (current + 1) % dots.length
+        : event.key === "ArrowLeft" ? (current - 1 + dots.length) % dots.length
+        : event.key === "Home" ? 0 : event.key === "End" ? dots.length - 1 : null;
+      if (target === null) return;
+      event.preventDefault();
+      pause();
+      showSlide(target);
+      dots[target].focus();
     });
   });
 
+  document.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented || event.isComposing || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+      !["ArrowLeft", "ArrowRight"].includes(event.key) || document.body.classList.contains("menu-open")) return;
+
+    const focused = document.activeElement;
+    if (focused instanceof Element) {
+      if (focused.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"]), [role="textbox"], [role="combobox"], [role="slider"], [role="spinbutton"]')) return;
+      if (focused !== document.body && focused !== document.documentElement && !homeCarousel.contains(focused)) return;
+    }
+
+    // Enable arrows on arrival without moving focus or capturing keys farther down the page.
+    const bounds = homeCarousel.getBoundingClientRect();
+    const viewportMiddle = window.innerHeight / 2;
+    if (bounds.top >= viewportMiddle || bounds.bottom <= viewportMiddle) return;
+
+    event.preventDefault();
+    pause();
+    showSlide(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
+  });
+
   homeCarousel.addEventListener("pointerdown", (event) => {
+    if (event.target.closest("a,button,input,select,textarea")) return;
     if (event.pointerType === "mouse" && event.button !== 0) {
       return;
     }
@@ -441,18 +528,14 @@ document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
     const deltaY = event.clientY - pointerStartY;
 
     if (Math.abs(deltaX) > 46 && Math.abs(deltaX) > Math.abs(deltaY)) {
-      stopAutoplay();
+      pause();
       showSlide(deltaX < 0 ? activeIndex + 1 : activeIndex - 1);
-      startAutoplay();
     }
   });
 
   homeCarousel.addEventListener("pointercancel", () => {
     isDragging = false;
   });
-
-  homeCarousel.addEventListener("mouseenter", stopAutoplay);
-  homeCarousel.addEventListener("mouseleave", startAutoplay);
 
   showSlide(0);
   startAutoplay();

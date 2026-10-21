@@ -3,7 +3,7 @@
 后台地址：
 
 ```text
-https://keep-website-ochre.vercel.app/admin/
+https://vinnercare.com/admin/
 ```
 
 ## 登录
@@ -28,6 +28,15 @@ https://keep-website-ochre.vercel.app/admin/
 4. 可新增、删除或修改 SKU。
 5. 每个 SKU 可编辑名称、图片、说明文字和规格参数。
 
+## 给产品添加 FAQ 的固定流程
+
+1. 提供目标产品及 FAQ 文案，由 Codex 加入该 SKU 的 `faq` 数据，并补齐英文；模块统一放在“使用流程”与“资料获取”之间，适配 1–10 条问答。
+2. 关联现有术语库：产品 FAQ 回答自动调用术语匹配表，使用对应语言的术语详情页链接；检查新增术语别名和实际链接，不在问题标题、图片 Alt 或结构化数据中插入链接，也不创建没有术语页的空链接。
+3. 检查新增内容 SEO：中英文显示、标题层级、服务端完整输出、FAQ Schema 与页面问答一致、canonical/hreflang、链接有效性及术语页反向关联；本地预览的 noindex 应保留。
+4. 验证折叠交互、响应式布局并完成内容校验及构建后，交付预览和检查结果。后续其他产品沿用同一个组件和流程。
+
+技术验收可运行 `npm run audit:product-faq`，检查全部已发布产品的中英文页面、FAQ 文字和 Schema、术语链接及反向关联；报告写入 `output/product-faq-seo/audit.json`。
+
 ## 修改新闻、博客和下载资源
 
 1. 进入 `官网内容`。
@@ -42,7 +51,7 @@ https://keep-website-ochre.vercel.app/admin/
 3. 填写 `类型`、`标签`、`标题` 和 `说明`。
 4. 在 `上传文件` 中选择 PDF 文件，建议使用英文小写和短横线命名，例如 `medikeep-alcohol-disinfectant-wipes-sds-en.pdf`。
 5. 如果资料只对应某个产品，也可以打开 `产品与 SKU`，在对应 SKU 的 `下载资源` 中上传文件。
-6. 点击 `Publish` 后，Vercel 重新部署完成，用户就可以在网站上直接打开或下载资料。
+6. 点击 `Publish` 后，EdgeOne Pages 重新部署完成，用户就可以在网站上直接打开或下载资料。
 
 ## 图片上传建议
 
@@ -55,5 +64,10 @@ https://keep-website-ochre.vercel.app/admin/
 
 1. 修改完成后点击 `Publish`。
 2. 后台会把修改提交到 GitHub。
-3. Vercel 会自动重新部署网站。
+3. EdgeOne Pages 会自动重新部署网站。
 4. 通常 1-3 分钟后线上网站生效。
+# 作者与上线审计资料（2026-09-14）
+
+博客作者通过 `authorId` 选择：`zion-hong`（洪梓豪 / Zion Hong）、`lanny-shi`（石穆朗 / Lanny Shi）。中英文姓名及职位统一维护于 `src/data/site/authors.json`，博客、联系页和 Schema 共用；不在单篇文章重复填写作者/职位。真实修改内容后填写 `updatedAt`（YYYY.MM.DD），不要使用构建日期。
+
+SEO 上下文请读取 [最新全站审计](SEO审计/2026-09-15-SEO-GEO全站审计.md)，上线验收查看 [官网审查](官网审查/2026-09-15-官网上线审查.md)。以后按日期查阅两个目录的最新报告。

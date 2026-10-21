@@ -1,17 +1,17 @@
 {
   "meta": {
     "title": {
-      "zh": "资源：新闻、观点、知识与数字资源 | VINNER",
-      "en": "Resources: News, Insights, Knowledge & Downloads | VINNER"
+      "zh": "资源：博客、新闻、数字资源与术语库 | 维尼健康",
+      "en": "Resources: Blogs, News, Glossary & Downloads | VINNER"
     },
     "description": {
-      "zh": "浏览 VINNER 湿巾行业博客、公司新闻、感染控制知识，以及产品说明书、SDS 和数字资料。",
-      "en": "Read VINNER wet wipes industry articles, company news, infection-control insights, product manuals, SDS files, and digital resources."
+      "zh": "维尼健康关于湿巾与感控行业的最新洞见、公司动向、可下载资源与行业术语库。",
+      "en": "Explore VINNER's latest insights on wet wipes and infection control, company news, downloadable resources, and industry glossary."
     }
   },
   "hero": {
     "title": {
-      "zh": "新闻、观点、知识与数字资源",
+      "zh": "博客、新闻、数字资源与术语库",
       "en": "News, insights, knowledge & digital resources"
     },
     "body": {
@@ -19,7 +19,10 @@
       "en": "Explore Vinner's latest updates, our insights, relevant knowledge and terminology,<br />along with digital resources for download."
     },
     "image": "/assets/resource-documents.jpg",
-    "alt": "VINNER 数字资料、产品文档和擦拭系统资源"
+    "alt": {
+      "zh": "VINNER 数字资料、产品文档和擦拭系统资源",
+      "en": "VINNER digital resources and product documentation"
+    }
   },
   "news": [
     {
@@ -33,7 +36,10 @@
         "en": "For hospitalized patients, older adults with limited mobility, people receiving long-term care, and newborns, “cleansing” is part of everyday hygiene—but it also directly affects comfort, skin condition, and caregiver efficiency. Drawing on more than two decades of wet-wipe R&D and manufacturing experience, VINNER Health has launched its Personal Care & Rinse-Free Cleansing Collection. Designed for situations where conventional bathing, hair washing, or skin cleansing is inconvenient, the collection provides a more convenient and gentle solution for everyday care."
       },
       "image": "/assets/news/news3-cover.png",
-      "alt": "VINNERLOVE 与 HOMEKEEP 清洁护理产品线",
+      "alt": {
+        "zh": "VINNERLOVE 与 HOMEKEEP 清洁护理产品线",
+        "en": "VINNERLOVE and HOMEKEEP cleansing and care product lines"
+      },
       "slug": "vinner-personal-cleansing-care-line",
       "sections": [
         {
@@ -240,7 +246,7 @@
           "productSlug": "homekeep-pure-water-baby-wipes",
           "body": {
             "zh": "HOMEKEEP 纯水婴儿湿巾专为新生儿及敏感肌设计，采用 100% 植物基纤维无纺布和纯水配方，不添加酒精、香精及对羟基苯甲酸酯（Parabens）。",
-              "en": "HOMEKEEP Pure Water Wipes are designed for newborns and sensitive skin. They use 100% plant-based nonwoven fiber and a pure-water formula, with no alcohol, fragrance, or parabens added."
+            "en": "HOMEKEEP Pure Water Wipes are designed for newborns and sensitive skin. They use 100% plant-based nonwoven fiber and a pure-water formula, with no alcohol, fragrance, or parabens added."
           },
           "paragraphs": [
             {
@@ -426,7 +432,10 @@
         "en": "From February 9 to 12, 2026, the VINNER team met healthcare customers and channel partners at WHX Dubai 2026 to discuss products, projects, and supply collaboration."
       },
       "image": "/assets/news/whx-dubai-2026/vinner-whx-dubai-2026-main.jpg",
-      "alt": "VINNER 团队参加 WHX Dubai 2026 的新闻主图",
+      "alt": {
+        "zh": "VINNER 团队参加 WHX Dubai 2026 的新闻主图",
+        "en": "VINNER team at WHX Dubai 2026"
+      },
       "slug": "vinner-team-whx-dubai-2026",
       "sections": [
         {
@@ -441,7 +450,10 @@
           "media": [
             {
               "image": "/assets/news/whx-dubai-2026/day0-arrival-1.jpg",
-              "alt": "VINNER 团队抵达 WHX Dubai 2026 展会现场",
+              "alt": {
+                "zh": "VINNER 团队抵达 WHX Dubai 2026 展会现场",
+                "en": "VINNER team arriving at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "抵达展馆，确认展会现场与展区动线。",
                 "en": "Arriving at the venue and checking the exhibition area."
@@ -449,7 +461,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day0-arrival-2.jpg",
-              "alt": "WHX Dubai 2026 展馆现场",
+              "alt": {
+                "zh": "WHX Dubai 2026 展馆现场",
+                "en": "WHX Dubai 2026 exhibition venue"
+              },
               "caption": {
                 "zh": "进入展馆后确认展位位置和现场环境。",
                 "en": "Confirming booth location and onsite conditions."
@@ -457,7 +472,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day0-booth-setup-1.png",
-              "alt": "VINNER WHX Dubai 2026 展位搭建",
+              "alt": {
+                "zh": "VINNER WHX Dubai 2026 展位搭建",
+                "en": "VINNER booth setup at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "展位搭建进入主视觉和产品陈列阶段。",
                 "en": "Booth setup moved into key visual and product display work."
@@ -465,7 +483,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day0-booth-setup-2.jpg",
-              "alt": "VINNER WHX Dubai 2026 展位完成布置",
+              "alt": {
+                "zh": "VINNER WHX Dubai 2026 展位完成布置",
+                "en": "Completed VINNER booth at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "完成样品、资料和洽谈区的最终检查。",
                 "en": "Final checks for samples, documents, and meeting area."
@@ -473,7 +494,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day0-gifts.jpg",
-              "alt": "VINNER WHX Dubai 2026 客户礼品准备",
+              "alt": {
+                "zh": "VINNER WHX Dubai 2026 客户礼品准备",
+                "en": "Customer gifts prepared for WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "整理客户礼品和接待物料，方便现场快速分发。",
                 "en": "Preparing customer gifts and reception materials for onsite meetings."
@@ -493,7 +517,10 @@
           "media": [
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-1.png",
-              "alt": "WHX Dubai 2026 VINNER 展位客户接待",
+              "alt": {
+                "zh": "WHX Dubai 2026 VINNER 展位客户接待",
+                "en": "Customers visiting the VINNER booth at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "围绕产品线和客户需求展开初步沟通。",
                 "en": "Initial conversations around product lines and customer needs."
@@ -501,7 +528,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-2.png",
-              "alt": "VINNER 团队在 WHX Dubai 2026 与客户洽谈",
+              "alt": {
+                "zh": "VINNER 团队在 WHX Dubai 2026 与客户洽谈",
+                "en": "VINNER team meeting customers at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "现场介绍样品、包装结构和应用场景。",
                 "en": "Introducing samples, pack formats, and application scenarios onsite."
@@ -509,7 +539,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-3.png",
-              "alt": "WHX Dubai 2026 客户沟通项目细节",
+              "alt": {
+                "zh": "WHX Dubai 2026 客户沟通项目细节",
+                "en": "Customer discussions at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "围绕规格、资料和定制方向确认项目细节。",
                 "en": "Confirming details around specifications, documents, and customization direction."
@@ -517,7 +550,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-4.png",
-              "alt": "VINNER WHX Dubai 2026 展位商务交流",
+              "alt": {
+                "zh": "VINNER WHX Dubai 2026 展位商务交流",
+                "en": "Business discussions at the VINNER booth at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "与客户讨论渠道合作和长期供货需求。",
                 "en": "Discussing channel cooperation and long-term supply requirements."
@@ -525,7 +561,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-5.png",
-              "alt": "VINNER 团队与客户在 WHX Dubai 2026 合影",
+              "alt": {
+                "zh": "VINNER 团队与客户在 WHX Dubai 2026 合影",
+                "en": "VINNER team and customers at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "现场交流后记录关键客户需求与后续事项。",
                 "en": "Recording key customer needs and follow-up actions after onsite discussions."
@@ -533,7 +572,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day1-4-customer-reception-6.png",
-              "alt": "WHX Dubai 2026 VINNER 客户接待与产品展示",
+              "alt": {
+                "zh": "WHX Dubai 2026 VINNER 客户接待与产品展示",
+                "en": "VINNER product display and customer reception at WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "通过产品实物帮助客户更快理解使用场景。",
                 "en": "Using physical products to help customers understand use scenarios faster."
@@ -553,7 +595,10 @@
           "media": [
             {
               "image": "/assets/news/whx-dubai-2026/day4-final-team-dinner-1.jpg",
-              "alt": "VINNER 团队 WHX Dubai 2026 Final Day 聚餐",
+              "alt": {
+                "zh": "VINNER 团队 WHX Dubai 2026 Final Day 聚餐",
+                "en": "VINNER team dinner on the final day of WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "展会收官后，团队进行阶段复盘。",
                 "en": "After the show closed, the team reviewed the work completed."
@@ -561,7 +606,10 @@
             },
             {
               "image": "/assets/news/whx-dubai-2026/day4-final-team-dinner-2.jpg",
-              "alt": "VINNER WHX Dubai 2026 团队收官合影",
+              "alt": {
+                "zh": "VINNER WHX Dubai 2026 团队收官合影",
+                "en": "VINNER team photo at the close of WHX Dubai 2026"
+              },
               "caption": {
                 "zh": "把现场反馈整理为后续项目行动清单。",
                 "en": "Turning onsite feedback into follow-up project actions."
@@ -581,7 +629,10 @@
           "media": [
             {
               "image": "/assets/news/whx-dubai-2026/after-whx-customer-meeting-1.png",
-              "alt": "VINNER 团队展后继续约见客户",
+              "alt": {
+                "zh": "VINNER 团队展后继续约见客户",
+                "en": "VINNER team meeting customers after the exhibition"
+              },
               "caption": {
                 "zh": "展后继续约见客户，推进样品、资料和项目细节。",
                 "en": "Continuing customer meetings after the show to move samples, documents, and project details forward."
@@ -606,7 +657,10 @@
         "en": "The visit focused on strategic discussions around long-term cooperation and future development opportunities."
       },
       "image": "/assets/news/vinner-gama-healthcare-strategic-discussion.png",
-      "alt": "维尼健康团队活动与企业交流场景",
+      "alt": {
+        "zh": "维尼健康团队活动与企业交流场景",
+        "en": "VINNER Health team activities and business discussions"
+      },
       "slug": "vinner-gama-healthcare-strategic-discussion",
       "sections": [
         {
@@ -648,7 +702,640 @@
   ],
   "blogs": [
     {
-      "category": "Regulations & Compliance",
+      "category": {
+        "zh": "法规与合规",
+        "en": "Regulations & Compliance"
+      },
+      "date": "2026.10.20 / Blog006",
+      "title": {
+        "zh": "“你们有 CE 证书吗？”",
+        "en": "“Do You Have a CE Certificate?”"
+      },
+      "body": {
+        "zh": "我们的业务开发团队每次在展会上遇到欧洲买家，或者收到来自欧盟客户的湿巾采购询盘（RFQ），几乎都会被问到：“Do you have CE?”。采购商理应要求供应商提供合规文件。但对于湿巾，在询问供应商是否有CE 标志之前，最好明确：湿巾的用途是什么？",
+        "en": "Whenever our business development team meets European buyers at trade shows or receives a wet-wipe request for quotation (RFQ) from an EU customer, we are almost always asked: “Do you have CE?” Buyers are right to ask suppliers for compliance documentation. For wet wipes, however, it is best to clarify one question before asking about the CE mark: what will the wipes be used for?"
+      },
+      "slug": "do-wet-wipes-need-ce-marking-eu",
+      "repeatSummaryInBody": false,
+      "authorId": "lanny-shi",
+      "coauthorIds": [
+        "zion-hong"
+      ],
+      "image": "/assets/blog/blog6/image1.jpg",
+      "alt": {
+        "zh": "欧盟旗帜与CE标志",
+        "en": "European Union flag and CE mark"
+      },
+      "imageCaption": {
+        "zh": "欧盟与CE标志",
+        "en": "The European Union and the CE mark"
+      },
+      "meta": {
+        "title": {
+          "zh": "湿巾需要CE标志吗？欧盟化妆品、MDR与BPR分类 | 维尼健康",
+          "en": "Do Wet Wipes Need CE Marking? EU Cosmetics, MDR & BPR | VINNER"
+        },
+        "description": {
+          "zh": "采购欧盟市场湿巾前，先按预期用途区分化妆品、医疗器械与生物灭杀剂，了解CE标志及CPSR、PIF、CPNP、MDR和BPR对应的文件要求。",
+          "en": "Clarify EU wet-wipe classifications by intended use: cosmetics, medical devices or biocides, with CE marking and CPSR, PIF, CPNP, MDR and BPR documentation."
+        }
+      },
+      "sections": [
+        {
+          "level": 1,
+          "paragraphs": [
+            {
+              "zh": "擦人的皮肤、擦医疗器械，还是擦公共场所的桌椅和门把手，看起来只是使用对象不同，在欧盟却可能对应不同的监管要求。即使产品用在医院，也不意味着它就是医疗器械。",
+              "en": "Wiping human skin, cleaning medical devices, or wiping tables, chairs and door handles in public places may appear to differ only in the object being wiped. In the EU, however, these uses can fall under different regulatory requirements. Even use in a hospital does not automatically make a product a medical device."
+            },
+            {
+              "zh": "判断产品的分类，需要看它的预期用途（Intended Purpose）、作用对象、作用机制（Mode of Action），以及包装、说明书和宣传资料上的宣称（Claims）。用途还没确定，就先把供应商分成“有CE”和“没有CE”，很容易从一开始就找错方向。",
+              "en": "Product classification depends on the intended purpose, the object of use, the mode of action, and the claims made on packaging, instructions and promotional materials. Dividing suppliers into those “with CE” and those “without CE” before establishing the intended use can send procurement in the wrong direction from the outset."
+            },
+            {
+              "zh": "CE 也不是一种普遍适用的“欧盟质量认证”。Regulation (EC) No 765/2008 第 30 条明确规定，只有相关欧盟协调法规要求加贴 CE 的产品，才能使用这个标志。[1]",
+              "en": "CE is not a universally applicable “EU quality certification.” Article 30 of Regulation (EC) No 765/2008 explicitly states that the mark may be used only on products for which relevant EU harmonisation legislation requires it.[1]"
+            },
+            {
+              "zh": "因此，一款按化妆品法规或生物灭杀剂法规（BPR）管理的湿巾，除非具有双重用途，否则本身便不应带有CE标志。有CE标志不仅不能说明它合规，反而，如果产品不属于需要CE的范围却硬在包装上印一个CE标志，反而是一种违规行为。",
+              "en": "A wipe regulated as a cosmetic or under the Biocidal Products Regulation (BPR) should therefore not itself bear a CE mark unless it has a dual purpose that brings it within CE-marking legislation. A CE mark does not, by itself, establish compliance. Printing one on packaging when the product is outside the scope of CE-marking requirements is itself a breach of the rules."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "一个经过匿名化处理的真实采购案例",
+            "en": "An anonymised real procurement case"
+          },
+          "paragraphs": [
+            {
+              "zh": "维尼健康的业务开发团队曾遇到过一个欧洲养老护理机构的采购项目，采购的产品为“免洗沐浴湿巾”。采购部门把它列为“医用耗材”。因此，他们的考虑不难理解：产品给卧床老人使用，使用地点又是专业护理机构，自然觉得应该按医疗器械采购，便因此要求产品提供CE标志。",
+              "en": "VINNER Health’s business development team once worked on a European elderly-care procurement project for rinse-free bathing wipes. The procurement department listed them as “medical consumables.” Their reasoning was understandable: the wipes were intended for bedridden older adults in a professional care facility, so they assumed they should be purchased as medical devices and requested CE marking."
+            },
+            {
+              "zh": "然而这款湿巾的实际用途，只是清洁身体、去除污物和体味，并对完整皮肤进行日常护理。其次，由于该湿巾没有疾病诊断或治疗用途、不用于破损皮肤、也不用于医疗器械消毒，因此排除医疗器械类别；再者，由于该湿巾也不用于人体皮肤的除菌，因此也排除了生物灭杀剂类别。按照Regulation (EC) No 1223/2009，主要用于清洁人体外部部位、保护皮肤、保持其良好状态或改善体味的物质或混合物，属于化妆品法规的范围。[2]",
+              "en": "The actual intended purpose, however, was simply to cleanse the body, remove dirt and body odour, and provide routine care for intact skin. The wipes were not intended to diagnose or treat disease, to be used on broken skin, or to disinfect medical devices, so they did not fall into the medical-device category. Nor were they intended to disinfect human skin, ruling out the biocidal-product category in this case. Under Regulation (EC) No 1223/2009, substances or mixtures intended mainly to clean external parts of the human body, protect the skin, keep it in good condition, or correct body odours fall within the scope of cosmetics legislation.[2]"
+            },
+            {
+              "zh": "同样，给健康人使用和给 ICU 病人使用的沐浴湿巾，如果预期用途都只是清洁和护理完整皮肤，就不会仅仅因为使用者躺在医院病床上而变成医疗器械。",
+              "en": "Likewise, bathing wipes used by healthy people and by ICU patients do not become medical devices merely because the user is in a hospital bed, if their intended purpose remains the cleansing and care of intact skin."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "三种常见的产品分类",
+            "en": "Three common product categories"
+          },
+          "paragraphs": [
+            {
+              "zh": "对于本文讨论的清洁、护理和消毒湿巾，可以先从三种分类入手：",
+              "en": "For the cleansing, care and disinfectant wipes discussed in this article, three categories provide a useful starting point:"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "化妆品：身体清洁和日常皮肤护理。常见的产品例如婴儿湿巾、纯水湿巾、清凉湿巾、沐浴湿巾等。",
+              "en": "Cosmetics: body cleansing and routine skin care. Common examples include baby wipes, pure-water wipes, cooling wipes and bathing wipes."
+            },
+            {
+              "zh": "医疗器械：专门清洁或消毒医疗器械。常见的产品例如医疗器械专用的表面消毒湿巾等。",
+              "en": "Medical devices: products specifically intended to clean or disinfect medical devices. Examples include surface-disinfection wipes intended specifically for medical devices."
+            },
+            {
+              "zh": "生物灭杀剂：一般人体卫生消毒和环境物表消毒。常见的产品例如皮肤除菌湿巾、物表消毒湿巾等。",
+              "en": "Biocidal products: general human-hygiene disinfection and environmental surface disinfection. Examples include skin-disinfection wipes and surface-disinfectant wipes."
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "注：这只是常见的产品主体分类，并不涵盖所有边界情形。产品进入欧盟后，还可能同时涉及包装、化学品、环保、标签和废弃物等要求。",
+              "en": "Note: these are common primary product classifications, not an exhaustive account of every borderline case. Products entering the EU may also be subject to packaging, chemicals, environmental, labelling and waste requirements."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "第一种分类：化妆品——身体清洁与日常护理",
+            "en": "Category 1: cosmetics — body cleansing and routine care"
+          },
+          "paragraphs": [
+            {
+              "zh": "婴儿湿巾、免洗沐浴湿巾、沐浴手套、免洗洗发帽，以及普通身体清洁湿巾，往往都属于化妆品类产品，由Regulation (EC) No 1223/2009。[2]，即欧盟化妆品法规，进行监管。它们的共同点，是主要用于清洁人体外部部位，或者保护皮肤、维持皮肤良好状态。",
+              "en": "Baby wipes, rinse-free bathing wipes, bathing gloves, rinse-free shampoo caps and ordinary body-cleansing wipes often fall within the cosmetics category and are regulated by Regulation (EC) No 1223/2009, the EU Cosmetics Regulation.[2] Their common feature is that their main purpose is to clean external parts of the human body, protect the skin, or keep it in good condition."
+            },
+            {
+              "zh": "采购这类产品时，CE标志便不再适用，因为化妆品类产品并非CE标志覆盖的产品类目。化妆品类目的产品通常需要以下的合规文件：",
+              "en": "CE marking is not applicable when purchasing these products, because cosmetics are not a product category covered by CE marking. Cosmetics typically require the following compliance documentation:"
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "1）CPSR：安全评估是否覆盖了实际产品",
+                "en": "1. CPSR: does the safety assessment cover the actual product?"
+              },
+              "paragraphs": [
+                {
+                  "zh": "CPSR 的全称是 Cosmetic Product Safety Report，即化妆品安全报告。产品上市前，需要由具备法规规定资格的安全评估人员完成相应评估。[2][4]",
+                  "en": "CPSR stands for Cosmetic Product Safety Report. Before a product is placed on the market, an appropriately qualified safety assessor must complete the assessment required by the legislation.[2][4]"
+                },
+                {
+                  "zh": "评估依据不能只有一张配方表，还需考虑定性和定量配方、理化性质、稳定性、微生物质量、原料毒理信息、产品及各成分的暴露情况，以及适用的防腐挑战试验资料等。",
+                  "en": "A formulation sheet alone is not sufficient. The assessment must also consider the qualitative and quantitative composition, physicochemical properties, stability, microbiological quality, toxicological information on raw materials, exposure to the product and its ingredients, and relevant preservative challenge-test data, where applicable."
+                },
+                {
+                  "zh": "法规没有规定 CPSR 必须有多少页。采购时，与其比较报告厚度，不如看它是否对应当前销售的配方、使用方式和目标人群，结论有没有足够资料支持。",
+                  "en": "The legislation does not specify a minimum page count for a CPSR. Rather than comparing report thickness, buyers should check whether it corresponds to the formulation currently being sold, the method of use and the target population, and whether sufficient evidence supports its conclusions."
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "2）PIF：产品档案是否完整、能够持续维护",
+                "en": "2. PIF: is the product file complete and maintained?"
+              },
+              "paragraphs": [
+                {
+                  "zh": "PIF，即 Product Information File，是产品信息档案，包含产品描述、CPSR、制造方法、GMP 合规声明、宣称支持资料等。",
+                  "en": "The Product Information File (PIF) contains the product description, CPSR, manufacturing method, a statement of GMP compliance, claims-supporting evidence and other relevant information."
+                },
+                {
+                  "zh": "法规要求，最后一批产品投放市场后，PIF 还要继续保存 10 年。[2][4]",
+                  "en": "The legislation requires the PIF to be retained for 10 years after the last batch of the product has been placed on the market.[2][4]"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "3）CPNP：通报已经完成，不等于产品获得批准",
+                "en": "3. CPNP: notification does not mean product approval"
+              },
+              "paragraphs": [
+                {
+                  "zh": "化妆品投放欧盟市场前，需要完成 Cosmetic Product Notification Portal（CPNP）通报。[5]",
+                  "en": "Before a cosmetic product is placed on the EU market, notification through the Cosmetic Product Notification Portal (CPNP) must be completed.[5]"
+                },
+                {
+                  "zh": "CPNP 是通报系统，不是产品审批程序。完成通报后，也不存在欧盟因此颁发一张“CPNP Certificate”的程序。",
+                  "en": "CPNP is a notification system, not a product-approval process. Completing notification does not result in the EU issuing a “CPNP Certificate.”"
+                },
+                {
+                  "zh": "供应商可以提供通报信息供采购核实，但不能把通报截图当成产品获得欧盟批准的证明。",
+                  "en": "Suppliers can provide notification information for procurement verification, but a notification screenshot must not be presented as proof of EU product approval."
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "4）EU Responsible Person 与 GMP",
+                "en": "4. EU Responsible Person and GMP"
+              },
+              "paragraphs": [
+                {
+                  "zh": "进入欧盟市场的化妆品，需要有一名设立在欧盟境内的 Responsible Person，承担法规规定的责任。[2]",
+                  "en": "A cosmetic product entering the EU market must have a Responsible Person established in the EU who assumes the responsibilities specified in the legislation.[2]"
+                },
+                {
+                  "zh": "制造环节则需要符合 GMP。行业常用的依据是 EN ISO 22716，但法规要求的是 GMP 合规，并没有要求所有工厂都必须取得第三方 ISO 22716 证书。[6][7]",
+                  "en": "Manufacturing must comply with GMP. EN ISO 22716 is a commonly used industry reference, but the legal requirement is GMP compliance; the legislation does not require every factory to obtain a third-party ISO 22716 certificate.[6][7]"
+                },
+                {
+                  "zh": "证书可以帮助采购审核，工厂是否真正按照相关要求生产，仍然需要相应记录和资料支持。",
+                  "en": "A certificate can assist procurement review, but records and supporting evidence are still needed to demonstrate that the factory actually manufactures in accordance with the relevant requirements."
+                }
+              ]
+            }
+          ],
+          "productLineSlug": "carekeep"
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "第二种分类：医疗器械——专门用于医疗器械物理清洁或消毒",
+            "en": "Category 2: medical devices — physical cleaning or disinfection specifically of medical devices"
+          },
+          "paragraphs": [
+            {
+              "zh": "是属于医疗器械类的产品，均需要CE标志。",
+              "en": "Products classified as medical devices require CE marking."
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "1）医疗器械清洁湿巾：MDR Class I",
+                "en": "1. Medical-device cleaning wipes: MDR Class I"
+              },
+              "paragraphs": [
+                {
+                  "zh": "医疗器械消毒产品需要考虑MDR（Medical Devices Regulation，医疗器械监管法规），很多采购商对此比较熟悉。容易被忽略的是，专门用于清洁医疗器械的产品，也属于MDR管理范围。[8]",
+                  "en": "Medical-device disinfectants must be considered under the Medical Devices Regulation (MDR), a framework familiar to many buyers. What is often overlooked is that products specifically intended to clean medical devices are also within the MDR’s scope.[8]"
+                },
+                {
+                  "zh": "例如，一款目标用途为：擦除医疗器械上的污物、灰尘或残留物的清洁湿巾，由于其仅通过物理作用清洁，且无消毒作用，在没有其他更具体规则适用的情况下，通常可以依据Rule 1分类为Class I（专门用于清洁隐形眼镜的除外[8][9]）。",
+                  "en": "For example, a cleaning wipe intended to remove dirt, dust or residues from medical devices, acting only through physical cleaning and without a disinfecting action, can generally be classified as Class I under Rule 1 where no more specific rule applies. Products specifically intended for cleaning contact lenses are excluded from this example.[8][9]"
+                },
+                {
+                  "zh": "这类Class I产品仍然需要CE。不过，普通 Class I 通常没有公告机构签发的 CE 证书。根据 MDR Article 52(7)，制造商完成相应技术文件和合格评定要求后，可以签署 EU Declaration of Conformity（DoC），并加贴 CE。无菌、具有测量功能或可重复使用外科器械等特殊 Class I 情形，才涉及公告机构在相应范围内的参与。[8]",
+                  "en": "These Class I products still require CE marking. Ordinary Class I devices, however, typically do not have a CE certificate issued by a notified body. Under MDR Article 52(7), once the manufacturer has completed the relevant technical documentation and conformity-assessment requirements, it can sign an EU Declaration of Conformity (DoC) and affix the CE mark. Special Class I cases, such as sterile devices, devices with a measuring function and reusable surgical instruments, involve a notified body within the relevant scope.[8]"
+                },
+                {
+                  "zh": "因此，采购普通 Class I 器械清洁巾时，如果把“Notified Body CE Certificate”设为必交文件，可能会排除本来符合要求的产品。",
+                  "en": "Making a “Notified Body CE Certificate” mandatory when purchasing ordinary Class I device-cleaning wipes may therefore exclude products that otherwise meet the applicable requirements."
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "2）医疗器械消毒湿巾：MDR Class IIa / IIb",
+                "en": "2. Medical-device disinfectant wipes: MDR Class IIa / IIb"
+              },
+              "paragraphs": [
+                {
+                  "zh": "如果湿巾专门用于医疗器械消毒，分类依据为MDR Annex VIII 的 Rule 16。[8][9]Rule 16 的一般规则是，专门用于医疗器械消毒或灭菌的产品归入 Class IIa。如果消毒产品专门用于侵入性医疗器械，而且这次消毒构成器械处理流程的终点，则需要考虑 Class IIb。[8][9]",
+                  "en": "Wipes specifically intended to disinfect medical devices are classified under Rule 16 of MDR Annex VIII.[8][9] The general rule assigns products specifically intended for disinfecting or sterilising medical devices to Class IIa. Class IIb must be considered where a disinfectant is specifically intended for invasive medical devices and that disinfection is the endpoint of the device-processing procedure.[8][9]"
+                },
+                {
+                  "zh": "例如，一款目标用途为：为医疗器械的表面进行初步消毒（非终末消毒）的酒精湿巾，通常可以依据Rule 16分类为Class IIa类医疗器械。而某款蒸汽消毒设备，作用为为医疗器械进行最终消毒，则依据Rule16分类为Class IIb类医疗器械。",
+                  "en": "For example, an alcohol wipe intended for preliminary surface disinfection of medical devices, rather than terminal disinfection, can generally be classified as a Class IIa medical device under Rule 16. A steam-disinfection device intended for final disinfection of medical devices is classified as Class IIb under Rule 16."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "第三种分类：生物灭杀剂——一般人体卫生除菌和公共环境消毒",
+            "en": "Category 3: biocidal products — general human-hygiene and public-environment disinfection"
+          },
+          "paragraphs": [
+            {
+              "zh": "如果湿巾的主要用途是人体卫生除菌，或者消毒公共场所的一般环境物表，则产品由Regulation (EU) No 528/2012，即BPR，进行监管。[17]BPR法规监管的产品本身并不需要CE标志。",
+              "en": "Where a wipe’s main purpose is human-hygiene disinfection or disinfection of general environmental surfaces in public places, it is regulated by Regulation (EU) No 528/2012, the Biocidal Products Regulation (BPR).[17] Products regulated under the BPR do not require CE marking on that basis alone."
+            },
+            {
+              "zh": "BPR分为22个PT，BPR法规监管的湿巾通常属于PT1或PT2。",
+              "en": "The BPR defines 22 product types (PTs). Wipes regulated under the BPR commonly fall within PT1 or PT2."
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "1）PT1：人体卫生",
+                "en": "1. PT1: human hygiene"
+              },
+              "paragraphs": [
+                {
+                  "zh": "普通手部消毒湿巾，是 PT1 的常见例子。它的主要目的在于消毒，与普通清洁皮肤的湿巾有所区别。涉及伤口、术前或注射前皮肤消毒及药用宣称时，还可能进入药品监管范围，不能一概按 BPR PT1 处理。[18]",
+                  "en": "Ordinary hand-disinfection wipes are a common PT1 example. Their primary purpose is disinfection, distinguishing them from ordinary skin-cleansing wipes. Wound disinfection, pre-operative or pre-injection skin disinfection, and medicinal claims may instead bring a product within medicinal-product legislation; these uses cannot all be treated as BPR PT1.[18]"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "2）PT2：不用于直接施用于人体或动物的消毒剂和除藻剂",
+                "en": "2. PT2: disinfectants and algaecides not intended for direct application to humans or animals"
+              },
+              "paragraphs": [
+                {
+                  "zh": "用于办公室、学校、车站、商场等公共场所，消毒普通桌椅、门把手、墙面和地面等一般环境物表的湿巾，通常考虑 BPR PT2。[17]",
+                  "en": "Wipes used in offices, schools, stations, shopping centres and other public places to disinfect ordinary tables, chairs, door handles, walls, floors and similar general environmental surfaces are usually considered under BPR PT2.[17]"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "BPR 采购要核查产品本身的授权与使用范围",
+                "en": "BPR procurement: verify the product’s authorisation and scope of use"
+              },
+              "paragraphs": [
+                {
+                  "zh": "BPR 同时管理活性物质和终端产品。活性物质获批，不等于含有它的每一款湿巾都自动获得市场准入资格。[19]",
+                  "en": "The BPR regulates both active substances and finished products. Approval of an active substance does not automatically grant market access to every wipe containing it.[19]"
+                },
+                {
+                  "zh": "采购时应核实产品在目标国家的授权情况，并查看获准的用途、目标微生物、使用方法和接触时间。测试报告上的效力结论，也应与实际销售产品和标签要求相符。",
+                  "en": "Buyers should verify the product’s authorisation in the target country and check its authorised uses, target microorganisms, instructions for use and contact times. Efficacy conclusions in test reports should also correspond to the product actually sold and its labelling requirements."
+                },
+                {
+                  "zh": "如果同一款湿巾既宣称“Disinfects Medical Devices”，又宣称可以消毒普通桌面和门把手，就需要分别评估这两种用途。医疗器械消毒用途可能适用 MDR，普通环境物表的消毒用途可能适用 BPR。BPR Article 2(2) 已经考虑了这类法规接口，因此，一张 MDR CE 不能自动覆盖产品另外提出的 PT2 用途。[17]因此，对于这类双重用途产品，既需要BPR的合规，也需要MDR的CE标志。",
+                  "en": "If the same wipe claims both “Disinfects Medical Devices” and disinfection of ordinary desks and door handles, the two uses must be assessed separately. Medical-device disinfection may fall under the MDR, while general environmental surface disinfection may fall under the BPR. Article 2(2) of the BPR addresses this regulatory interface: MDR CE marking cannot automatically cover an additional PT2 use claimed for the product.[17] Such dual-purpose products therefore need both BPR compliance and MDR CE marking."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "湿巾监管分类采购对照表",
+            "en": "Wet-wipe regulatory classification checklist"
+          },
+          "paragraphs": [
+            {
+              "zh": "为方便您的采购团队阅读，我们对文章内容进行了总结，我们建议下载收藏该表格：",
+              "en": "For your procurement team’s convenience, we have summarised the article in the table below. We recommend downloading and keeping it for reference:"
+            }
+          ],
+          "table": {
+            "headers": [
+              {
+                "zh": "使用目的",
+                "en": "Intended use"
+              },
+              {
+                "zh": "主体监管框架",
+                "en": "Primary regulatory framework"
+              },
+              {
+                "zh": "常见分类",
+                "en": "Common classification"
+              },
+              {
+                "zh": "采购重点",
+                "en": "Procurement priorities"
+              },
+              {
+                "zh": "CE",
+                "en": "CE marking"
+              }
+            ],
+            "rows": [
+              [
+                {
+                  "zh": "身体清洁、免洗沐浴、洗发、完整皮肤日常护理",
+                  "en": "Body cleansing, rinse-free bathing, hair cleansing and routine care of intact skin"
+                },
+                {
+                  "zh": "Cosmetics Regulation",
+                  "en": "Cosmetics Regulation"
+                },
+                {
+                  "zh": "Cosmetic",
+                  "en": "Cosmetic"
+                },
+                {
+                  "zh": "CPSR、PIF、CPNP、EU RP、ISO22716等",
+                  "en": "CPSR, PIF, CPNP, EU Responsible Person, ISO 22716, etc."
+                },
+                {
+                  "zh": "不适用",
+                  "en": "Not applicable"
+                }
+              ],
+              [
+                {
+                  "zh": "专门通过物理作用清洁医疗器械，隐形眼镜相关产品除外",
+                  "en": "Physical cleaning specifically of medical devices, excluding contact-lens products"
+                },
+                {
+                  "zh": "MDR",
+                  "en": "MDR"
+                },
+                {
+                  "zh": "MDR Class I",
+                  "en": "MDR Class I"
+                },
+                {
+                  "zh": "分类依据、技术文件、DoC、性能资料、ISO13485等",
+                  "en": "Classification rationale, technical documentation, DoC, performance evidence, ISO 13485, etc."
+                },
+                {
+                  "zh": "需要；普通 Class I 通常无公告机构证书",
+                  "en": "Required; ordinary Class I typically has no notified-body certificate"
+                }
+              ],
+              [
+                {
+                  "zh": "非侵入性医疗器械消毒",
+                  "en": "Disinfection of non-invasive medical devices"
+                },
+                {
+                  "zh": "MDR Rule 16",
+                  "en": "MDR Rule 16"
+                },
+                {
+                  "zh": "MDR Class IIa",
+                  "en": "MDR Class IIa"
+                },
+                {
+                  "zh": "公告机构证书、DoC、消毒效力测试报告、ISO13485等",
+                  "en": "Notified-body certificate, DoC, disinfectant-efficacy test reports, ISO 13485, etc."
+                },
+                {
+                  "zh": "需要",
+                  "en": "Required"
+                }
+              ],
+              [
+                {
+                  "zh": "侵入性医疗器械处理流程终点消毒",
+                  "en": "Disinfection at the endpoint of processing invasive medical devices"
+                },
+                {
+                  "zh": "MDR Rule 16",
+                  "en": "MDR Rule 16"
+                },
+                {
+                  "zh": "MDR Class IIb",
+                  "en": "MDR Class IIb"
+                },
+                {
+                  "zh": "同上，并核实具体用途和处理流程",
+                  "en": "As above; also verify the specific intended use and processing procedure"
+                },
+                {
+                  "zh": "需要",
+                  "en": "Required"
+                }
+              ],
+              [
+                {
+                  "zh": "一般人体卫生消毒，例如普通手部消毒",
+                  "en": "General human-hygiene disinfection, e.g. ordinary hand disinfection"
+                },
+                {
+                  "zh": "BPR",
+                  "en": "BPR"
+                },
+                {
+                  "zh": "BPR PT1",
+                  "en": "BPR PT1"
+                },
+                {
+                  "zh": "目标市场授权、获准用途、效力及安全性资料",
+                  "en": "Target-market authorisation, authorised uses, efficacy and safety evidence"
+                },
+                {
+                  "zh": "BPR本身不要求",
+                  "en": "Not required by the BPR itself"
+                }
+              ],
+              [
+                {
+                  "zh": "公共场所一般环境物表消毒",
+                  "en": "Disinfection of general environmental surfaces in public places"
+                },
+                {
+                  "zh": "BPR",
+                  "en": "BPR"
+                },
+                {
+                  "zh": "BPR PT2",
+                  "en": "BPR PT2"
+                },
+                {
+                  "zh": "同上",
+                  "en": "As above"
+                },
+                {
+                  "zh": "BPR本身不要求",
+                  "en": "Not required by the BPR itself"
+                }
+              ]
+            ],
+            "download": {
+              "href": "/assets/blog/blog6/eu-wipes-classification-comparison.html",
+              "label": {
+                "zh": "下载监管分类对照表（中英双语）",
+                "en": "Download the regulatory comparison table (Chinese / English)"
+              }
+            }
+          }
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "结语",
+            "en": "Conclusion"
+          },
+          "paragraphs": [
+            {
+              "zh": "对于采购方，下次发送RFQ前，不妨先根据产品用途理清产品分类。",
+              "en": "Before sending the next RFQ, buyers should clarify the product category based on its intended use."
+            },
+            {
+              "zh": "而对于供应商，熟悉欧洲法规的供应商，应能够解释为什么采用这条监管路线，再提供对应资料。如果对方只能反复强调“我们有证书”，却说不清证书覆盖什么产品和用途，采购审核就还没有完成。",
+              "en": "A supplier familiar with European legislation should be able to explain why a particular regulatory route applies and then provide the corresponding evidence. If a supplier can only repeat “we have certificates” without explaining which products and uses those certificates cover, the procurement review is not yet complete."
+            },
+            {
+              "zh": "如果产品分类做错，后续测试、标签、包装和技术文件都可能跟着返工。把用途写清楚，再讨论需要哪些文件，项目通常会顺得多。",
+              "en": "An incorrect product classification can mean redoing tests, labels, packaging and technical documentation. Clearly defining the intended use before discussing the required documents usually makes the project run more smoothly."
+            },
+            {
+              "zh": "如果您正打算为欧洲市场采购湿巾，欢迎您直接联系维尼的业务开发团队，我们将为您梳理产品合规路径，并提供最优解决方案，让项目丝滑开展。",
+              "en": "If you are planning to source wet wipes for the European market, please contact VINNER’s business development team. We can help map out your product’s compliance route and propose a solution to keep the project moving smoothly."
+            }
+          ],
+          "linkedParagraph": {
+            "href": "/contact/",
+            "text": {
+              "zh": "联系维尼健康业务开发团队",
+              "en": "Contact VINNER Health’s business development team"
+            }
+          }
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "参考文献",
+            "en": "References"
+          },
+          "bullets": [
+            {
+              "zh": "[1] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EC) No 765/2008[S]. Official Journal of the European Union, 2008, L218: 30–47. Article 30.",
+              "en": "[1] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EC) No 765/2008[S]. Official Journal of the European Union, 2008, L218: 30–47. Article 30."
+            },
+            {
+              "zh": "[2] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EC) No 1223/2009 of 30 November 2009 on cosmetic products[S]. Official Journal of the European Union, 2009, L342: 59–209. Consolidated version: 18 May 2026.",
+              "en": "[2] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EC) No 1223/2009 of 30 November 2009 on cosmetic products[S]. Official Journal of the European Union, 2009, L342: 59–209. Consolidated version: 18 May 2026."
+            },
+            {
+              "zh": "[3] WORKING GROUP ON COSMETIC PRODUCTS, SUB-GROUP ON BORDERLINE PRODUCTS. Manual on the Scope of Application of the Cosmetics Regulation (EC) No 1223/2009 (Art. 2(1)(a)), Version 5.5[EB/OL]. June 2025. Section 1.6: Wipes. 非约束性指导文件。",
+              "en": "[3] WORKING GROUP ON COSMETIC PRODUCTS, SUB-GROUP ON BORDERLINE PRODUCTS. Manual on the Scope of Application of the Cosmetics Regulation (EC) No 1223/2009 (Art. 2(1)(a)), Version 5.5[EB/OL]. June 2025. Section 1.6: Wipes. Non-binding guidance."
+            },
+            {
+              "zh": "[4] EUROPEAN COMMISSION. Commission Implementing Decision 2013/674/EU of 25 November 2013 on Guidelines on Annex I to Regulation (EC) No 1223/2009 on cosmetic products[S]. Official Journal of the European Union, 2013, L315: 82–104.",
+              "en": "[4] EUROPEAN COMMISSION. Commission Implementing Decision 2013/674/EU of 25 November 2013 on Guidelines on Annex I to Regulation (EC) No 1223/2009 on cosmetic products[S]. Official Journal of the European Union, 2013, L315: 82–104."
+            },
+            {
+              "zh": "[5] EUROPEAN COMMISSION. Cosmetic product notification portal[EB/OL]. [2026-10-19].",
+              "en": "[5] EUROPEAN COMMISSION. Cosmetic product notification portal[EB/OL]. [2026-10-19]."
+            },
+            {
+              "zh": "[6] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO 22716:2007 Cosmetics—Good Manufacturing Practices (GMP)—Guidelines on Good Manufacturing Practices[S]. Geneva: ISO, 2007. Reviewed and confirmed in 2022.",
+              "en": "[6] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO 22716:2007 Cosmetics—Good Manufacturing Practices (GMP)—Guidelines on Good Manufacturing Practices[S]. Geneva: ISO, 2007. Reviewed and confirmed in 2022."
+            },
+            {
+              "zh": "[7] EUROPEAN COMMISSION. Commission communication in the framework of the implementation of Regulation (EC) No 1223/2009—Publication of titles and references of harmonised standards (2011/C 123/04)[S]. Official Journal of the European Union, 2011, C123: 3.",
+              "en": "[7] EUROPEAN COMMISSION. Commission communication in the framework of the implementation of Regulation (EC) No 1223/2009—Publication of titles and references of harmonised standards (2011/C 123/04)[S]. Official Journal of the European Union, 2011, C123: 3."
+            },
+            {
+              "zh": "[8] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EU) 2017/745 of 5 April 2017 on medical devices[S]. Official Journal of the European Union, 2017, L117: 1–175. Consolidated version: 19 July 2026.",
+              "en": "[8] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EU) 2017/745 of 5 April 2017 on medical devices[S]. Official Journal of the European Union, 2017, L117: 1–175. Consolidated version: 19 July 2026."
+            },
+            {
+              "zh": "[9] MEDICAL DEVICE COORDINATION GROUP. MDCG 2021-24 Rev.1: Guidance on Classification of Medical Devices[EB/OL]. April 2026. 非约束性指导文件。",
+              "en": "[9] MEDICAL DEVICE COORDINATION GROUP. MDCG 2021-24 Rev.1: Guidance on Classification of Medical Devices[EB/OL]. April 2026. Non-binding guidance."
+            },
+            {
+              "zh": "[10] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 14885:2022 Chemical disinfectants and antiseptics—Application of European Standards for chemical disinfectants and antiseptics[S]. Brussels: CEN, 2022. Including corrigendum AC:2023.",
+              "en": "[10] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 14885:2022 Chemical disinfectants and antiseptics—Application of European Standards for chemical disinfectants and antiseptics[S]. Brussels: CEN, 2022. Including corrigendum AC:2023."
+            },
+            {
+              "zh": "[11] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 13727:2012+A2:2015 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of bactericidal activity in the medical area—Test method and requirements (phase 2, step 1)[S]. Brussels: CEN, 2015.",
+              "en": "[11] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 13727:2012+A2:2015 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of bactericidal activity in the medical area—Test method and requirements (phase 2, step 1)[S]. Brussels: CEN, 2015."
+            },
+            {
+              "zh": "[12] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 13624:2021 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of fungicidal or yeasticidal activity in the medical area—Test method and requirements (phase 2, step 1)[S]. Brussels: CEN, 2021.",
+              "en": "[12] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 13624:2021 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of fungicidal or yeasticidal activity in the medical area—Test method and requirements (phase 2, step 1)[S]. Brussels: CEN, 2021."
+            },
+            {
+              "zh": "[13] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 14476:2025 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of virucidal activity in the medical area—Test method and requirements (Phase 2/Step 1)[S]. Brussels: CEN, 2025.",
+              "en": "[13] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 14476:2025 Chemical disinfectants and antiseptics—Quantitative suspension test for the evaluation of virucidal activity in the medical area—Test method and requirements (Phase 2/Step 1)[S]. Brussels: CEN, 2025."
+            },
+            {
+              "zh": "[14] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 16615:2026 Chemical disinfectants and antiseptics—Quantitative test method for the evaluation of bactericidal and yeasticidal and/or fungicidal and/or tuberculocidal and/or mycobactericidal activity on non-porous surfaces with mechanical action employing wipes or mops in the medical area (4-field test)—Test method and requirements (phase 2, step 2)[S]. Brussels: CEN, 2026.",
+              "en": "[14] EUROPEAN COMMITTEE FOR STANDARDIZATION. EN 16615:2026 Chemical disinfectants and antiseptics—Quantitative test method for the evaluation of bactericidal and yeasticidal and/or fungicidal and/or tuberculocidal and/or mycobactericidal activity on non-porous surfaces with mechanical action employing wipes or mops in the medical area (4-field test)—Test method and requirements (phase 2, step 2)[S]. Brussels: CEN, 2026."
+            },
+            {
+              "zh": "[15] MEDICAL DEVICE COORDINATION GROUP. MDCG 2022-5 Rev.1: Guidance on Borderline between Medical Devices and Medicinal Products under Regulation (EU) 2017/745 on Medical Devices[EB/OL]. October 2024. 非约束性指导文件。",
+              "en": "[15] MEDICAL DEVICE COORDINATION GROUP. MDCG 2022-5 Rev.1: Guidance on Borderline between Medical Devices and Medicinal Products under Regulation (EU) 2017/745 on Medical Devices[EB/OL]. October 2024. Non-binding guidance."
+            },
+            {
+              "zh": "[16] EUROPEAN COMMISSION. Updated list of notified bodies’ standard fees[EB/OL]. 13 July 2026.",
+              "en": "[16] EUROPEAN COMMISSION. Updated list of notified bodies’ standard fees[EB/OL]. 13 July 2026."
+            },
+            {
+              "zh": "[17] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EU) No 528/2012 of 22 May 2012 concerning the making available on the market and use of biocidal products[S]. Official Journal of the European Union, 2012, L167: 1–123. Article 2(2), Annex V.",
+              "en": "[17] EUROPEAN PARLIAMENT, COUNCIL OF THE EUROPEAN UNION. Regulation (EU) No 528/2012 of 22 May 2012 concerning the making available on the market and use of biocidal products[S]. Official Journal of the European Union, 2012, L167: 1–123. Article 2(2), Annex V."
+            },
+            {
+              "zh": "[18] EUROPEAN CHEMICALS AGENCY. Guidance on the Biocidal Products Regulation, Volume II: Efficacy, Parts B+C: Assessment and Evaluation, Version 6.0[EB/OL]. August 2023. Section 5.4.1.1.",
+              "en": "[18] EUROPEAN CHEMICALS AGENCY. Guidance on the Biocidal Products Regulation, Volume II: Efficacy, Parts B+C: Assessment and Evaluation, Version 6.0[EB/OL]. August 2023. Section 5.4.1.1."
+            },
+            {
+              "zh": "[19] EUROPEAN CHEMICALS AGENCY. Biocides supplier or user[EB/OL]. [2026-10-19].",
+              "en": "[19] EUROPEAN CHEMICALS AGENCY. Biocides supplier or user[EB/OL]. [2026-10-19]."
+            },
+            {
+              "zh": "[20] EUROPEAN COMMISSION. Commission Implementing Regulation (EU) 2025/1490 of 24 July 2025 amending Implementing Regulation (EU) No 564/2013 as regards the adaptation of fees to inflation[S]. Official Journal of the European Union, 2025, L, 2025/1490.",
+              "en": "[20] EUROPEAN COMMISSION. Commission Implementing Regulation (EU) 2025/1490 of 24 July 2025 amending Implementing Regulation (EU) No 564/2013 as regards the adaptation of fees to inflation[S]. Official Journal of the European Union, 2025, L, 2025/1490."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": {
+        "zh": "法规与合规",
+        "en": "Regulations & Compliance"
+      },
       "date": "2026.09.22 / Blog005",
       "updatedAt": "2026.09.22",
       "title": {
@@ -672,7 +1359,7 @@
       "authorId": "zion-hong",
       "meta": {
         "title": {
-          "zh": "欧盟 PPWR 包装法规要求与合规时间表 | VINNER",
+          "zh": "欧盟 PPWR 包装法规要求与合规时间表 | 维尼健康",
           "en": "EU PPWR Packaging Requirements and Compliance Timeline | VINNER"
         },
         "description": {
@@ -740,80 +1427,215 @@
               "en": "Table 1. Main PPWR requirements by phase"
             },
             "headers": [
-              { "zh": "时间", "en": "Date" },
-              { "zh": "适用范围", "en": "Scope" },
-              { "zh": "主要要求", "en": "Key requirement" }
+              {
+                "zh": "时间",
+                "en": "Date"
+              },
+              {
+                "zh": "适用范围",
+                "en": "Scope"
+              },
+              {
+                "zh": "主要要求",
+                "en": "Key requirement"
+              }
             ],
             "rows": [
               [
-                { "zh": "2026 年 8 月 12 日", "en": "August 12, 2026" },
-                { "zh": "所有包装", "en": "All packaging" },
-                { "zh": "PPWR 开始适用。包装及包装组件中的铅、镉、汞和六价铬浓度总和不得超过100 mg/kg。[1]", "en": "The PPWR applies. The combined concentration of lead, cadmium, mercury and hexavalent chromium in packaging and packaging components must not exceed 100 mg/kg.[1]" }
+                {
+                  "zh": "2026 年 8 月 12 日",
+                  "en": "August 12, 2026"
+                },
+                {
+                  "zh": "所有包装",
+                  "en": "All packaging"
+                },
+                {
+                  "zh": "PPWR 开始适用。包装及包装组件中的铅、镉、汞和六价铬浓度总和不得超过100 mg/kg。[1]",
+                  "en": "The PPWR applies. The combined concentration of lead, cadmium, mercury and hexavalent chromium in packaging and packaging components must not exceed 100 mg/kg.[1]"
+                }
               ],
               [
-                { "zh": "2026 年 8 月 12 日", "en": "August 12, 2026" },
-                { "zh": "食品接触包装", "en": "Food-contact packaging" },
-                { "zh": "PFAS（Per- and Polyfluoroalkyl Substances，全氟和多氟烷基物质）开始受到 Article 5 规定的浓度限制。[1]", "en": "PFAS (per- and polyfluoroalkyl substances) become subject to the concentration limits in Article 5.[1]" }
+                {
+                  "zh": "2026 年 8 月 12 日",
+                  "en": "August 12, 2026"
+                },
+                {
+                  "zh": "食品接触包装",
+                  "en": "Food-contact packaging"
+                },
+                {
+                  "zh": "PFAS（Per- and Polyfluoroalkyl Substances，全氟和多氟烷基物质）开始受到 Article 5 规定的浓度限制。[1]",
+                  "en": "PFAS (per- and polyfluoroalkyl substances) become subject to the concentration limits in Article 5.[1]"
+                }
               ],
               [
-                { "zh": "2026 年 8 月 12 日起", "en": "From August 12, 2026" },
-                { "zh": "所有包装", "en": "All packaging" },
-                { "zh": "Article 6(1) 要求投放欧盟市场的包装具有可回收性；具体 Design for Recycling 评价标准按照后续授权法案逐步落实。[1][4]", "en": "Article 6(1) requires packaging placed on the EU market to be recyclable; detailed Design for Recycling criteria will be implemented through later delegated acts.[1][4]" }
+                {
+                  "zh": "2026 年 8 月 12 日起",
+                  "en": "From August 12, 2026"
+                },
+                {
+                  "zh": "所有包装",
+                  "en": "All packaging"
+                },
+                {
+                  "zh": "Article 6(1) 要求投放欧盟市场的包装具有可回收性；具体 Design for Recycling 评价标准按照后续授权法案逐步落实。[1][4]",
+                  "en": "Article 6(1) requires packaging placed on the EU market to be recyclable; detailed Design for Recycling criteria will be implemented through later delegated acts.[1][4]"
+                }
               ],
               [
-                { "zh": "2028 年 2 月 12 日", "en": "February 12, 2028" },
-                { "zh": "销售包装", "en": "Sales packaging" },
-                { "zh": "包装内部空余空间应减少至保证包装功能所必需的最低程度。[1]", "en": "Empty space inside packaging must be reduced to the minimum needed for the packaging to function.[1]" }
+                {
+                  "zh": "2028 年 2 月 12 日",
+                  "en": "February 12, 2028"
+                },
+                {
+                  "zh": "销售包装",
+                  "en": "Sales packaging"
+                },
+                {
+                  "zh": "包装内部空余空间应减少至保证包装功能所必需的最低程度。[1]",
+                  "en": "Empty space inside packaging must be reduced to the minimum needed for the packaging to function.[1]"
+                }
               ],
               [
-                { "zh": "2028 年 8 月 12 日起", "en": "From August 12, 2028" },
-                { "zh": "大部分包装", "en": "Most packaging" },
-                { "zh": "包装逐步采用欧盟统一标签标明材料组成，以支持消费者正确分类投放。[1]", "en": "Packaging will progressively use harmonised EU labels to identify material composition and support correct sorting by consumers.[1]" }
+                {
+                  "zh": "2028 年 8 月 12 日起",
+                  "en": "From August 12, 2028"
+                },
+                {
+                  "zh": "大部分包装",
+                  "en": "Most packaging"
+                },
+                {
+                  "zh": "包装逐步采用欧盟统一标签标明材料组成，以支持消费者正确分类投放。[1]",
+                  "en": "Packaging will progressively use harmonised EU labels to identify material composition and support correct sorting by consumers.[1]"
+                }
               ],
               [
-                { "zh": "2029 年 2 月 12 日起", "en": "From February 12, 2029" },
-                { "zh": "可重复使用包装", "en": "Reusable packaging" },
-                { "zh": "包装应标明其可重复使用属性，并通过 QR Code 或其他数字载体提供重复使用体系等信息。[1]", "en": "Packaging must indicate that it is reusable and provide information about the reuse system through a QR code or another digital carrier.[1]" }
+                {
+                  "zh": "2029 年 2 月 12 日起",
+                  "en": "From February 12, 2029"
+                },
+                {
+                  "zh": "可重复使用包装",
+                  "en": "Reusable packaging"
+                },
+                {
+                  "zh": "包装应标明其可重复使用属性，并通过 QR Code 或其他数字载体提供重复使用体系等信息。[1]",
+                  "en": "Packaging must indicate that it is reusable and provide information about the reuse system through a QR code or another digital carrier.[1]"
+                }
               ],
               [
-                { "zh": "2030 年 1 月 1 日起", "en": "From January 1, 2030" },
-                { "zh": "大部分包装", "en": "Most packaging" },
-                { "zh": "按 Design for Recycling 评价包装可回收性能：Grade A ≥95%，Grade B ≥80%，Grade C ≥70%；低于 70% 属于技术上不可回收。[1]", "en": "Recyclability is assessed under Design for Recycling: Grade A ≥95%, Grade B ≥80% and Grade C ≥70%; below 70% is technically non-recyclable.[1]" }
+                {
+                  "zh": "2030 年 1 月 1 日起",
+                  "en": "From January 1, 2030"
+                },
+                {
+                  "zh": "大部分包装",
+                  "en": "Most packaging"
+                },
+                {
+                  "zh": "按 Design for Recycling 评价包装可回收性能：Grade A ≥95%，Grade B ≥80%，Grade C ≥70%；低于 70% 属于技术上不可回收。[1]",
+                  "en": "Recyclability is assessed under Design for Recycling: Grade A ≥95%, Grade B ≥80% and Grade C ≥70%; below 70% is technically non-recyclable.[1]"
+                }
               ],
               [
-                { "zh": "2030 年起", "en": "From 2030" },
-                { "zh": "塑料包装", "en": "Plastic packaging" },
-                { "zh": "最低再生塑料含量开始实施：接触敏感型 PET 包装30%；其他接触敏感型塑料包装10%；一次性塑料饮料瓶 30%；其他塑料包装35%。[1]", "en": "Minimum recycled-plastic content begins: 30% for contact-sensitive PET packaging; 10% for other contact-sensitive plastic packaging; 30% for single-use plastic beverage bottles; and 35% for other plastic packaging.[1]" }
+                {
+                  "zh": "2030 年起",
+                  "en": "From 2030"
+                },
+                {
+                  "zh": "塑料包装",
+                  "en": "Plastic packaging"
+                },
+                {
+                  "zh": "最低再生塑料含量开始实施：接触敏感型 PET 包装30%；其他接触敏感型塑料包装10%；一次性塑料饮料瓶 30%；其他塑料包装35%。[1]",
+                  "en": "Minimum recycled-plastic content begins: 30% for contact-sensitive PET packaging; 10% for other contact-sensitive plastic packaging; 30% for single-use plastic beverage bottles; and 35% for other plastic packaging.[1]"
+                }
               ],
               [
-                { "zh": "2030 年 1 月 1 日起", "en": "From January 1, 2030" },
-                { "zh": "一般包装", "en": "General packaging" },
-                { "zh": "包装重量和体积应减少至实现包装功能所需的最低程度，并限制双层壁、假底和不必要包装层等仅用于增加视觉体积的设计。[1]", "en": "Packaging weight and volume must be reduced to the minimum needed for its function, limiting double walls, false bottoms and unnecessary layers used only to increase perceived volume.[1]" }
+                {
+                  "zh": "2030 年 1 月 1 日起",
+                  "en": "From January 1, 2030"
+                },
+                {
+                  "zh": "一般包装",
+                  "en": "General packaging"
+                },
+                {
+                  "zh": "包装重量和体积应减少至实现包装功能所需的最低程度，并限制双层壁、假底和不必要包装层等仅用于增加视觉体积的设计。[1]",
+                  "en": "Packaging weight and volume must be reduced to the minimum needed for its function, limiting double walls, false bottoms and unnecessary layers used only to increase perceived volume.[1]"
+                }
               ],
               [
-                { "zh": "2030 年起", "en": "From 2030" },
-                { "zh": "分组包装、运输包装、电商包装", "en": "Grouped, transport and e-commerce packaging" },
-                { "zh": "最大空余空间比例原则上不得超过50%。[1]", "en": "The maximum empty-space ratio should in principle not exceed 50%.[1]" }
+                {
+                  "zh": "2030 年起",
+                  "en": "From 2030"
+                },
+                {
+                  "zh": "分组包装、运输包装、电商包装",
+                  "en": "Grouped, transport and e-commerce packaging"
+                },
+                {
+                  "zh": "最大空余空间比例原则上不得超过50%。[1]",
+                  "en": "The maximum empty-space ratio should in principle not exceed 50%.[1]"
+                }
               ],
               [
-                { "zh": "2030 年起", "en": "From 2030" },
-                { "zh": "特定行业和场景", "en": "Specific sectors and uses" },
-                { "zh": "Annex V 所列部分一次性塑料包装开始受到限制，包括部分酒店和 HORECA 场景的一次性包装。[1]", "en": "Certain single-use plastic packaging listed in Annex V becomes restricted, including some single-use packaging in hotel and HORECA settings.[1]" }
+                {
+                  "zh": "2030 年起",
+                  "en": "From 2030"
+                },
+                {
+                  "zh": "特定行业和场景",
+                  "en": "Specific sectors and uses"
+                },
+                {
+                  "zh": "Annex V 所列部分一次性塑料包装开始受到限制，包括部分酒店和 HORECA 场景的一次性包装。[1]",
+                  "en": "Certain single-use plastic packaging listed in Annex V becomes restricted, including some single-use packaging in hotel and HORECA settings.[1]"
+                }
               ],
               [
-                { "zh": "2035 年起", "en": "From 2035" },
-                { "zh": "大部分包装", "en": "Most packaging" },
-                { "zh": "在 Design for Recycling 基础上进一步加入 Recycled at Scale（规模化回收）要求，需要考虑包装是否能够在实际回收体系中被收集、分选和规模化回收。[1][4]", "en": "Recycled at Scale requirements are added to Design for Recycling, considering whether packaging can be collected, sorted and recycled at scale in real systems.[1][4]" }
+                {
+                  "zh": "2035 年起",
+                  "en": "From 2035"
+                },
+                {
+                  "zh": "大部分包装",
+                  "en": "Most packaging"
+                },
+                {
+                  "zh": "在 Design for Recycling 基础上进一步加入 Recycled at Scale（规模化回收）要求，需要考虑包装是否能够在实际回收体系中被收集、分选和规模化回收。[1][4]",
+                  "en": "Recycled at Scale requirements are added to Design for Recycling, considering whether packaging can be collected, sorted and recycled at scale in real systems.[1][4]"
+                }
               ],
               [
-                { "zh": "2038 年 1 月 1 日起", "en": "From January 1, 2038" },
-                { "zh": "大部分包装", "en": "Most packaging" },
-                { "zh": "Grade C 包装原则上不得继续投放欧盟市场，包装需达到 Grade A 或 Grade B。[1]", "en": "Grade C packaging may in principle no longer be placed on the EU market; packaging must achieve Grade A or Grade B.[1]" }
+                {
+                  "zh": "2038 年 1 月 1 日起",
+                  "en": "From January 1, 2038"
+                },
+                {
+                  "zh": "大部分包装",
+                  "en": "Most packaging"
+                },
+                {
+                  "zh": "Grade C 包装原则上不得继续投放欧盟市场，包装需达到 Grade A 或 Grade B。[1]",
+                  "en": "Grade C packaging may in principle no longer be placed on the EU market; packaging must achieve Grade A or Grade B.[1]"
+                }
               ],
               [
-                { "zh": "2040 年 1 月 1 日起", "en": "From January 1, 2040" },
-                { "zh": "塑料包装", "en": "Plastic packaging" },
-                { "zh": "最低再生塑料比例进一步提高：接触敏感型 PET 50%；其他接触敏感型塑料25%；一次性塑料饮料瓶 65%；其他塑料包装65%。[1]", "en": "Minimum recycled-plastic content increases further: 50% for contact-sensitive PET; 25% for other contact-sensitive plastic; 65% for single-use plastic beverage bottles; and 65% for other plastic packaging.[1]" }
+                {
+                  "zh": "2040 年 1 月 1 日起",
+                  "en": "From January 1, 2040"
+                },
+                {
+                  "zh": "塑料包装",
+                  "en": "Plastic packaging"
+                },
+                {
+                  "zh": "最低再生塑料比例进一步提高：接触敏感型 PET 50%；其他接触敏感型塑料25%；一次性塑料饮料瓶 65%；其他塑料包装65%。[1]",
+                  "en": "Minimum recycled-plastic content increases further: 50% for contact-sensitive PET; 25% for other contact-sensitive plastic; 65% for single-use plastic beverage bottles; and 65% for other plastic packaging.[1]"
+                }
               ]
             ]
           },
@@ -866,12 +1688,7 @@
             }
           ],
           "pageWindow": {
-            "href": "/products/series/carekeep/",
-            "image": "/assets/gallery-care.jpg",
-            "alt": {
-              "zh": "VINNER 清洁护理湿巾与个人护理使用场景",
-              "en": "VINNER cleansing and care wipes in personal-care settings"
-            },
+            "href": "/products/series/cleansing-care/",
             "kicker": {
               "zh": "相关页面",
               "en": "Related page"
@@ -887,7 +1704,8 @@
             "link": {
               "zh": "查看清洁护理产品线",
               "en": "View the Cleansing & Care line"
-            }
+            },
+            "productLine": "carekeep"
           }
         },
         {
@@ -918,7 +1736,10 @@
       ]
     },
     {
-      "category": "Regulations & Compliance",
+      "category": {
+        "zh": "法规与合规",
+        "en": "Regulations & Compliance"
+      },
       "date": "2026.09.11 / Blog004",
       "updatedAt": "2026.09.14",
       "title": {
@@ -957,75 +1778,201 @@
               "en": "Table 1  Key FLR requirements"
             },
             "headers": [
-              { "zh": "项目", "en": "Item" },
-              { "zh": "FLR 主要要求", "en": "Key FLR requirement" },
-              { "zh": "信息源", "en": "Source" }
+              {
+                "zh": "项目",
+                "en": "Item"
+              },
+              {
+                "zh": "FLR 主要要求",
+                "en": "Key FLR requirement"
+              },
+              {
+                "zh": "信息源",
+                "en": "Source"
+              }
             ],
             "rows": [
               [
-                { "zh": "法规名称", "en": "Regulation" },
-                { "zh": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market", "en": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market" },
-                { "zh": "EU Regulation 2024/3015", "en": "EU Regulation 2024/3015" }
+                {
+                  "zh": "法规名称",
+                  "en": "Regulation"
+                },
+                {
+                  "zh": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market",
+                  "en": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market"
+                },
+                {
+                  "zh": "EU Regulation 2024/3015",
+                  "en": "EU Regulation 2024/3015"
+                }
               ],
               [
-                { "zh": "正式适用时间", "en": "Application date" },
-                { "zh": "2027 年 12 月 14 日起全面适用并开始执法", "en": "Fully applies and enforcement begins on December 14, 2027" },
-                { "zh": "European Commission Single Portal；Regulation Article 39", "en": "European Commission Single Portal; Regulation Article 39" }
+                {
+                  "zh": "正式适用时间",
+                  "en": "Application date"
+                },
+                {
+                  "zh": "2027 年 12 月 14 日起全面适用并开始执法",
+                  "en": "Fully applies and enforcement begins on December 14, 2027"
+                },
+                {
+                  "zh": "European Commission Single Portal；Regulation Article 39",
+                  "en": "European Commission Single Portal; Regulation Article 39"
+                }
               ],
               [
-                { "zh": "适用产品", "en": "Products covered" },
-                { "zh": "原则上覆盖所有产品，不论来源、产品类型或行业", "en": "In principle, all products, regardless of origin, product type or industry" },
-                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+                {
+                  "zh": "适用产品",
+                  "en": "Products covered"
+                },
+                {
+                  "zh": "原则上覆盖所有产品，不论来源、产品类型或行业",
+                  "en": "In principle, all products, regardless of origin, product type or industry"
+                },
+                {
+                  "zh": "Commission Guidelines §3.1",
+                  "en": "Commission Guidelines §3.1"
+                }
               ],
               [
-                { "zh": "适用企业", "en": "Businesses covered" },
-                { "zh": "将产品投放、提供于欧盟市场或从欧盟出口的经济运营商；不设一般性的企业规模豁免", "en": "Economic operators placing products on, making them available on, or exporting them from the EU; no general company-size exemption" },
-                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+                {
+                  "zh": "适用企业",
+                  "en": "Businesses covered"
+                },
+                {
+                  "zh": "将产品投放、提供于欧盟市场或从欧盟出口的经济运营商；不设一般性的企业规模豁免",
+                  "en": "Economic operators placing products on, making them available on, or exporting them from the EU; no general company-size exemption"
+                },
+                {
+                  "zh": "Commission Guidelines §3.1",
+                  "en": "Commission Guidelines §3.1"
+                }
               ],
               [
-                { "zh": "供应链范围", "en": "Supply-chain scope" },
-                { "zh": "强迫劳动发生在原料开采、采收、生产、制造、加工等任何供应链阶段，都可能导致最终产品受到 FLR 监管", "en": "Forced labour at any relevant stage, including extraction, harvesting, production, manufacturing or processing, may bring the finished product within the FLR" },
-                { "zh": "Regulation Article 2(7)；Guidelines §3.1", "en": "Regulation Article 2(7); Guidelines §3.1" }
+                {
+                  "zh": "供应链范围",
+                  "en": "Supply-chain scope"
+                },
+                {
+                  "zh": "强迫劳动发生在原料开采、采收、生产、制造、加工等任何供应链阶段，都可能导致最终产品受到 FLR 监管",
+                  "en": "Forced labour at any relevant stage, including extraction, harvesting, production, manufacturing or processing, may bring the finished product within the FLR"
+                },
+                {
+                  "zh": "Regulation Article 2(7)；Guidelines §3.1",
+                  "en": "Regulation Article 2(7); Guidelines §3.1"
+                }
               ],
               [
-                { "zh": "是否存在最低占比豁免", "en": "Minimum-share exemption" },
-                { "zh": "没有一般性的最低比例豁免；即使强迫劳动部分仅占最终产品较小比例，产品仍可能属于 FLR 范围", "en": "There is no general minimum-share exemption; a product may remain in scope even when the forced-labour component is a small part of the finished product" },
-                { "zh": "Guidelines §3.1", "en": "Guidelines §3.1" }
+                {
+                  "zh": "是否存在最低占比豁免",
+                  "en": "Minimum-share exemption"
+                },
+                {
+                  "zh": "没有一般性的最低比例豁免；即使强迫劳动部分仅占最终产品较小比例，产品仍可能属于 FLR 范围",
+                  "en": "There is no general minimum-share exemption; a product may remain in scope even when the forced-labour component is a small part of the finished product"
+                },
+                {
+                  "zh": "Guidelines §3.1",
+                  "en": "Guidelines §3.1"
+                }
               ],
               [
-                { "zh": "强迫劳动定义", "en": "Definition of forced labour" },
-                { "zh": "采用 ILO Convention No. 29 的基本定义，核心包括劳动是否自愿，以及是否存在惩罚或强制威胁", "en": "Uses the core definition in ILO Convention No. 29, focusing on whether work is voluntary and whether a penalty or coercive threat exists" },
-                { "zh": "Regulation Article 2；Commission Guidelines §3.2", "en": "Regulation Article 2; Commission Guidelines §3.2" }
+                {
+                  "zh": "强迫劳动定义",
+                  "en": "Definition of forced labour"
+                },
+                {
+                  "zh": "采用 ILO Convention No. 29 的基本定义，核心包括劳动是否自愿，以及是否存在惩罚或强制威胁",
+                  "en": "Uses the core definition in ILO Convention No. 29, focusing on whether work is voluntary and whether a penalty or coercive threat exists"
+                },
+                {
+                  "zh": "Regulation Article 2；Commission Guidelines §3.2",
+                  "en": "Regulation Article 2; Commission Guidelines §3.2"
+                }
               ],
               [
-                { "zh": "监管方式", "en": "Regulatory approach" },
-                { "zh": "欧盟主管机关采用 Risk-based Approach，根据风险信息开展初步评估、调查及执法", "en": "EU competent authorities use a risk-based approach for preliminary assessment, investigation and enforcement" },
-                { "zh": "Regulation Article 14", "en": "Regulation Article 14" }
+                {
+                  "zh": "监管方式",
+                  "en": "Regulatory approach"
+                },
+                {
+                  "zh": "欧盟主管机关采用 Risk-based Approach，根据风险信息开展初步评估、调查及执法",
+                  "en": "EU competent authorities use a risk-based approach for preliminary assessment, investigation and enforcement"
+                },
+                {
+                  "zh": "Regulation Article 14",
+                  "en": "Regulation Article 14"
+                }
               ],
               [
-                { "zh": "境外风险调查", "en": "Investigations outside the EU" },
-                { "zh": "如果涉嫌强迫劳动发生在欧盟以外，由欧盟委员会原则上作为 Lead Competent Authority", "en": "When suspected forced labour occurs outside the EU, the European Commission is in principle the Lead Competent Authority" },
-                { "zh": "Regulation Article 15", "en": "Regulation Article 15" }
+                {
+                  "zh": "境外风险调查",
+                  "en": "Investigations outside the EU"
+                },
+                {
+                  "zh": "如果涉嫌强迫劳动发生在欧盟以外，由欧盟委员会原则上作为 Lead Competent Authority",
+                  "en": "When suspected forced labour occurs outside the EU, the European Commission is in principle the Lead Competent Authority"
+                },
+                {
+                  "zh": "Regulation Article 15",
+                  "en": "Regulation Article 15"
+                }
               ],
               [
-                { "zh": "企业信息提供义务", "en": "Duty to provide information" },
-                { "zh": "初步调查阶段，主管机关可要求企业提供识别、预防、降低、终止和补救强迫劳动风险所采取的措施；企业原则上应在 30 个工作日内回应", "en": "During a preliminary investigation, authorities may request measures taken to identify, prevent, mitigate, end and remedy forced-labour risks; businesses generally respond within 30 working days" },
-                { "zh": "Regulation Article 17", "en": "Regulation Article 17" }
+                {
+                  "zh": "企业信息提供义务",
+                  "en": "Duty to provide information"
+                },
+                {
+                  "zh": "初步调查阶段，主管机关可要求企业提供识别、预防、降低、终止和补救强迫劳动风险所采取的措施；企业原则上应在 30 个工作日内回应",
+                  "en": "During a preliminary investigation, authorities may request measures taken to identify, prevent, mitigate, end and remedy forced-labour risks; businesses generally respond within 30 working days"
+                },
+                {
+                  "zh": "Regulation Article 17",
+                  "en": "Regulation Article 17"
+                }
               ],
               [
-                { "zh": "调查确认后的措施", "en": "Measures after confirmation" },
-                { "zh": "可禁止产品继续投放、提供于欧盟市场或出口，并要求已进入市场的产品撤回及处置；拒不执行决定还可能受到成员国规定的处罚", "en": "Authorities may prohibit continued placing, making available or exporting, and require products already on the market to be withdrawn and disposed of; member-state penalties may apply for non-compliance" },
-                { "zh": "Regulation Articles 20、23–25、37", "en": "Regulation Articles 20, 23–25 and 37" }
+                {
+                  "zh": "调查确认后的措施",
+                  "en": "Measures after confirmation"
+                },
+                {
+                  "zh": "可禁止产品继续投放、提供于欧盟市场或出口，并要求已进入市场的产品撤回及处置；拒不执行决定还可能受到成员国规定的处罚",
+                  "en": "Authorities may prohibit continued placing, making available or exporting, and require products already on the market to be withdrawn and disposed of; member-state penalties may apply for non-compliance"
+                },
+                {
+                  "zh": "Regulation Articles 20、23–25、37",
+                  "en": "Regulation Articles 20, 23–25 and 37"
+                }
               ],
               [
-                { "zh": "2027 年前生产的库存产品", "en": "Inventory produced before 2027" },
-                { "zh": "不当然豁免；只要产品在 2027 年 12 月 14 日以后仍被投放或继续提供于欧盟市场，即使产品或零部件此前生产或进口，也仍可能属于 FLR 适用范围", "en": "Not automatically exempt; if products remain placed or made available on the EU market after December 14, 2027, they may still be in scope even if made or imported earlier" },
-                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+                {
+                  "zh": "2027 年前生产的库存产品",
+                  "en": "Inventory produced before 2027"
+                },
+                {
+                  "zh": "不当然豁免；只要产品在 2027 年 12 月 14 日以后仍被投放或继续提供于欧盟市场，即使产品或零部件此前生产或进口，也仍可能属于 FLR 适用范围",
+                  "en": "Not automatically exempt; if products remain placed or made available on the EU market after December 14, 2027, they may still be in scope even if made or imported earlier"
+                },
+                {
+                  "zh": "Commission Guidelines §3.1",
+                  "en": "Commission Guidelines §3.1"
+                }
               ],
               [
-                { "zh": "FLR 是否具有认证", "en": "Whether FLR certification exists" },
-                { "zh": "FLR 没有建立统一的“FLR 认证”，也没有对所有企业设置普遍性的强制审计或定期报告义务", "en": "The FLR does not establish a universal “FLR certification” or a general mandatory audit or periodic-reporting duty for all businesses" },
-                { "zh": "European Commission FLR Portal", "en": "European Commission FLR Portal" }
+                {
+                  "zh": "FLR 是否具有认证",
+                  "en": "Whether FLR certification exists"
+                },
+                {
+                  "zh": "FLR 没有建立统一的“FLR 认证”，也没有对所有企业设置普遍性的强制审计或定期报告义务",
+                  "en": "The FLR does not establish a universal “FLR certification” or a general mandatory audit or periodic-reporting duty for all businesses"
+                },
+                {
+                  "zh": "European Commission FLR Portal",
+                  "en": "European Commission FLR Portal"
+                }
               ]
             ]
           }
@@ -1151,7 +2098,7 @@
           },
           "paragraphs": [
             {
-            "zh": "对于欧洲进口商而言，供应商价值正在从简单的代工生产商转向更合乎道德、人权与法规的负责任的供应商。",
+              "zh": "对于欧洲进口商而言，供应商价值正在从简单的代工生产商转向更合乎道德、人权与法规的负责任的供应商。",
               "en": "For European importers, supplier value is shifting from simple contract manufacturing toward responsible suppliers with stronger ethics, human-rights practices and regulatory readiness."
             }
           ],
@@ -1250,7 +2197,10 @@
       ]
     },
     {
-      "category": "Cleansing & Care",
+      "category": {
+        "zh": "清洁护理",
+        "en": "Cleansing & Care"
+      },
       "date": "2026.08.25 / Blog003",
       "updatedAt": "2026.09.14",
       "title": {
@@ -1419,7 +2369,10 @@
       ]
     },
     {
-      "category": "Infection Control",
+      "category": {
+        "zh": "感染控制",
+        "en": "Infection Control"
+      },
       "date": "2026.08.24 / Blog002",
       "updatedAt": "2026.09.14",
       "title": {
@@ -1677,13 +2630,13 @@
         {
           "level": 1,
           "heading": {
-            "zh": "5. VINNER 两款感染控制新品，即将面世",
-            "en": "5. Two New VINNER Infection-Control Products Coming Soon"
+            "zh": "5. VINNER 感染控制产品研发进展",
+            "en": "5. VINNER Infection-Control Product Development"
           },
           "paragraphs": [
             {
-              "zh": "围绕医疗机构和专业感染控制场景，VINNER 正在内部开发两款专业湿巾产品。目前产品仍处于内部开发阶段，即将正式面世。",
-              "en": "With a focus on healthcare facilities and professional infection-control settings, VINNER is developing two professional wipe products internally. The products are still in internal development and will be officially launched soon."
+              "zh": "围绕医疗机构和专业感染控制场景，VINNER 正在开发两款专业湿巾产品。目前产品处于研发阶段，具体规格与项目适配信息可联系我们咨询。",
+              "en": "VINNER is developing two professional wipe products for healthcare and infection-control settings. Contact us to discuss development specifications and project requirements."
             },
             {
               "zh": "本文新闻中提到的鲍曼不动杆菌（Acinetobacter baumannii）、MRSA（Methicillin-resistant Staphylococcus aureus）和肺炎克雷伯菌（Klebsiella pneumoniae），均已在 VINNER 对应产品上通过欧盟 EN 标准杀菌效力检测。[4]",
@@ -1959,8 +2912,8 @@
               "en": "Product Development Note"
             },
             {
-              "zh": "VINNERLOVE Surface Disinfectant Wipes（VLSDW）和 VINNERLOVE Alcohol Disinfectant Wipes（VLADW）目前均处于 VINNER 内部开发阶段，即将面世。",
-              "en": "VINNERLOVE Surface Disinfectant Wipes (VLSDW) and VINNERLOVE Alcohol Disinfectant Wipes (VLADW) are both currently in VINNER's internal development phase and will be launched soon."
+              "zh": "VINNERLOVE Surface Disinfectant Wipes（VLSDW）和 VINNERLOVE Alcohol Disinfectant Wipes（VLADW）目前均处于 VINNER 研发阶段，具体规格与项目进展可联系我们咨询。",
+              "en": "VINNERLOVE Surface Disinfectant Wipes (VLSDW) and VINNERLOVE Alcohol Disinfectant Wipes (VLADW) are currently in development. Contact VINNER for specifications and project updates."
             }
           ],
           "subsections": [
@@ -2024,7 +2977,10 @@
       ]
     },
     {
-      "category": "OEM/ODM Compliance",
+      "category": {
+        "zh": "OEM/ODM 合规",
+        "en": "OEM/ODM Compliance"
+      },
       "date": "2026.08.21 / Blog001",
       "updatedAt": "2026.09.14",
       "title": {
@@ -2036,7 +2992,10 @@
         "en": "For cosmetic brands planning to enter the U.S. market, selecting an OEM/ODM manufacturer involves much more than formulation, pricing, and production capacity. Brands should also evaluate whether the supplier has the regulatory and compliance foundation required for the U.S. market. Following the implementation of the Modernization of Cosmetics Regulation Act of 2022 (MoCRA), the responsibilities of cosmetic manufacturing facilities, processing facilities, and Responsible Persons have become much clearer."
       },
       "image": "/assets/factory/production-workshop.jpg",
-      "alt": "VINNER 化妆品与湿巾生产车间",
+      "alt": {
+        "zh": "VINNER 化妆品与湿巾生产车间",
+        "en": "VINNER cosmetics and wet wipes production workshop"
+      },
       "slug": "how-to-choose-compliant-us-cosmetics-oem-supplier",
       "authorId": "zion-hong",
       "sections": [
@@ -2163,7 +3122,10 @@
           "pageWindow": {
             "href": "/about/factory-qualification/",
             "image": "/assets/factory/laboratory.jpg",
-            "alt": "VINNER 工厂实验室与质量管理环境",
+            "alt": {
+              "zh": "VINNER 工厂实验室与质量管理环境",
+              "en": "VINNER factory laboratory and quality-control environment"
+            },
             "kicker": {
               "zh": "工厂资质",
               "en": "Factory qualifications"
@@ -2342,133 +3304,224 @@
   "downloads": [
     {
       "type": "PDF",
-      "label": "Product Manual",
-      "title": "VINNERLOVE Rinse-free Bathing Wipes Product Manual",
+      "label": {
+        "zh": "产品手册",
+        "en": "Product Manual"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗沐浴湿巾产品手册",
+        "en": "VINNERLOVE Rinse-free Bathing Wipes Product Manual"
+      },
       "body": {
         "zh": "VLBBW8 免冲洗沐浴湿巾产品手册，包含产品参数、关键亮点、使用场景与 8 片式床旁沐浴使用说明。",
         "en": "Product manual for VLBBW8 Rinse-free Bathing Wipes, including specifications, key features, use scenarios, and the 8-wipe bedside bathing protocol."
       },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf",
+      "access": "download"
     },
     {
       "type": "PDF",
-      "label": "Product Manual",
-      "title": "VINNERLOVE Rinse-free Bathing Gloves Product Manual",
+      "label": {
+        "zh": "产品手册",
+        "en": "Product Manual"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗沐浴手套产品手册",
+        "en": "VINNERLOVE Rinse-free Bathing Gloves Product Manual"
+      },
       "body": {
         "zh": "VLBBG8 免冲洗沐浴手套产品手册，包含产品参数、关键亮点、使用场景与手套式床旁沐浴使用说明。",
         "en": "Product manual for VLBBG8 Rinse-free Bathing Gloves, including specifications, key features, use scenarios, and glove-format bedside bathing instructions."
       },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf",
+      "access": "download"
     },
     {
       "type": "PDF",
-      "label": "Product Manual",
-      "title": "VINNERLOVE Rinse-free Shampoo Cap Product Manual",
+      "label": {
+        "zh": "产品手册",
+        "en": "Product Manual"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗洗发浴帽产品手册",
+        "en": "VINNERLOVE Rinse-free Shampoo Cap Product Manual"
+      },
       "body": {
         "zh": "VLSHMC1 免冲洗洗发浴帽产品手册，包含产品参数、床旁洗发优势、使用场景与使用说明。",
         "en": "Product manual for VLSHMC1 Rinse-free Shampoo Cap, including specifications, bedside shampooing advantages, use scenarios, and instructions."
       },
-      "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
+      "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf",
+      "access": "download"
     },
     {
       "type": "PDF",
-      "label": "Product Manual",
-      "title": "VINNERLOVE Continence Care Wipes Product Manual",
+      "label": {
+        "zh": "产品手册",
+        "en": "Product Manual"
+      },
+      "title": {
+        "zh": "VINNERLOVE 失禁护理湿巾产品手册",
+        "en": "VINNERLOVE Continence Care Wipes Product Manual"
+      },
       "body": {
         "zh": "VLCONCW25 失禁护理湿巾产品手册，包含 4 合 1 护理逻辑、适用场景、MASD/压疮风险护理说明与使用方式。",
         "en": "Product manual for VLCONCW25 Continence Care Wipes, including the 4-in-1 care logic, use scenarios, MASD/pressure-injury risk care notes, and instructions."
       },
-      "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
+      "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf",
+      "access": "download"
     },
     {
       "type": "PDF",
-      "label": "Product Manual",
-      "title": "HOMEKEEP Pure Water Wipes Product Manual",
+      "label": {
+        "zh": "产品手册",
+        "en": "Product Manual"
+      },
+      "title": {
+        "zh": "HOMEKEEP 纯水婴儿湿巾产品手册",
+        "en": "HOMEKEEP Pure Water Wipes Product Manual"
+      },
       "body": {
         "zh": "HKPWW60 纯水湿巾产品手册，包含产品参数、极简配方、使用场景与使用说明。",
         "en": "Product manual for HKPWW60 Pure Water Wipes, including specifications, minimal formula, use scenarios, and instructions."
       },
-      "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
+      "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf",
+      "access": "download"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNERLOVE Rinse-free Bathing Wipes SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗沐浴湿巾安全数据表",
+        "en": "VINNERLOVE Rinse-free Bathing Wipes SDS"
+      },
       "body": {
         "zh": "VLBBW8 免冲洗沐浴湿巾的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VLBBW8 Rinse-free Bathing Wipes. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNERLOVE Rinse-free Bathing Gloves SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗沐浴手套安全数据表",
+        "en": "VINNERLOVE Rinse-free Bathing Gloves SDS"
+      },
       "body": {
         "zh": "VLBBG8 免冲洗沐浴手套的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VLBBG8 Rinse-free Bathing Gloves. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNERLOVE Rinse-free Shampoo Cap SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNERLOVE 免洗洗发浴帽安全数据表",
+        "en": "VINNERLOVE Rinse-free Shampoo Cap SDS"
+      },
       "body": {
         "zh": "VLSHMC1 免冲洗洗发浴帽的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VLSHMC1 Rinse-free Shampoo Cap. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNERLOVE Continence Care Wipes SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNERLOVE 失禁护理湿巾安全数据表",
+        "en": "VINNERLOVE Continence Care Wipes SDS"
+      },
       "body": {
         "zh": "VLCONCW25 失禁护理湿巾的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VLCONCW25 Continence Care Wipes. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "HOMEKEEP Pure Water Wipes SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "HOMEKEEP 纯水婴儿湿巾安全数据表",
+        "en": "HOMEKEEP Pure Water Wipes SDS"
+      },
       "body": {
         "zh": "HKPWW60 纯水湿巾的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for HKPWW60 HOMEKEEP Pure Water Wipes. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNER Surface Disinfectant Wipes SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNER 无醇物表消毒湿巾安全数据表",
+        "en": "VINNER Surface Disinfectant Wipes SDS"
+      },
       "body": {
         "zh": "VINNER Surface Disinfectant Wipes 的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VINNER Surface Disinfectant Wipes. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNER Alcohol Disinfectant Wipes SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNER 酒精物表消毒湿巾安全数据表",
+        "en": "VINNER Alcohol Disinfectant Wipes SDS"
+      },
       "body": {
         "zh": "VINNER Alcohol Disinfectant Wipes 的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VINNER Alcohol Disinfectant Wipes. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     },
     {
       "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNER CHG Wash Cloths SDS",
+      "label": {
+        "zh": "安全数据表",
+        "en": "Safety Data Sheet"
+      },
+      "title": {
+        "zh": "VINNER 氯己定全身擦浴巾安全数据表",
+        "en": "VINNER CHG Wash Cloths SDS"
+      },
       "body": {
         "zh": "VINNER CHG Wash Cloths 的安全数据表，请联系我们获取。",
         "en": "Safety Data Sheet for VINNER CHG Wash Cloths. Contact us to request a copy."
       },
-      "href": ""
+      "href": "",
+      "access": "contact"
     }
   ]
 }

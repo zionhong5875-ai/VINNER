@@ -29,6 +29,9 @@ export const schemaIds = (siteUrl: string) => {
     organization: `${root}#organization`,
     website: `${root}#website`,
     logo: `${root}#logo`,
+    brandVinner: `${root}#brand-vinner`,
+    brandVinnerlove: `${root}#brand-vinnerlove`,
+    brandHomekeep: `${root}#brand-homekeep`,
     headquarters: `${root}#headquarters`,
     factory: `${root}#huanggang-factory`
   };
@@ -69,8 +72,8 @@ export const buildOrganizationNodes = (siteUrl: string, language: Language): Sch
     {
       "@type": "Organization",
       "@id": ids.organization,
-      name: ORGANIZATION_NAME,
-      legalName: ORGANIZATION_LEGAL_NAME,
+      name: isEnglish ? ORGANIZATION_NAME : "维尼健康",
+      legalName: isEnglish ? ORGANIZATION_LEGAL_NAME : "维尼健康（深圳）股份有限公司",
       alternateName: ["VINNER", "维尼", "维尼健康", "维尼健康（深圳）股份有限公司"],
       url: ids.root,
       logo: { "@id": ids.logo },
@@ -91,30 +94,36 @@ export const buildOrganizationNodes = (siteUrl: string, language: Language): Sch
       },
       contactPoint: [{
         "@type": "ContactPoint",
-        contactType: "sales",
+        contactType: isEnglish ? "sales" : "销售咨询",
         email: "hongzihao@vinnercare.cn",
         telephone: "+86-150-1399-5875",
-        areaServed: "Worldwide",
+        areaServed: isEnglish ? "Worldwide" : "全球",
         availableLanguage: ["zh-CN", "en"]
       }],
       sameAs: settings.footer.socials.map((item) => item.href).filter(Boolean),
-      knowsAbout: [
+      knowsAbout: isEnglish ? [
         "Wet wipes manufacturing",
         "Infection control wipes",
         "Personal cleansing wipes",
         "Industrial wiping",
         "Wet wipes OEM/ODM"
-      ],
+      ] : ["湿巾制造", "感染控制湿巾", "个人清洁湿巾", "工业擦拭", "湿巾 OEM/ODM"],
       location: [{ "@id": ids.headquarters }, { "@id": ids.factory }],
       subOrganization: { "@id": ids.factory },
+      brand: [ids.brandVinner, ids.brandVinnerlove, ids.brandHomekeep].map(id => ({ "@id": id })),
       hasCertification: certifications
     },
+    ...[
+      { id: ids.brandVinner, name: "VINNER" },
+      { id: ids.brandVinnerlove, name: "VINNERLOVE" },
+      { id: ids.brandHomekeep, name: "HOMEKEEP" }
+    ].map(brand => ({ "@type": "Brand", "@id": brand.id, name: brand.name })),
     {
       "@type": "ImageObject",
       "@id": ids.logo,
       url: absoluteUrl(settings.brand.logo, siteUrl),
       contentUrl: absoluteUrl(settings.brand.logo, siteUrl),
-      caption: "Vinner logo"
+      caption: isEnglish ? "VINNER Health logo" : "维尼健康标志"
     },
     {
       "@type": "Place",
@@ -181,6 +190,16 @@ export const productBrandName = (code = "", title = "") => {
   if (value.includes("HOMEKEEP")) return "HOMEKEEP";
   if (value.includes("VINNER")) return "Vinner";
   return "Vinner";
+};
+
+export const buildProductBrand = (code: string, title: string, siteUrl: string) => {
+  const name = productBrandName(code, title);
+  const ids = schemaIds(siteUrl);
+  return {
+    "@type": "Brand",
+    "@id": name === "VINNERLOVE" ? ids.brandVinnerlove : name === "HOMEKEEP" ? ids.brandHomekeep : ids.brandVinner,
+    name: name === "Vinner" ? "VINNER" : name
+  };
 };
 
 export const resourceDate = (date = "") => {

@@ -8,7 +8,15 @@ export const glossaryCategories = [
 ];
 export const publishedTerms = [...published].sort((a, b) => a.title.en.localeCompare(b.title.en, "en"));
 export const glossaryTerms = [...publishedTerms];
-export const glossaryPath = (slug) => `/resources/glossary/${slug}/`;
+const englishGlossarySlugs = {
+  "basis-weight": "gsm"
+};
+
+export const glossaryPublicSlug = (slug, language = "zh") =>
+  language === "en" ? englishGlossarySlugs[slug] || slug : slug;
+
+export const glossaryPath = (slug, language = "zh") =>
+  `/resources/glossary/${glossaryPublicSlug(slug, language)}/`;
 
 const compactDescription = (value) => String(value || "").replace(/\s+/g, " ").trim();
 const clipDescription = (value, language) => {
@@ -28,5 +36,14 @@ export const glossaryMetaDescription = (term, language) => {
   ].map(compactDescription).filter(Boolean);
   const source = candidates.find((value) => value.length >= minimum) || candidates.join(" ");
   return clipDescription(source, language);
+};
+
+// Schema describes the visible definition without the search-snippet budget.
+export const glossarySchemaDescription = (term, language) => {
+  const definition = (term.definition?.[language] || [])
+    .map(value => compactDescription(value).replace(/\[\d+\]/g, '').replace(/^\*\s*/, ''))
+    .filter(Boolean)
+    .join(' ');
+  return definition || compactDescription(term.summary?.[language]);
 };
 

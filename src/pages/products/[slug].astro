@@ -2,17 +2,20 @@
 import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
+import ProductFaq from "../../components/ProductFaq.astro";
+import { buildProductFaqSchema } from "../../utils/productFaq.mjs";
 import products from "../../data/site/products.json" with { type: "json" };
-import { text, attrs, localizedPath } from "../../utils/i18n";
-import { getProductLineMeta } from "../../utils/productLines";
+import { text, attrs, imageAttrs, ariaAttrs, localizedPath } from "../../utils/i18n";
+import { getProductLineHref, getProductLineMeta } from "../../utils/productLines";
 import { isDirectDownloadResource, sortResourcesByAccessAndName } from "../../utils/resources.js";
-import { absoluteUrl, productBrandName, schemaIds } from "../../utils/schema";
+import { absoluteUrl, buildProductBrand, schemaIds } from "../../utils/schema";
+import { getProductCardImage, getProductCardAlt } from "../../utils/productImages.mjs";
 
 const entry = products.lines.flatMap((line) =>
-  line.skus.filter((sku) => !sku.comingSoon).map((sku) => ({
+  (Array.isArray(line.skus) ? line.skus : []).filter((sku) => !sku.comingSoon).map((sku) => ({
     line,
     sku,
-    related: line.skus.filter((item) => item.slug !== sku.slug && !item.comingSoon)
+    related: (Array.isArray(line.skus) ? line.skus : []).filter((item) => item.slug !== sku.slug && !item.comingSoon)
   }))
 ).find(({ sku }) => sku.slug === Astro.params.slug);
 
@@ -22,18 +25,41 @@ if (!entry) {
 
 const { line, sku, related } = entry;
 const lineMeta = getProductLineMeta(line);
+const localizedSeoTitles = {
+  "vinnerlove-cream-care-wipes": { zh: "VINNERLOVE 失禁护理湿巾", en: sku.title },
+  "vinnerlove-rinse-free-bathing-gloves": { zh: "VINNERLOVE 免洗沐浴手套", en: sku.title },
+  "vinnerlove-rinse-free-bathing-wipes": { zh: "VINNERLOVE 免洗沐浴湿巾", en: sku.title },
+  "vinnerlove-rinse-free-shampoo-cap": { zh: "VINNERLOVE 免洗洗发浴帽", en: sku.title },
+  "homekeep-pure-water-baby-wipes": { zh: "HOMEKEEP纯水婴儿湿巾", en: sku.title }
+};
+const localizedH1Titles = {
+  "vinnerlove-cream-care-wipes": { zh: "VINNERLOVE 失禁护理湿巾", en: sku.title },
+  "vinnerlove-rinse-free-bathing-gloves": { zh: "VINNERLOVE 免洗沐浴手套", en: sku.title },
+  "vinnerlove-rinse-free-bathing-wipes": { zh: "VINNERLOVE 免洗沐浴湿巾", en: sku.title },
+  "vinnerlove-rinse-free-shampoo-cap": { zh: "VINNERLOVE 免洗洗发浴帽", en: sku.title }
+};
+const seoTitle = localizedSeoTitles[sku.slug] || sku.displayName || { zh: sku.title, en: sku.title };
+const h1Title = localizedH1Titles[sku.slug] || sku.displayName || { zh: sku.title, en: sku.title };
 const pageTitle = {
-  zh: `${sku.title} | VINNER`,
-  en: `${sku.title} | VINNER`
+  zh: `${seoTitle.zh} | 维尼健康`,
+  en: `${seoTitle.en} | VINNER`
+};
+const chineseDescriptions = {
+  "homekeep-pure-water-baby-wipes": "HOMEKEEP 纯水婴儿湿巾采用 99%+ EDI纯水、100% 植物基纤维和极简配方，适合宝宝、敏感肌、老人及全家日常温和清洁护理。",
+  "vinnerlove-rinse-free-bathing-gloves": "VINNERLOVE 免洗沐浴手套将免冲洗清洁护理液与手套式布料结合，便于护理人员在床旁完成更可控、更体面的全身清洁流程。"
 };
 const pageDescription = {
-  zh: sku.intro?.zh || sku.body.zh,
+  zh: chineseDescriptions[sku.slug] || sku.intro?.zh || sku.body.zh,
   en: sku.body?.en || sku.intro.en
 };
 const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
 const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
 const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sku.alt }];
 const galleryTotal = gallery.length;
+const highlights = Array.isArray(sku.highlights) ? sku.highlights : [];
+const specs = Array.isArray(sku.specs) ? sku.specs : [];
+const usage = Array.isArray(sku.usage) ? sku.usage : [];
+const faqItems = Array.isArray(sku.faq) ? sku.faq : [];
 const availableResources = sortResourcesByAccessAndName(sku.downloads || []);
 const relatedProducts = related.slice(0, 3);
 const relatedLineTitle = {
@@ -48,19 +74,16 @@ const productId = `${pageUrl}#product`;
 const productSchema = {
   "@type": "Product",
   "@id": productId,
-  name: sku.title,
+  name: text(seoTitle, language),
   sku: sku.itemNo || sku.code,
-  brand: {
-    "@type": "Brand",
-    name: productBrandName(sku.code, sku.title)
-  },
+  brand: buildProductBrand(sku.code, sku.title, siteUrl),
   manufacturer: { "@id": ids.organization },
   category: text(lineMeta.name, language),
   description: text(pageDescription, language),
   image: gallery.map((image) => absoluteUrl(image.image, siteUrl)),
   url: pageUrl,
   mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
-  additionalProperty: sku.specs.map((spec) => ({
+  additionalProperty: specs.map((spec) => ({
     "@type": "PropertyValue",
     name: text(Array.isArray(spec) ? spec[0] : spec.label, language),
     value: text(Array.isArray(spec) ? spec[1] : spec.value, language)
@@ -77,17 +100,18 @@ const productSchema = {
   breadcrumbs={[
     { name: { zh: "首页", en: "Home" }, path: "/" },
     { name: { zh: "产品", en: "Products" }, path: "/products/" },
-    { name: lineMeta.name, path: `/products/series/${lineMeta.slug}/` },
-    { name: { zh: sku.title, en: sku.title }, path: `/products/${sku.slug}/` }
+    { name: lineMeta.name, path: getProductLineHref(line, language) },
+    { name: seoTitle, path: `/products/${sku.slug}/` }
   ]}
   mainEntityId={productId}
-  schema={productSchema}
+  schema={[productSchema, ...buildProductFaqSchema(faqItems, pageUrl, language)]}
+  pageProperties={faqItems.length ? { hasPart: { "@id": `${pageUrl}#product-faq` } } : {}}
 >
   <section class="product-detail-hero" aria-labelledby="product-title">
     <div class="product-detail-copy">
       <a class="back-link" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>
       <p class="section-kicker" {...attrs(lineMeta.indexLabel)}>{text(lineMeta.indexLabel)}</p>
-      <h1 id="product-title">{sku.title}</h1>
+      <h1 id="product-title" {...attrs(h1Title)}>{text(h1Title)}</h1>
       <p class="product-code">
         <span>{sku.code}</span>
         <span>{sku.itemNo}</span>
@@ -100,12 +124,12 @@ const productSchema = {
         <a class="button button-dark" href="/contact/" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
       </div>
     </div>
-    <div class="product-gallery" data-product-carousel aria-label="Product images">
+    <div class="product-gallery" data-product-carousel {...ariaAttrs({ zh: "产品图片", en: "Product images" })}>
       <div class="product-gallery-main" tabindex="0">
         <div class="product-gallery-track">
           {gallery.map((image, index) => (
             <figure class:list={["product-gallery-slide", index === 0 && "is-active"]}>
-              <img src={image.image} alt={image.alt} />
+              <img src={image.image} {...imageAttrs(image.alt)} />
             </figure>
           ))}
         </div>
@@ -121,7 +145,7 @@ const productSchema = {
       </div>
       <div class="product-thumbnails" role="list" data-aria-label-zh="产品图片缩略图" data-aria-label-en="Product image thumbnails" aria-label="产品图片缩略图">
         {gallery.map((image, index) => (
-          <button class:list={["product-thumbnail", index === 0 && "is-active"]} type="button" data-product-thumb={index} aria-label={`Show product image ${index + 1}`}>
+          <button class:list={["product-thumbnail", index === 0 && "is-active"]} type="button" data-product-thumb={index} {...ariaAttrs({ zh: `显示第 ${index + 1} 张产品图`, en: `Show product image ${index + 1}` })}>
             <img src={image.image} alt="" />
           </button>
         ))}
@@ -134,7 +158,7 @@ const productSchema = {
       <h2 id="overview-title" class="detail-section-label" data-zh="产品定位" data-en="Product position">产品定位</h2>
     </div>
     <div class="detail-highlight-grid">
-      {sku.highlights.map((highlight) => (
+      {highlights.map((highlight) => (
         <article>
           <span class="highlight-icon" aria-hidden="true">+</span>
           <p><GlossaryLinkedText value={highlight} context="feature" /></p>
@@ -148,7 +172,7 @@ const productSchema = {
       <h2 id="spec-title" class="detail-section-label" data-zh="规格与结构" data-en="Format & build">规格与结构</h2>
     </div>
     <dl class="detail-spec-list">
-      {sku.specs.map((spec) => (
+      {specs.map((spec) => (
         <div>
         <dt><GlossaryLinkedText value={Array.isArray(spec) ? spec[0] : spec.label} context="label" /></dt>
         <dd><GlossaryLinkedText value={Array.isArray(spec) ? spec[1] : spec.value} context="spec" /></dd>
@@ -162,7 +186,7 @@ const productSchema = {
       <h2 id="usage-title" class="detail-section-label" data-zh="使用流程" data-en="Use protocol">使用流程</h2>
     </div>
     <ol class="usage-steps">
-      {sku.usage.map((step, index) => (
+      {usage.map((step, index) => (
         <li>
           <span>{String(index + 1).padStart(2, "0")}</span>
           <h3 class="sr-only" data-zh={`步骤 ${index + 1}`} data-en={`Step ${index + 1}`}>步骤 {index + 1}</h3>
@@ -172,6 +196,8 @@ const productSchema = {
     </ol>
   </section>
 
+  <ProductFaq items={faqItems} />
+
   {availableResources.length > 0 && (
     <section class="product-detail-section download-panel" id="resources" aria-labelledby="downloads-title">
       <div class="detail-section-heading">
@@ -180,13 +206,13 @@ const productSchema = {
       <div class="download-card-grid">
         {availableResources.map((download) => (
           <a class="download-card" href={isDirectDownloadResource(download) ? download.href : "/contact/"} {...(isDirectDownloadResource(download) ? { download: true } : {})}>
-            <span>{download.type}</span>
+            <span>{language === "zh" && download.type === "Brochure" ? "产品手册" : download.type}</span>
             <strong {...attrs(download.title)}>{text(download.title)}</strong>
             <small
-              data-zh={isDirectDownloadResource(download) ? "下载 Brochure" : "联系我们获取"}
+              data-zh={isDirectDownloadResource(download) ? "下载产品手册" : "联系我们获取"}
               data-en={isDirectDownloadResource(download) ? "Download brochure" : "Contact us to request"}
             >
-              {isDirectDownloadResource(download) ? "下载 Brochure" : "联系我们获取"}
+              {isDirectDownloadResource(download) ? "下载产品手册" : "联系我们获取"}
             </small>
           </a>
         ))}
@@ -202,12 +228,12 @@ const productSchema = {
       </div>
       <div class="related-grid">
         {relatedProducts.map((item) => (
-          <a class="related-card" href={`/products/${item.slug}/`}>
-            <figure>
-              <img src={item.image} alt={item.alt} />
+          <a class="related-card" href={localizedPath(`/products/${item.slug}/`, language)}>
+            <figure class="product-card-media">
+              <img src={getProductCardImage(item, lineMeta.slug)} {...imageAttrs(getProductCardAlt(item, lineMeta.slug))} loading="lazy" decoding="async" />
             </figure>
             <span>{item.code}</span>
-            <h3>{item.title}</h3>
+            <h3 {...attrs(item.displayName || item.title)}>{text(item.displayName || item.title)}</h3>
             <p {...attrs(item.body)}>{text(item.body)}</p>
           </a>
         ))}

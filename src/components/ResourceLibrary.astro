@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import resources from "../data/site/resources.json" with { type: "json" };
 import settings from "../data/site/siteSettings.json";
-import { attrs, text } from "../utils/i18n";
+import { attrs, text, ariaAttrs } from "../utils/i18n";
 import { localizedPath } from "../utils/i18n";
 import { absoluteUrl, buildAuthorNode, resourceDate, schemaIds } from "../utils/schema";
 import { searchConfig } from "../utils/search-config.mjs";
@@ -36,8 +36,8 @@ const views = {
     eyebrow: { zh: "资源中心", en: "Resource Library" },
     title: { zh: "所有资源", en: "All Resources" },
     description: {
-      zh: "集中浏览维尼的博客、新闻与可直接下载的产品资料，按内容类型快速找到需要的信息。",
-      en: "Browse VINNER blogs, news, and product materials available for direct download."
+      zh: "集中浏览维尼的博客、新闻、可直接下载的产品资料与行业术语库，按内容类型快速找到需要的信息。",
+      en: "Explore VINNER's resource hub for wet wipes and infection control insights, company news, industry glossary terms, and downloadable resources."
     },
     listTitle: { zh: "所有资源", en: "All Resources" }
   },
@@ -67,7 +67,7 @@ const views = {
     title: { zh: "所有文件", en: "All Files" },
     description: {
       zh: "下载维尼现有的五款产品手册，支持产品选型、培训、项目评估和客户沟通。",
-      en: "Download VINNER product manuals for product selection, training, and project evaluation."
+      en: "Download VINNER product manuals for wet wipes, including rinse-free bathing, shampoo caps, continence care, and pure water baby wipes."
     },
     listTitle: { zh: "可下载文件", en: "All Files" }
   }
@@ -130,7 +130,7 @@ const resourceListSchema = {
 ---
 
 <BaseLayout
-  title={{ zh: `${current.title.zh} | VINNER`, en: `${current.title.en} | VINNER` }}
+  title={{ zh: `${current.title.zh} | 维尼健康`, en: `${current.title.en} | VINNER` }}
   description={current.description}
   image={libraryImage}
   pageType="CollectionPage"
@@ -149,7 +149,7 @@ const resourceListSchema = {
   </section>
 
   <section class="resource-library-shell" aria-labelledby="library-list-title">
-    <aside class="resource-library-sidebar" aria-label="Resource library navigation">
+    <aside class="resource-library-sidebar" {...ariaAttrs({ zh: "资源库导航", en: "Resource library navigation" })}>
       <nav class="resource-library-nav">
         {sidebarLinks.map((item) => (
           <a
@@ -161,7 +161,7 @@ const resourceListSchema = {
       </nav>
       <div class="resource-library-socials">
         <p data-zh="关注我们" data-en="Follow us">关注我们</p>
-        <div aria-label="Social media links">
+        <div {...ariaAttrs({ zh: "社交媒体链接", en: "Social media links" })}>
           {settings.footer.socials.map((item) => (
             <a href={item.href} aria-label={item.name} title={item.name} target="_blank" rel="noopener noreferrer">
               <img src={item.icon} alt="" loading="lazy" />
@@ -182,7 +182,7 @@ const resourceListSchema = {
         {entries.map(({ kind, item }) => {
           const isFile = kind === "file";
           const entryLabel = isFile
-            ? { zh: item.label || entryLabels.file.zh, en: item.label || entryLabels.file.en }
+            ? item.label || entryLabels.file
             : entryLabels[kind];
           const href = isFile ? item.href : `/resources/${item.slug}/`;
           const action = isFile

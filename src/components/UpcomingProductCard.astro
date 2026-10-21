@@ -1,0 +1,9 @@
+---
+import ProductCard from "./ProductCard.astro";
+
+const { sku, lineSlug } = Astro.props;
+const image = sku.card?.image || "/assets/coming-soon.png";
+const alt = sku.card?.image ? sku.card.alt || sku.alt : { zh: `${sku.displayName?.zh || sku.title}：即将上市`, en: `${sku.displayName?.en || sku.title}: coming soon` };
+---
+
+<ProductCard sku={sku} lineSlug={lineSlug} image={image} alt={alt} variant="upcoming" />

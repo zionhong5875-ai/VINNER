@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import policies from "../data/legal/policies.json" with { type: "json" };
 import settings from "../data/site/siteSettings.json";
-import { text, attrs } from "../utils/i18n";
+import { ariaAttrs, text, attrs } from "../utils/i18n";
 import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
 
 const policy = policies[Astro.params.policy];
@@ -12,7 +12,7 @@ if (!policy) {
 const policyLinks = settings.footer.legal;
 const language = Astro.locals.language || "zh";
 const pageTitle = {
-  zh: `${policy.title.zh} | VINNER`,
+  zh: `${policy.title.zh} | 维尼健康`,
   en: `${policy.title.en} | VINNER`
 };
 ---
@@ -45,7 +45,7 @@ const pageTitle = {
         <p data-zh="最近更新" data-en="Last updated">最近更新</p>
         <strong>{policy.updatedAt}</strong>
       </div>
-      <nav class="policy-nav" aria-label="Policy navigation">
+      <nav class="policy-nav" {...ariaAttrs({ zh: "政策导航", en: "Policy navigation" })}>
         <p data-zh="政策导航" data-en="Policy navigation">政策导航</p>
         {policyLinks.map((item) => (
           <a

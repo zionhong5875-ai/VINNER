@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GlossaryBrowser from "../../components/GlossaryBrowser.astro";
 import { searchConfig } from "../../utils/search-config.mjs";
-import { glossaryMetaDescription, glossaryPath, glossaryTerms } from "../../utils/glossary.mjs";
+import { glossaryPath, glossaryTerms } from "../../utils/glossary.mjs";
 import { absoluteUrl } from "../../utils/schema";
 import { localizedPath } from "../../utils/i18n";
 const en = Astro.locals.language === "en";
@@ -15,12 +15,12 @@ const glossaryDescription = {
 };
 const pageUrl = absoluteUrl(localizedPath("/resources/glossary/", language), searchConfig.siteUrl);
 const termNodes = glossaryTerms.map((term) => {
-  const url = absoluteUrl(localizedPath(glossaryPath(term.slug), language), searchConfig.siteUrl);
+  const url = absoluteUrl(localizedPath(glossaryPath(term.slug, language), language), searchConfig.siteUrl);
   return {
     "@type": "DefinedTerm",
     "@id": `${url}#defined-term`,
     name: term.title[language],
-    description: glossaryMetaDescription(term, language),
+    description: term.summary[language].replace(/\s+/g, " ").trim(),
     url,
     inLanguage: language === "en" ? "en" : "zh-CN"
   };
@@ -51,7 +51,7 @@ const glossarySchema = [
 ];
 ---
 <BaseLayout
-  title={{ zh: "知识与术语 | VINNER", en: "Glossary | VINNER" }}
+  title={{ zh: "知识与术语 | 维尼健康", en: "Glossary | VINNER" }}
   description={glossaryDescription}
   image="/assets/resource-library.jpg"
   pageType="CollectionPage"

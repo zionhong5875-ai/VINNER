@@ -13,3 +13,7 @@ test('localized links and source page metadata are preserved', () => {
   const r=extractBacklinks('<meta property="og:description" content="Description"><main><h1>English page</h1><p><a href="/en/resources/glossary/gmp/">GMP</a></p></main>', '/en/about/vinner/');
   assert.deepEqual(r.terms,['gmp']);assert.equal(r.page.href,'/en/about/vinner/');assert.equal(r.page.title,'English page');
 });
+test('canonical English GSM URLs map back to the stable glossary term ID', () => {
+  const html = '<main><p>100<a href="/en/resources/glossary/gsm/">gsm</a></p></main>';
+  assert.deepEqual(extractBacklinks(html, '/en/products/example/').terms, ['basis-weight']);
+});

@@ -1,8 +1,8 @@
 .DS_Store
 node_modules/
 dist/
+.edgeone/
 .astro/
-.vercel/
 *.zip
 assets/preview-astro*.png
 
@@ -14,6 +14,29 @@ keep-brand-video/assets/video-source/
 keep-brand-video/node_modules/
 keep-brand-video/dist/
 keep-brand-video/.hyperframes/
-.vercel
 .env*
 !.env.example
+
+# Local source material, private documents and verification output (not deployed)
+/output/
+/tmp/
+/private-resources/
+/SEO审计/
+/官网审查/
+/Factory_Pics/
+/Factory_Certification_Assests/
+/News_Assests/
+/Glossary/
+/HKPWW60_Assests/
+/VLBBW8_Assets/
+/VLBBG8_Asssets/
+/VLSHMC1_Assests/
+/VLCONCW25_Assests/
+/OEM 产品线图片/
+/合作伙伴&采购方 Partners&Buyers/
+/关于维尼页面/
+/关于维尼.txt
+/工厂介绍.txt
+/assets/Home_Carousel/
+/assets/product-originals/
+/assets/Coming Soon.png

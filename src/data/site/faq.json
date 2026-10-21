@@ -1,0 +1,48 @@
+{
+  "title": {
+    "zh": "您可能想了解更多关于与维尼健康的合作",
+    "en": "What you may want to know about working with VINNER Health"
+  },
+  "items": [
+    {
+      "question": { "zh": "维尼健康是湿巾制造商吗？工厂在哪里？", "en": "Is VINNER Health a wet wipes manufacturer? Where is the factory?" },
+      "paragraphs": [
+        { "zh": "维尼健康是一家专注湿巾研发、生产与销售的制造商。我们成立于2004年，总部位于广东省深圳市，工厂（分公司）位于湖北省黄冈市。", "en": "VINNER Health is a manufacturer specializing in the research, development, production and sale of wet wipes. Founded in 2004, we are headquartered in Shenzhen, Guangdong, with our factory (branch company) in Huanggang, Hubei, China." },
+        { "zh": "我们从事湿巾与干巾的ODM、OEM与OBM，即我们为客户提供产品研发、合同制造服务，同时我们也提供旗下自有品牌的直接分销。", "en": "We provide ODM, OEM and OBM services for wet and dry wipes: product development and contract manufacturing for our customers, as well as direct distribution of our own brands." }
+      ],
+      "related": "about"
+    },
+    {
+      "question": { "zh": "维尼健康可以提供哪些资质与认证？", "en": "What qualifications and certifications does VINNER Health hold?" },
+      "paragraphs": [
+        { "zh": "维尼健康具有消毒产品生产许可证、化妆品生产许可证，能够从事消毒类与个人清洁、护理类产品的生产。", "en": "VINNER Health holds production licenses for disinfection products and cosmetics, enabling us to manufacture disinfection, personal cleansing and care products." },
+        { "zh": "消毒与医疗类产品方面，我们具有国际通用的医疗器械GMP资质（ISO13485）；化妆品类产品方面，我们具有国际通用的化妆品GMP资质（ISO22716），并同时符合美国FDA化妆品GMP指导准则。", "en": "For disinfection and medical products, we hold internationally recognized medical-device GMP qualifications (ISO 13485). For cosmetics, we hold internationally recognized cosmetics GMP qualifications (ISO 22716) and also comply with the U.S. FDA's cosmetics GMP guidelines." },
+        { "zh": "此外，我们在劳工、环境与公司治理上，具有多项国际通用认证和审计报告。", "en": "We also hold multiple internationally recognized certifications and audit reports covering labor, the environment and corporate governance." }
+      ],
+      "related": "qualifications"
+    },
+    {
+      "question": { "zh": "最低起订量是多少？", "en": "What is the minimum order quantity?" },
+      "paragraphs": [
+        { "zh": "通常而言，合同制造产品MOQ为30,000–100,000包（根据不同产品而定）或一个独立的货柜。维尼健康自有品牌产品的分销则更加灵活。", "en": "The MOQ for contract-manufactured products is typically 30,000–100,000 packs, depending on the product, or one dedicated shipping container. Distribution of VINNER Health's own-brand products offers greater flexibility." }
+      ]
+    },
+    {
+      "question": { "zh": "维尼健康的优势是什么？我为什么要选择维尼健康？", "en": "What are VINNER Health's strengths, and why should I choose you?" },
+      "paragraphs": [
+        { "zh": "第一，就合规资质与管理体系而言，维尼健康是“大满贯”选手。我们的资质涵盖国内与全球通用的全品类湿巾，保障您的产品在制造环节的品质与合规；", "en": "First, VINNER Health offers a comprehensive range of compliance qualifications and management systems. Our qualifications cover all categories of wet wipes for domestic and international markets, supporting product quality and compliance throughout manufacturing." },
+        { "zh": "第二，就湿巾研发技术而言，维尼健康具有二十年以上的湿巾研发经验与配方积累，并拥有独立的生物化学与研发实验室，保障您的产品达到最好的使用体验；", "en": "Second, we bring more than 20 years of wet-wipe R&D experience and formulation expertise, supported by independent biochemistry and R&D laboratories to deliver the best possible product experience." },
+        { "zh": "第三，就工厂实力而言，维尼健康具有超过95%自动化率的生产线与最高8×40HQ的每日产能；", "en": "Third, our production lines have an automation rate of over 95%, with daily production capacity reaching up to eight 40-foot high-cube containers (8 × 40HQ)." },
+        { "zh": "第四，就信任成本而言，{{partners}}，我们自身与客户均以最高品质要求维尼的生产与物流环节，过往的履历有效降低了我们与客户的信任成本。", "en": "Fourth, {{partners}}. Both we and our customers hold VINNER's production and logistics to the highest quality standards. This track record helps reduce the effort required to establish trust with new customers." }
+      ]
+    },
+    {
+      "question": { "zh": "如何与维尼健康联系？", "en": "How can I contact VINNER Health?" },
+      "paragraphs": [
+        { "zh": "您可以直接通过官网的{{form}}发送您的需求，我们时刻会关注该表单；", "en": "You can submit your requirements through our website's {{form}}, which our team monitors regularly." },
+        { "zh": "同时您也可以直接通过官网的{{contacts}}联系到我们的业务开发经理。", "en": "You can also reach our business development managers directly using the {{contacts}} listed on our website." }
+      ],
+      "related": "contact"
+    }
+  ]
+}

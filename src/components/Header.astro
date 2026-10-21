@@ -1,5 +1,10 @@
 ---
+import { ariaAttrs } from "../utils/i18n";
 import settings from "../data/site/siteSettings.json";
+import { getProductLinePublicSlug } from "../utils/productLines.js";
+
+const language = Astro.locals.language || "zh";
+const productLineHref = (slug) => `/products/series/${getProductLinePublicSlug(slug, language)}/`;
 
 const nav = [
   { href: "/", label: settings.navigation.home },
@@ -7,9 +12,9 @@ const nav = [
     href: "/products/",
     label: settings.navigation.products,
     children: [
-      { href: "/products/series/medikeep/", zh: "感染控制", en: "INFECTION CONTROL" },
-      { href: "/products/series/carekeep/", zh: "清洁护理", en: "CLEANSING & CARE" },
-      { href: "/products/series/indukeep/", zh: "工业擦拭", en: "INDUSTRIAL WIPING" },
+      { href: productLineHref("medikeep"), zh: "感染控制", en: "INFECTION CONTROL" },
+      { href: productLineHref("carekeep"), zh: "清洁护理", en: "CLEANSING & CARE" },
+      { href: productLineHref("indukeep"), zh: "工业擦拭", en: "INDUSTRIAL WIPING" },
       { href: "/products/series/oem-odm/", zh: "定制开发", en: "OEM/ODM" }
     ]
   },
@@ -57,7 +62,7 @@ const nav = [
       <div class:list={["site-nav-item", item.children?.length ? "has-subnav" : ""]}>
         <a class="site-nav-link" href={item.href} data-zh={item.label.zh} data-en={item.label.en}>{item.label.zh}</a>
         {item.children?.length && (
-          <div class="site-subnav" aria-label={item.label.zh}>
+          <div class="site-subnav" {...ariaAttrs(item.label)}>
             {item.children.map((child) => (
               <a href={child.href} data-zh={child.zh} data-en={child.en}>{child.zh}</a>
             ))}

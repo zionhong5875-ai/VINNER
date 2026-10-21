@@ -3,19 +3,28 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
   "scripts": {
     "test:contact": "node --test scripts/contact.test.mjs",
     "dev": "astro dev",
+    "prebuild": "node scripts/validate-cms-content.mjs && node scripts/check-sitemap.mjs",
     "build": "astro build",
+    "postbuild": "node scripts/check-sitemap.mjs --built",
+    "check:sitemap": "node scripts/check-sitemap.mjs",
+    "test:sitemap": "node --test scripts/sitemap.test.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "check:glossary-links": "node scripts/check-glossary-links.mjs",
     "audit:seo": "node scripts/audit-seo.mjs",
     "audit:crawl": "node scripts/audit-crawl.mjs",
     "audit:release": "node scripts/audit-release.mjs",
+    "audit:language": "node scripts/audit-language.mjs",
     "audit:backlinks": "node scripts/audit-glossary-backlinks.mjs",
     "test:backlinks": "node --test scripts/glossary-backlinks.test.mjs",
     "audit:glossary-links": "node scripts/audit-glossary-links.mjs",
+    "audit:product-faq": "node scripts/audit-product-faq.mjs",
     "test:search": "node --test scripts/search.test.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },

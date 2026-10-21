@@ -1,3 +1,7 @@
+import products from "../data/site/products.json" with { type: "json" };
+
+const careLine = products.lines.find((line) => line.slug === "carekeep");
+
 export const productLineMeta = {
   medikeep: {
     slug: "medikeep",
@@ -68,8 +72,8 @@ export const productLineMeta = {
       zh: "清洁护理系列更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
       en: "CLEANSING & CARE centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
     },
-    image: "/assets/gallery-care.jpg",
-    alt: "VINNER 清洁护理产品使用场景",
+    image: careLine.image,
+    alt: careLine.alt,
     uses: [
       {
         zh: "卧床、术后、老年和长期照护人群",
@@ -186,9 +190,36 @@ export const getProductLineMeta = (line) => {
     products: line.products || fallback.products,
     detail: line.detail || fallback.detail || line.summary || fallback.summary,
     image: line.image || fallback.image,
+    imageWidth: line.imageWidth,
+    imageHeight: line.imageHeight,
     alt: line.alt || fallback.alt || line.name?.zh || fallback.name?.zh || "",
     uses: line.uses?.length ? line.uses : fallback.uses || []
   };
 };
 
-export const getProductLineHref = (line) => `/products/series/${getProductLineMeta(line)?.slug || ""}/`;
+// References always inherit both the image and its bilingual description.
+// Keep product-line media in products.json so every placement updates together.
+export const resolveProductLineMedia = (entry, lines = products.lines) => {
+  if (!entry.productLine) return entry;
+  const line = lines.find((line) => line.slug === entry.productLine);
+  if (!line) throw new Error(`Unknown product-line media reference: ${entry.productLine}`);
+  return {
+    ...entry,
+    image: line.image,
+    alt: line.alt,
+    imageWidth: line.imageWidth,
+    imageHeight: line.imageHeight
+  };
+};
+
+const publicProductLineSlugs = {
+  medikeep: "infection-control",
+  carekeep: "cleansing-care",
+  indukeep: "industrial-wiping"
+};
+
+export const getProductLinePublicSlug = (slug, language = "zh") =>
+  publicProductLineSlugs[slug] || slug;
+
+export const getProductLineHref = (line, language = "zh") =>
+  `/products/series/${getProductLinePublicSlug(getProductLineMeta(line)?.slug || "", language)}/`;

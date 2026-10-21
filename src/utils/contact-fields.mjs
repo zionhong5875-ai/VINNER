@@ -17,7 +17,8 @@ export const contactFields = [
   { name: "regulation", zh: "适用法规", en: "Applicable regulation", options: [
     option("cosmetics", "由化妆品法规监管", "Cosmetics regulations"),
     option("bpr", "由BPR法规监管", "BPR regulations"),
-    option("medical", "由医疗器械法规监管", "Medical device regulations")
+    option("medical", "由医疗器械法规监管", "Medical device regulations"),
+    option("not-sure", "不确定", "Not sure")
   ] },
   { name: "need", zh: "产品类型", en: "Product type", options: [
     option("medikeep", "感染控制", "Infection control"),

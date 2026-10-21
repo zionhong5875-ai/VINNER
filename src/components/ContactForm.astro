@@ -1,5 +1,5 @@
 ---
-import { text, attrs } from "../utils/i18n";
+import { text, attrs, ariaAttrs } from "../utils/i18n";
 import { contactFields } from "../utils/contact-fields.mjs";
 
 const {
@@ -60,7 +60,7 @@ const {
     <p id="contact-file-help" class="contact-file-help" data-zh="可将 PDF 拖入此处，或点击上传文件（最多 3 个，合计 4 MB）" data-en="Drop PDFs here or upload files (up to 3 files, 4 MB total)">可将 PDF 拖入此处，或点击上传文件（最多 3 个，合计 4 MB）</p>
     </div>
     <div class="contact-files" data-contact-files aria-live="polite"></div>
-    <input type="file" accept=".pdf,application/pdf" multiple data-contact-file-input hidden aria-label="PDF attachments" />
+    <input type="file" accept=".pdf,application/pdf" multiple data-contact-file-input hidden {...ariaAttrs({ zh: "PDF 附件", en: "PDF attachments" })} />
     <input class="contact-form-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
     <div class="button-row contact-actions">
     <button class="button button-dark" type="button" data-contact-upload data-zh="上传文件" data-en="Upload files">上传文件</button>

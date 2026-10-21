@@ -1,0 +1,15 @@
+---
+import FaqAccordion from "./FaqAccordion.astro";
+import "../styles/faq.css";
+import "../styles/product-faq.css";
+const { items = [] } = Astro.props;
+const language = Astro.locals.language === "en" ? "en" : "zh";
+---
+{items.length > 0 && (
+  <section class="product-detail-section faq-section product-faq-section" id="product-faq" aria-labelledby="product-faq-title">
+    <div class="detail-section-heading">
+      <h2 id="product-faq-title" class="detail-section-label" data-zh="常见问题" data-en="FAQ">{language === "en" ? "FAQ" : "常见问题"}</h2>
+    </div>
+    <FaqAccordion items={items} numbered glossaryAnswers idPrefix="product-faq" />
+  </section>
+)}

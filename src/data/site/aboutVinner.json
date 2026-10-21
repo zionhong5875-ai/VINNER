@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": {
-      "zh": "维尼健康公司与湿巾制造基地 | 关于 VINNER",
+      "zh": "维尼健康公司与湿巾制造基地 | 关于维尼",
       "en": "Wet Wipes Manufacturer & Company Profile | VINNER"
     },
     "description": {
       "zh": "了解维尼健康深圳总部与黄冈湿巾制造基地，包括研发生产流程、质量资质、核心产品、发展历史与合作伙伴。",
-      "en": "Explore Vinner Health's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners."
+      "en": "Explore VINNER's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners."
     }
   },
   "hero": {
@@ -23,12 +23,18 @@
       "en": "Founded in 2004 and listed on China's NEEQ in 2015, Vinner Health is a professional manufacturer specializing in the R&D, manufacturing, and supply of wet wipes."
     },
     "image": "/assets/about-hero.jpg",
-    "alt": "洁净制造与质量控制环境",
+    "alt": {
+      "zh": "洁净制造与质量控制环境",
+      "en": "Clean manufacturing and quality-control environment"
+    },
     "light": false
   },
   "headquartersSection": {
     "image": "/assets/headquarters-baoshan-times-building.png",
-    "imageAlt": "维尼健康深圳总部所在的宝山时代大厦",
+    "imageAlt": {
+      "zh": "维尼健康深圳总部所在的宝山时代大厦",
+      "en": "Baoshan Times Building, home to VINNER Health’s Shenzhen headquarters"
+    },
     "kicker": {
       "zh": "总公司介绍",
       "en": "Headquarters"
@@ -46,7 +52,10 @@
   },
   "facilitySection": {
     "image": "/assets/factory/production-workshop.jpg",
-    "imageAlt": "维尼黄冈制造基地生产车间",
+    "imageAlt": {
+      "zh": "维尼黄冈制造基地生产车间",
+      "en": "Production workshop at VINNER’s Huanggang manufacturing facility"
+    },
     "kicker": {
       "zh": "工厂介绍",
       "en": "Manufacturing Facility"
@@ -142,7 +151,11 @@
           "en": "Industrial wiping solutions, including general-purpose industrial wipes, heavy-duty soil-removal wipes, and cleanroom wipes."
         }
       }
-    ]
+    ],
+    "brandSummary": {
+      "zh": "维尼健康以 VINNER 开展湿巾研发与制造业务，旗下 VINNERLOVE 和 HOMEKEEP 为自有品牌。感染控制、清洁护理和工业擦拭是按应用划分的产品线，OEM/ODM 为面向客户品牌的定制研发与制造服务。",
+      "en": "VINNER is the corporate brand for our wet wipes R&D and manufacturing business. VINNERLOVE and HOMEKEEP are our own product brands. Infection Control, Cleansing & Care, and Industrial Wiping are application-based product lines; OEM/ODM provides custom development and manufacturing for customer brands."
+    }
   },
   "metricsSection": {
     "kicker": {
@@ -154,16 +167,106 @@
       "en": "Experience, capacity, and R&D systems as our core support"
     },
     "items": [
-      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
-      { "number": { "zh": "15+", "en": "15+" }, "label": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
-      { "number": { "zh": "95%+", "en": "95%+" }, "label": { "zh": "自动化率", "en": "automation rate" } },
-      { "number": { "zh": "3%+", "en": "3%+" }, "label": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
-      { "number": { "zh": "500+", "en": "500+" }, "label": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
-      { "number": { "zh": "3", "en": "3" }, "label": { "zh": "个独立实验室", "en": "independent laboratories" } },
-      { "number": { "zh": "30+", "en": "30+" }, "label": { "zh": "知识产权专利", "en": "intellectual property patents" } },
-      { "number": { "zh": "80亿+", "en": "8B+" }, "label": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } },
-      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
-      { "number": { "zh": "2015", "en": "2015" }, "label": { "zh": "年上市", "en": "listed in 2015" } }
+      {
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "label": {
+          "zh": "年湿巾研发与生产经验",
+          "en": "years of wet wipes R&D and manufacturing experience"
+        }
+      },
+      {
+        "number": {
+          "zh": "15+",
+          "en": "15+"
+        },
+        "label": {
+          "zh": "年医疗消毒湿巾生产经验",
+          "en": "years of medical disinfectant wipes manufacturing experience"
+        }
+      },
+      {
+        "number": {
+          "zh": "95%+",
+          "en": "95%+"
+        },
+        "label": {
+          "zh": "自动化率",
+          "en": "automation rate"
+        }
+      },
+      {
+        "number": {
+          "zh": "3%+",
+          "en": "3%+"
+        },
+        "label": {
+          "zh": "以上销售额投入研发",
+          "en": "of sales invested in R&D"
+        }
+      },
+      {
+        "number": {
+          "zh": "500+",
+          "en": "500+"
+        },
+        "label": {
+          "zh": "成熟湿巾配方",
+          "en": "mature wipe formulas"
+        }
+      },
+      {
+        "number": {
+          "zh": "3",
+          "en": "3"
+        },
+        "label": {
+          "zh": "个独立实验室",
+          "en": "independent laboratories"
+        }
+      },
+      {
+        "number": {
+          "zh": "30+",
+          "en": "30+"
+        },
+        "label": {
+          "zh": "知识产权专利",
+          "en": "intellectual property patents"
+        }
+      },
+      {
+        "number": {
+          "zh": "80亿+",
+          "en": "8B+"
+        },
+        "label": {
+          "zh": "片以上湿巾年产能",
+          "en": "wipes annual capacity"
+        }
+      },
+      {
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "label": {
+          "zh": "家合作实验室与大学",
+          "en": "partner laboratories and universities"
+        }
+      },
+      {
+        "number": {
+          "zh": "2015",
+          "en": "2015"
+        },
+        "label": {
+          "zh": "年上市",
+          "en": "listed in 2015"
+        }
+      }
     ]
   },
   "qualificationSection": {
@@ -180,12 +283,30 @@
       "en": "Vinner follows international and domestic compliance standards and has obtained:"
     },
     "items": [
-      { "zh": "ISO 9001 质量管理体系认证", "en": "ISO 9001 Quality Management System Certification" },
-      { "zh": "ISO 13485 医疗器械质量管理体系认证", "en": "ISO 13485 Medical Device Quality Management System Certification" },
-      { "zh": "ISO 22716 化妆品良好生产规范认证", "en": "ISO 22716 Cosmetics Good Manufacturing Practices Certification" },
-      { "zh": "FDA Cosmetic GMP 认证", "en": "FDA Cosmetic GMP Certification" },
-      { "zh": "化妆品生产许可证", "en": "Cosmetic Product Manufacturing License" },
-      { "zh": "消毒产品生产许可证", "en": "Disinfectant Product Manufacturing License" }
+      {
+        "zh": "ISO 9001 质量管理体系认证",
+        "en": "ISO 9001 Quality Management System Certification"
+      },
+      {
+        "zh": "ISO 13485 医疗器械质量管理体系认证",
+        "en": "ISO 13485 Medical Device Quality Management System Certification"
+      },
+      {
+        "zh": "ISO 22716 化妆品良好生产规范认证",
+        "en": "ISO 22716 Cosmetics Good Manufacturing Practices Certification"
+      },
+      {
+        "zh": "FDA Cosmetic GMP 认证",
+        "en": "FDA Cosmetic GMP Certification"
+      },
+      {
+        "zh": "化妆品生产许可证",
+        "en": "Cosmetic Product Manufacturing License"
+      },
+      {
+        "zh": "消毒产品生产许可证",
+        "en": "Disinfectant Product Manufacturing License"
+      }
     ],
     "cta": {
       "zh": "查看我们的资质体系",
@@ -206,10 +327,22 @@
       "en": "To put VINNER's values into practice, we:"
     },
     "items": [
-      { "zh": "通过了 SMETA 4-Pillar 审计，持续关注劳工标准、健康与安全、环境及商业道德", "en": "Have passed the SMETA 4-Pillar audit, with continued attention to labor standards, health and safety, the environment, and business ethics" },
-      { "zh": "建立符合 ISO 14001 与 ISO 45001 标准的环境和职业健康安全管理体系", "en": "Maintain environmental and occupational health and safety management systems aligned with ISO 14001 and ISO 45001" },
-      { "zh": "通过 FSC® 森林认证支持负责任的森林资源管理与原材料采购", "en": "Support responsible forest management and raw-material sourcing through FSC® certification" },
-      { "zh": "通过 Global Security Verification（GSV），强化全球供应链安全及防伪防损管控", "en": "Use Global Security Verification (GSV) to strengthen global supply-chain security and loss-prevention controls" }
+      {
+        "zh": "通过了 SMETA 4-Pillar 审计，持续关注劳工标准、健康与安全、环境及商业道德",
+        "en": "Have passed the SMETA 4-Pillar audit, with continued attention to labor standards, health and safety, the environment, and business ethics"
+      },
+      {
+        "zh": "建立符合 ISO 14001 与 ISO 45001 标准的环境和职业健康安全管理体系",
+        "en": "Maintain environmental and occupational health and safety management systems aligned with ISO 14001 and ISO 45001"
+      },
+      {
+        "zh": "通过 FSC® 森林认证支持负责任的森林资源管理与原材料采购",
+        "en": "Support responsible forest management and raw-material sourcing through FSC® certification"
+      },
+      {
+        "zh": "通过 Global Security Verification（GSV），强化全球供应链安全及防伪防损管控",
+        "en": "Use Global Security Verification (GSV) to strengthen global supply-chain security and loss-prevention controls"
+      }
     ],
     "cta": {
       "zh": "查看我们的认证",
@@ -226,13 +359,55 @@
       "en": "From Shenzhen factory to Huanggang manufacturing base"
     },
     "items": [
-      { "year": "2004", "body": { "zh": "11月公司与深圳工厂成立", "en": "Vinner Health and the Shenzhen factory were founded in November." } },
-      { "year": "2009", "body": { "zh": "涉足医疗消毒领域", "en": "Entered the medical disinfection field." } },
-      { "year": "2015", "body": { "zh": "12月成功挂牌新三板", "en": "Listed on the NEEQ in December." } },
-      { "year": "2017", "body": { "zh": "维尼健康黄冈工厂成立并投产", "en": "The Huanggang factory was established and put into production." } },
-      { "year": "2020", "body": { "zh": "成为国家高新技术企业", "en": "Recognized as a National High-Tech Enterprise." } },
-      { "year": "2022", "body": { "zh": "深圳工厂生产转移至黄冈工厂，深圳作为总部办公室，保留行政部门", "en": "Production moved from Shenzhen to Huanggang; Shenzhen remained the headquarters office with administration functions." } },
-      { "year": "2025", "body": { "zh": "持续研发新技术和产品，并持续更新设备", "en": "Continues to develop new technologies and products while upgrading equipment." } }
+      {
+        "year": "2004",
+        "body": {
+          "zh": "11月公司与深圳工厂成立",
+          "en": "Vinner Health and the Shenzhen factory were founded in November."
+        }
+      },
+      {
+        "year": "2009",
+        "body": {
+          "zh": "涉足医疗消毒领域",
+          "en": "Entered the medical disinfection field."
+        }
+      },
+      {
+        "year": "2015",
+        "body": {
+          "zh": "12月成功挂牌新三板",
+          "en": "Listed on the NEEQ in December."
+        }
+      },
+      {
+        "year": "2017",
+        "body": {
+          "zh": "维尼健康黄冈工厂成立并投产",
+          "en": "The Huanggang factory was established and put into production."
+        }
+      },
+      {
+        "year": "2020",
+        "body": {
+          "zh": "成为国家高新技术企业",
+          "en": "Recognized as a National High-Tech Enterprise."
+        }
+      },
+      {
+        "year": "2022",
+        "body": {
+          "zh": "深圳工厂生产转移至黄冈工厂，深圳作为总部办公室，保留行政部门",
+          "en": "Production moved from Shenzhen to Huanggang; Shenzhen remained the headquarters office with administration functions."
+        }
+      },
+      {
+        "year": "2025",
+        "body": {
+          "zh": "持续研发新技术和产品，并持续更新设备",
+          "en": "Continues to develop new technologies and products while upgrading equipment."
+        }
+      }
     ]
   },
   "partnersSection": {
@@ -245,26 +420,86 @@
       "en": "Serving brand customers and channel partners worldwide"
     },
     "items": [
-      { "name": "Bluesail", "logo": "/assets/partners/buyers/bluesail.png" },
-      { "name": "Breeze", "logo": "/assets/partners/buyers/breeze.png" },
-      { "name": "C&S", "logo": "/assets/partners/buyers/c-and-s.png" },
-      { "name": "Dr. Brown's", "logo": "/assets/partners/buyers/dr-browns.png" },
-      { "name": "Dr. E.J. Swabb", "logo": "/assets/partners/buyers/dr-e-j-swabb.png" },
-      { "name": "GAMA Healthcare", "logo": "/assets/partners/buyers/gama.png" },
-      { "name": "Medicom", "logo": "/assets/partners/buyers/medicom.png" },
-      { "name": "NUPCO", "logo": "/assets/partners/buyers/nupco.png" },
-      { "name": "Optimum Medical", "logo": "/assets/partners/buyers/optimum-medical.png" },
-      { "name": "Pharmavest", "logo": "/assets/partners/buyers/pharmavest.png" },
-      { "name": "Walmart", "logo": "/assets/partners/buyers/walmart.png" },
-      { "name": "Winner Medical", "logo": "/assets/partners/buyers/winner-medical.png" },
-      { "name": "3M", "logo": "/assets/partners/buyers/3m.png" },
-      { "name": "Duskin", "logo": "/assets/partners/buyers/duskin.png" },
-      { "name": "MINISO", "logo": "/assets/partners/buyers/miniso.png" },
-      { "name": "Vanguard", "logo": "/assets/partners/buyers/vanguard.png" },
-      { "name": "Saky", "logo": "/assets/partners/buyers/shuke.png" },
-      { "name": "Want Want", "logo": "/assets/partners/buyers/want-want.png" },
-      { "name": "Rainbow", "logo": "/assets/partners/buyers/rainbow.png" },
-      { "name": "BYD", "logo": "/assets/partners/buyers/byd.png" }
+      {
+        "name": "Bluesail",
+        "logo": "/assets/partners/buyers/bluesail.png"
+      },
+      {
+        "name": "Breeze",
+        "logo": "/assets/partners/buyers/breeze.png"
+      },
+      {
+        "name": "C&S",
+        "logo": "/assets/partners/buyers/c-and-s.png"
+      },
+      {
+        "name": "Dr. Brown's",
+        "logo": "/assets/partners/buyers/dr-browns.png"
+      },
+      {
+        "name": "Dr. E.J. Swabb",
+        "logo": "/assets/partners/buyers/dr-e-j-swabb.png"
+      },
+      {
+        "name": "GAMA Healthcare",
+        "logo": "/assets/partners/buyers/gama.png"
+      },
+      {
+        "name": "Medicom",
+        "logo": "/assets/partners/buyers/medicom.png"
+      },
+      {
+        "name": "NUPCO",
+        "logo": "/assets/partners/buyers/nupco.png"
+      },
+      {
+        "name": "Optimum Medical",
+        "logo": "/assets/partners/buyers/optimum-medical.png"
+      },
+      {
+        "name": "Pharmavest",
+        "logo": "/assets/partners/buyers/pharmavest.png"
+      },
+      {
+        "name": "Walmart",
+        "logo": "/assets/partners/buyers/walmart.png"
+      },
+      {
+        "name": "Winner Medical",
+        "logo": "/assets/partners/buyers/winner-medical.png"
+      },
+      {
+        "name": "3M",
+        "logo": "/assets/partners/buyers/3m.png"
+      },
+      {
+        "name": "Duskin",
+        "logo": "/assets/partners/buyers/duskin.png"
+      },
+      {
+        "name": "MINISO",
+        "logo": "/assets/partners/buyers/miniso.png"
+      },
+      {
+        "name": "Vanguard",
+        "logo": "/assets/partners/buyers/vanguard.png"
+      },
+      {
+        "name": "Saky",
+        "logo": "/assets/partners/buyers/shuke.png"
+      },
+      {
+        "name": "Want Want",
+        "logo": "/assets/partners/buyers/want-want.png"
+      },
+      {
+        "name": "Rainbow",
+        "logo": "/assets/partners/buyers/rainbow.png"
+      },
+      {
+        "name": "BYD",
+        "logo": "/assets/partners/buyers/byd.png"
+      }
     ]
   }
 }

@@ -1,4 +1,4 @@
-const STORAGE_KEY = "keep-language";
+const STORAGE_KEY = "vinner-language";
 const supportedLanguages = ["zh", "en"];
 
 const getInitialLanguage = () => {

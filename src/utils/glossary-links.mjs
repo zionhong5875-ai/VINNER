@@ -14,6 +14,7 @@ const aliases = glossaryLinkTerms.flatMap((term) => languageKeys.flatMap((langua
     normalized: normalizeAlias(alias, language),
     language,
     slug: term.slug,
+    caseSensitive: term.caseSensitive === true,
     priority: term.priority || 0,
     contexts: term.contexts || linkTable.defaultContexts
   }))
@@ -26,12 +27,19 @@ const sortedAliases = (language, context) => aliases
 const matchesAt = (value, index, entry) => {
   const source = normalizeAlias(value, entry.language);
   if (!source.startsWith(entry.normalized, index)) return false;
-  if (entry.language !== "en") return true;
+  // Distinguish regulatory acronyms such as REACH from ordinary words such
+  // as "keep out of reach", without changing the visible text.
+  if (entry.caseSensitive && value.slice(index, index + entry.alias.length) !== entry.alias) return false;
+  const isWeightUnit = entry.slug === "basis-weight" && /^gsm$/i.test(entry.alias);
+  if (entry.language !== "en" && !isWeightUnit) return true;
   const before = value[index - 1];
   const after = value[index + entry.alias.length];
   const first = entry.alias[0];
   const last = entry.alias.at(-1);
-  return !(isEnglishWord(first) && isEnglishWord(before)) && !(isEnglishWord(last) && isEnglishWord(after));
+  // GSM is often attached to its numeric value (100gsm); still reject words
+  // such as "gsmith" and keep the normal boundary rules for every other alias.
+  const numericUnitPrefix = isWeightUnit && /[0-9]/.test(before || "");
+  return !(isEnglishWord(first) && isEnglishWord(before) && !numericUnitPrefix) && !(isEnglishWord(last) && isEnglishWord(after));
 };
 
 /**

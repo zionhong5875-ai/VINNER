@@ -1,6 +1,7 @@
 ---
 import { linkGlossaryText } from "../utils/glossary-links.mjs";
 import { localizedPath } from "../utils/i18n";
+import { glossaryPath } from "../utils/glossary.mjs";
 
 const { value, context = "body", class: className } = Astro.props;
 const language = Astro.locals.language === "en" ? "en" : "zh";
@@ -13,7 +14,7 @@ const languageAttrs = !hasLinks && value && typeof value !== "string"
 ---
 <span class={className} {...languageAttrs}>
   {segments.map((segment) => segment.slug
-    ? <a class="glossary-inline-link" data-glossary-link={segment.slug} href={localizedPath(`/resources/glossary/${segment.slug}/`, language)}>{segment.text}</a>
+    ? <a class="glossary-inline-link" data-glossary-link={segment.slug} href={localizedPath(glossaryPath(segment.slug, language), language)}>{segment.text}</a>
     : segment.text)}
 </span>
 <style>

@@ -2,6 +2,9 @@ import { parse } from 'parse5';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
+import { publishedTerms, glossaryPublicSlug } from '../src/utils/glossary.mjs';
+
+const canonicalTermSlugs = new Map(publishedTerms.map(term => [glossaryPublicSlug(term.slug, 'en'), term.slug]));
 
 const attr = (n, key) => n.attrs?.find(a => a.name === key)?.value;
 const nodes = n => [n, ...(n.childNodes || []).flatMap(nodes)];
@@ -20,7 +23,7 @@ export function extractBacklinks(html, path) {
       if (['nav','header','footer','h1','h2','h3','h4','figcaption'].includes(parent.tagName) || /hero|knowledge-cloud|term-other/.test(attr(parent,'class') || '')) excluded = true;
       parent = parent.parentNode;
     }
-    if (main && !excluded) terms.add(match[1]);
+    if (main && !excluded) terms.add(canonicalTermSlugs.get(match[1]) || match[1]);
   }
   const meta = property => attr(all.find(n => n.tagName === 'meta' && attr(n, 'property') === property) || {}, 'content');
   const title = text(all.find(n => n.tagName === 'h1'));

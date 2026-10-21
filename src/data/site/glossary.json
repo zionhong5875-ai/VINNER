@@ -37,7 +37,7 @@
     "category": "testing",
     "title": {
       "zh": "EN（European Standard）标准",
-      "en": "EN (European Standard)"
+      "en": "EN (European Norm)"
     },
     "definition": {
       "zh": [
@@ -492,24 +492,28 @@
     "slug": "basis-weight",
     "category": "fundamentals",
     "title": {
-      "zh": "克重",
-      "en": "Grammage / Basis Weight"
+      "zh": "克重（GSM）",
+      "en": "Basis Weight, GSM"
     },
     "definition": {
       "zh": [
-        "克重（Grammage / Basis Weight），通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
+        "克重，通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
         "例如：",
         "60 GSM = 每平方米该材料的质量为 60 g。",
         "INDA（美国非织造布工业协会，Association of the Nonwoven Fabrics Industry）将 Basis Weight 定义为单位面积织物的重量，常用单位包括 grams per square metre；ISO 9073-1:2023 则是专门规定无纺布单位面积质量测定方法的国际标准。[1][2]",
         "在湿巾规格中，GSM 是描述无纺布用量和结构的重要参数。通常情况下，在纤维组成和制造工艺相近时，更高 GSM 意味着单位面积含有更多材料，成品往往会表现得更加厚实。"
       ],
       "en": [
-        "Basis weight, commonly expressed as GSM, is the mass of material per square metre. It is an important wet wipe specification because, when fiber composition and process are comparable, higher GSM generally produces a thicker-feeling material."
+        "Grammage, commonly expressed as GSM (grams per square metre), is the mass of a material per unit area.",
+        "For example:",
+        "60 GSM means that one square metre of the material has a mass of 60 g.",
+        "INDA (the Association of the Nonwoven Fabrics Industry) defines basis weight as the weight of a fabric per unit area; grams per square metre is a commonly used unit. ISO 9073-1:2023 specifies a method for determining the mass per unit area of nonwovens.[1][2]",
+        "In wet wipe specifications, GSM is an important parameter describing the amount and structure of the nonwoven. When fiber composition and manufacturing process are comparable, a higher GSM means more material per unit area and generally results in a thicker-feeling finished material."
       ]
     },
     "summary": {
-      "zh": "克重（Grammage / Basis Weight），通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
-      "en": "Basis weight, commonly expressed as GSM, is the mass of material per square metre. It is an important wet wipe specification because, when fiber composition and process are comparable, higher GSM generally produces a thicker-feeling material."
+      "zh": "克重，通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
+      "en": "Grammage, commonly expressed as GSM (grams per square metre), is the mass of a material per unit area."
     },
     "references": [
       "[1] INDA, Nonwovens Glossary of Terms — Basis Weight. (非织造材料协会)",
@@ -1395,6 +1399,74 @@
       "[2] Occupational Safety and Health Administration (OSHA). Safety Data Sheets (SDSs).",
       "[3] Occupational Safety and Health Administration (OSHA). Appendix D to § 1910.1200 — Safety Data Sheets (Mandatory).",
       "[4] European Chemicals Agency (ECHA). Guidance on the compilation of safety data sheets."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "cpnp",
+    "category": "regulations",
+    "title": {
+      "zh": "CPNP（Cosmetic Products Notification Portal）",
+      "en": "Cosmetic Products Notification Portal (CPNP)"
+    },
+    "definition": {
+      "zh": [
+        "Cosmetic Products Notification Portal（CPNP），中文可译为“化妆品产品通报门户”或简称“化妆品通报门户”。CPNP 是欧盟委员会建立的免费在线化妆品通报系统。根据 Regulation (EC) No 1223/2009 Article 13，化妆品的 Responsible Person（责任人），以及法规规定的特定情况下的 Distributor（经销商），需要通过该系统向欧盟委员会提交产品信息。产品完成 CPNP 通报后，无需再针对同一通报事项逐个向欧盟成员国进行国家层面的产品通报。[1][2]",
+        "根据 Regulation (EC) No 1223/2009 Article 13，Responsible Person 应在化妆品投放市场前，以电子方式向欧盟委员会提交规定的信息。内容包括产品类别和名称、Responsible Person 的名称和地址及其 Product Information File（PIF）所在地、进口产品的原产国、产品拟投放的成员国、紧急联系人，以及适用情况下的纳米材料、特定 CMR 物质等信息。[2]产品实际投放市场时，Responsible Person 还需要向欧盟委员会通报产品的原始标签，并在合理可辨认的情况下提交对应包装的照片。对于已经在一个成员国上市、随后由经销商自行翻译标签并在另一成员国销售的产品，Article 13 也规定了相应的 Distributor 通报义务。[2]",
+        "因此，在法规语境下，更准确的表述是 CPNP notification（CPNP 通报）。CPNP 是履行欧盟化妆品法规信息通报义务的平台，而不是一种产品认证体系；企业日常所说的“做 CPNP”，本质上是通过该平台履行 Regulation (EC) No 1223/2009 所规定的电子通报义务。[1][2]"
+      ],
+      "en": [
+        "The Cosmetic Products Notification Portal (CPNP), commonly translated into Chinese as the Cosmetic Product Notification Portal, is a free online cosmetic product notification system established by the European Commission. Under Article 13 of Regulation (EC) No 1223/2009, the Responsible Person for a cosmetic product, and the Distributor in the specific circumstances set out in the Regulation, must submit product information to the European Commission through the system. Once a product has been notified through CPNP, the same notification does not need to be submitted separately to each EU Member State.[1][2]",
+        "Under Article 13 of Regulation (EC) No 1223/2009, the Responsible Person must submit the prescribed information electronically to the European Commission before placing the cosmetic product on the market. This includes the product category and name; the name and address of the Responsible Person and the location of the Product Information File (PIF); the country of origin for imported products; the Member States in which the product is intended to be placed on the market; an emergency contact; and, where applicable, nanomaterials and specific CMR substances.[2] When the product is placed on the market, the Responsible Person must also notify the original product label and, where reasonably legible, a photograph of the corresponding packaging. For a product already placed on the market in one Member State that is subsequently sold in another Member State after the Distributor translates the label, Article 13 also sets out a notification obligation for the Distributor.[2]",
+        "In regulatory terminology, the more precise expression is CPNP notification. CPNP is a platform for fulfilling the notification obligation under EU cosmetics law, not a product certification scheme. What companies commonly call “doing CPNP” is, in substance, submitting the electronic notification required by Article 13 of Regulation (EC) No 1223/2009 through that platform.[1][2]"
+      ]
+    },
+    "summary": {
+      "zh": "Cosmetic Products Notification Portal（CPNP），中文可译为“化妆品产品通报门户”或简称“化妆品通报门户”。CPNP 是欧盟委员会建立的免费在线化妆品通报系统。[1][2]",
+      "en": "The Cosmetic Products Notification Portal (CPNP) is a free online cosmetic product notification system established by the European Commission.[1][2]"
+    },
+    "references": [
+      "[1] European Commission, Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs, Cosmetic Product Notification Portal (CPNP).",
+      "[2] Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products, Article 13 — Notification."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "cpsr",
+    "category": "testing",
+    "title": {
+      "zh": "CPSR（Cosmetic Product Safety Report）",
+      "en": "Cosmetic Product Safety Report (CPSR)"
+    },
+    "definition": {
+      "zh": [
+        "Cosmetic Product Safety Report（CPSR），中文通常译为“化妆品产品安全报告”。CPSR 是欧盟化妆品法规 Regulation (EC) No 1223/2009 on cosmetic products 所建立的产品安全评估文件，其具体内容和结构规定于该法规 Article 10 及 Annex I。[1]CPSR 是用于证明化妆品在正常或合理可预见使用条件下对人体健康安全的核心技术文件。根据 Regulation (EC) No 1223/2009 Article 10，Responsible Person（责任人）必须在化妆品投放欧盟市场之前，确保产品已经基于相关资料完成安全评估，并按照 Annex I 编制 Cosmetic Product Safety Report。[1]",
+        "CPSR 同时也是 Product Information File（PIF，产品信息档案）的组成部分。欧盟委员会的实施指南将 CPSR 称为 PIF 中从产品安全角度而言最重要的组成部分之一。[2]",
+        "CPSR 不能由普通企业人员随意签署。根据 Regulation (EC) No 1223/2009 Article 10(2)，安全评估必须由具备相应专业资格的 Safety Assessor 完成，即取得药学、毒理学、医学或类似学科大学理论及实践课程学历，或者拥有被欧盟成员国认可为同等水平的资格。[1][2]",
+        "因此，CPSR 并不是一种“检测报告”，也不是第三方机构签发的“欧盟认证”。它本质上是一份以产品配方、毒理学数据、暴露数据、稳定性、微生物学资料及其他安全证据为基础，由合格 Safety Assessor 完成的产品安全风险评估文件。[1][2]",
+        "同时，CPSR 不是编制一次后永久不变。Responsible Person 必须根据产品上市后产生的新的相关信息持续保持 CPSR 更新。例如，当配方或原料规格发生变化、出现新的毒理学数据、产品使用条件改变，或者不良反应的性质、严重程度或发生频率发生明显变化时，都可能需要重新审查并更新安全评估。[1][2]",
+        "在欧盟化妆品合规体系中，可以简单理解为：",
+        "CPSR 负责证明“产品是否安全” → PIF 保存完整产品技术和合规资料 → CPNP 负责将产品信息向欧盟进行电子通报。",
+        "三者不是互相替代的关系，而是 Regulation (EC) No 1223/2009 下相互衔接的不同合规环节。[1][2]"
+      ],
+      "en": [
+        "Cosmetic Product Safety Report (CPSR), commonly translated into Chinese as the Cosmetic Product Safety Report, is the product safety assessment document established under Regulation (EC) No 1223/2009 on cosmetic products. Its content and structure are specified in Article 10 and Annex I of that Regulation.[1] CPSR is the core technical document used to demonstrate that a cosmetic product is safe for human health under normal or reasonably foreseeable conditions of use. Under Article 10 of Regulation (EC) No 1223/2009, the Responsible Person must ensure, before placing a cosmetic product on the EU market, that a safety assessment has been completed on the basis of relevant information and that a Cosmetic Product Safety Report has been prepared in accordance with Annex I.[1]",
+        "CPSR is also part of the Product Information File (PIF). The European Commission's implementation guidance describes CPSR as one of the most important components of the PIF from a product-safety perspective.[2]",
+        "A CPSR cannot be signed at will by ordinary company personnel. Under Article 10(2) of Regulation (EC) No 1223/2009, the safety assessment must be performed by a qualified Safety Assessor—someone with a university degree and theoretical and practical training in pharmacy, toxicology, medicine or a similar discipline, or equivalent qualifications recognised by an EU Member State.[1][2]",
+        "Therefore, CPSR is neither a test report nor an EU certification issued by a third-party body. It is, in substance, a product safety risk assessment document based on the product formulation, toxicological data, exposure data, stability, microbiological data and other safety evidence, completed by a qualified Safety Assessor.[1][2]",
+        "A CPSR is not prepared once and then left unchanged forever. The Responsible Person must keep it up to date in light of relevant new information arising after the product is placed on the market. For example, changes to the formulation or raw-material specifications, new toxicological data, changes to conditions of use, or material changes in the nature, severity or frequency of adverse reactions may require the safety assessment to be reviewed and updated.[1][2]",
+        "Within the EU cosmetics compliance system, it can be understood simply as follows:",
+        "CPSR demonstrates whether the product is safe → PIF retains the complete product technical and compliance documentation → CPNP provides for electronic notification of product information to the EU.",
+        "The three are not substitutes for one another; they are interlinked compliance steps under Regulation (EC) No 1223/2009.[1][2]"
+      ]
+    },
+    "summary": {
+      "zh": "Cosmetic Product Safety Report（CPSR），中文通常译为“化妆品产品安全报告”。CPSR 是欧盟化妆品法规 Regulation (EC) No 1223/2009 所建立的产品安全评估文件，其具体内容和结构规定于该法规 Article 10 及 Annex I。[1]",
+      "en": "A Cosmetic Product Safety Report (CPSR) is the product safety assessment document required under Regulation (EC) No 1223/2009 on cosmetic products; its content and structure are specified in Article 10 and Annex I.[1]"
+    },
+    "references": [
+      "[1] Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products, Article 10 and Annex I — Cosmetic Product Safety Report.",
+      "[2] Commission Implementing Decision 2013/674/EU of 25 November 2013 on Guidelines on Annex I to Regulation (EC) No 1223/2009 on cosmetic products."
     ],
     "showImportance": false
   }

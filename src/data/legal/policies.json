@@ -6,7 +6,7 @@
       "zh": "本政策说明维尼健康在您访问本网站、提交联系表单或向我们索取资料时，如何收集、使用、保存和保护相关信息。",
       "en": "This policy explains how VINNER collects, uses, retains, and protects information when you visit this website, submit a contact form, or request materials from us."
     },
-    "updatedAt": "2026.08.24",
+    "updatedAt": "2026.10.16",
     "effectiveAt": "2026.08.24",
     "body": [
       {
@@ -48,8 +48,8 @@
         "heading": { "zh": "5. 服务提供商与信息传输", "en": "5. Service providers and transfers" },
         "paragraphs": [
           {
-            "zh": "为运行网站和处理联系请求，我们可能使用网站托管、邮件发送、表单防滥用或内部通知等服务提供商。当前联系表单使用 Resend 发送邮件，并由 Vercel 提供网站托管服务；如后续启用其他通知或客户管理工具，将仅在必要范围内使用。",
-            "en": "To operate the website and handle contact requests, we may use providers for hosting, email delivery, abuse prevention, or internal notifications. The contact form currently uses Resend for email delivery and Vercel for website hosting. If additional notification or customer-management tools are enabled, they will be used only as necessary."
+            "zh": "为运行网站和处理联系请求，我们可能使用网站托管、邮件发送、表单防滥用或内部通知等服务提供商。当前联系表单使用 Resend 发送邮件，并由腾讯云 EdgeOne Pages 提供网站托管服务；如后续启用其他通知或客户管理工具，将仅在必要范围内使用。",
+            "en": "To operate the website and handle contact requests, we may use providers for hosting, email delivery, abuse prevention, or internal notifications. The contact form currently uses Resend for email delivery and Tencent Cloud EdgeOne Pages for website hosting. If additional notification or customer-management tools are enabled, they will be used only as necessary."
           },
           {
             "zh": "部分服务提供商可能在中国境外处理信息。我们会根据适用法律采取必要的合同、技术和管理措施，并尽量限制服务提供商访问的数据范围。",
@@ -96,10 +96,10 @@
     "eyebrow": { "zh": "法律信息", "en": "Legal information" },
     "title": { "zh": "Cookie 政策", "en": "Cookie Policy" },
     "summary": {
-      "zh": "本政策说明 VINNER 网站使用 Cookie、本地存储和类似技术的范围、目的以及管理方式。",
+      "zh": "本政策说明维尼健康网站使用 Cookie、本地存储和类似技术的范围、目的以及管理方式。",
       "en": "This policy explains how the VINNER website uses cookies, local storage, and similar technologies, including their purposes and how you can manage them."
     },
-    "updatedAt": "2026.08.24",
+    "updatedAt": "2026.10.16",
     "effectiveAt": "2026.08.24",
     "body": [
       {
@@ -114,14 +114,14 @@
         "items": [
           { "zh": "语言偏好：网站使用浏览器 localStorage 保存您选择的中文或英文界面偏好，以便下次访问时保持一致。", "en": "Language preference: the website uses browser local storage to remember whether you selected Chinese or English, so the preference can be retained on later visits." },
           { "zh": "必要运行与安全日志：托管、网络传输和安全服务可能生成维持网站运行所需的基础日志。", "en": "Essential operation and security logs: hosting, network, and security services may generate basic logs needed to operate and protect the website." },
-          { "zh": "当前未启用广告 Cookie、跨站跟踪 Cookie 或基于兴趣的广告画像。", "en": "Advertising cookies, cross-site tracking cookies, and interest-based advertising profiles are not currently enabled." }
+          { "zh": "本网站未配置自有广告 Cookie 或基于兴趣的广告画像；用户主动播放嵌入视频或访问外部服务时，相关第三方可能使用自己的技术。", "en": "This website does not configure its own advertising cookies or interest-based advertising profiles. Third parties may use their own technologies when you choose to play an embedded video or visit an external service." }
         ]
       },
       {
         "heading": { "zh": "3. 第三方服务", "en": "3. Third-party services" },
         "paragraphs": [{
-          "zh": "当您点击社交媒体、地图、邮件或其他外部链接时，第三方可能按照自己的规则使用 Cookie 或类似技术。VINNER 无法控制这些第三方技术，建议您在使用前阅读对应服务的隐私和 Cookie 政策。",
-          "en": "When you follow social-media, map, email, or other external links, third parties may use cookies or similar technologies under their own rules. VINNER does not control those technologies, so please review the relevant provider's privacy and cookie policies before using the service."
+          "zh": "首页工厂视频先显示本地封面，只有在您点击播放后才加载 YouTube 隐私增强模式播放器。播放器及您主动访问的社交媒体、地图或其他外部服务可能按照各自规则使用 Cookie 或类似技术。隐私增强模式不代表完全没有第三方请求或存储，建议您阅读对应服务的隐私和 Cookie 政策。",
+          "en": "The factory video initially displays a local poster. The YouTube privacy-enhanced player loads only after you choose to play it. The player and external social-media, map, or other services you visit may use cookies or similar technologies under their own rules. Privacy-enhanced mode does not mean there are no third-party requests or storage; please review the relevant provider’s privacy and cookie policies."
         }]
       },
       {
@@ -197,7 +197,7 @@
     "eyebrow": { "zh": "法律信息", "en": "Legal information" },
     "title": { "zh": "版权信息", "en": "Copyright" },
     "summary": {
-      "zh": "本页面说明 VINNER 网站内容、品牌标识、资料和第三方内容的权利归属与使用边界。",
+      "zh": "本页面说明维尼健康网站内容、品牌标识、资料和第三方内容的权利归属与使用边界。",
       "en": "This page explains ownership and permitted use of VINNER website content, brand assets, materials, and third-party content."
     },
     "updatedAt": "2026.08.24",

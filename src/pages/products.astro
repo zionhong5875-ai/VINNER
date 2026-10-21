@@ -2,7 +2,7 @@
 import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import products from "../data/site/products.json" with { type: "json" };
-import { text, attrs, localizedPath } from "../utils/i18n";
+import { text, attrs, imageAttrs, ariaAttrs, localizedPath } from "../utils/i18n";
 import { getProductLineHref, getProductLineMeta } from "../utils/productLines";
 import { absoluteUrl } from "../utils/schema";
 
@@ -17,7 +17,7 @@ const productLinesSchema = {
   numberOfItems: products.lines.length,
   itemListElement: products.lines.map((line, index) => {
     const meta = getProductLineMeta(line);
-    const url = absoluteUrl(localizedPath(`/products/series/${meta.slug}/`, language), siteUrl);
+    const url = absoluteUrl(localizedPath(getProductLineHref(line, language), language), siteUrl);
     return {
       "@type": "ListItem",
       position: index + 1,
@@ -60,11 +60,11 @@ const productLinesSchema = {
           <a
             class="product-line-tile"
             data-line-slug={meta.slug}
-            href={getProductLineHref(line)}
-            aria-label={`View ${meta.name.en}`}
+            href={getProductLineHref(line, language)}
+            {...ariaAttrs({ zh: `查看${meta.name.zh}`, en: `View ${meta.name.en}` })}
           >
             <span class="product-line-tile-media" aria-hidden="true">
-              <img src={meta.image} alt={meta.alt} />
+              <img src={meta.image} {...imageAttrs(meta.alt)} width={meta.imageWidth} height={meta.imageHeight} decoding="async" />
             </span>
             <span class="product-line-tile-copy">
               <span {...attrs(meta.indexLabel)}>{text(meta.indexLabel)}</span>

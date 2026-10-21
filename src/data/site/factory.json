@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": {
-      "zh": "工厂介绍 | VINNER",
+      "zh": "工厂介绍 | 维尼健康",
       "en": "Factory | VINNER"
     },
     "description": {
@@ -23,7 +23,10 @@
       "en": "VINNER connects production workshops, liquid preparation, water treatment, laboratories, and warehousing into one manufacturing flow for Infection Control, Cleansing & Care, Industrial Wiping, and OEM/ODM programs."
     },
     "image": "/assets/factory/production-workshop.jpg",
-    "alt": "VINNER 湿巾生产车间",
+    "alt": {
+      "zh": "VINNER 湿巾生产车间",
+      "en": "VINNER wet wipes production workshop"
+    },
     "light": false
   },
   "intro": {
@@ -56,14 +59,86 @@
       "en": "Capacity, automation, and R&D systems support long-term delivery."
     },
     "items": [
-      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
-      { "number": { "zh": "15+", "en": "15+" }, "label": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
-      { "number": { "zh": "95%+", "en": "95%+" }, "label": { "zh": "自动化率", "en": "automation rate" } },
-      { "number": { "zh": "80亿+", "en": "8B+" }, "label": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } },
-      { "number": { "zh": "500+", "en": "500+" }, "label": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
-      { "number": { "zh": "3", "en": "3" }, "label": { "zh": "个独立实验室", "en": "independent laboratories" } },
-      { "number": { "zh": "30+", "en": "30+" }, "label": { "zh": "知识产权专利", "en": "intellectual property patents" } },
-      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } }
+      {
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "label": {
+          "zh": "年湿巾研发与生产经验",
+          "en": "years of wet wipes R&D and manufacturing experience"
+        }
+      },
+      {
+        "number": {
+          "zh": "15+",
+          "en": "15+"
+        },
+        "label": {
+          "zh": "年医疗消毒湿巾生产经验",
+          "en": "years of medical disinfectant wipes manufacturing experience"
+        }
+      },
+      {
+        "number": {
+          "zh": "95%+",
+          "en": "95%+"
+        },
+        "label": {
+          "zh": "自动化率",
+          "en": "automation rate"
+        }
+      },
+      {
+        "number": {
+          "zh": "80亿+",
+          "en": "8B+"
+        },
+        "label": {
+          "zh": "片以上湿巾年产能",
+          "en": "wipes annual capacity"
+        }
+      },
+      {
+        "number": {
+          "zh": "500+",
+          "en": "500+"
+        },
+        "label": {
+          "zh": "成熟湿巾配方",
+          "en": "mature wipe formulas"
+        }
+      },
+      {
+        "number": {
+          "zh": "3",
+          "en": "3"
+        },
+        "label": {
+          "zh": "个独立实验室",
+          "en": "independent laboratories"
+        }
+      },
+      {
+        "number": {
+          "zh": "30+",
+          "en": "30+"
+        },
+        "label": {
+          "zh": "知识产权专利",
+          "en": "intellectual property patents"
+        }
+      },
+      {
+        "number": {
+          "zh": "20+",
+          "en": "20+"
+        },
+        "label": {
+          "zh": "家合作实验室与大学",
+          "en": "partner laboratories and universities"
+        }
+      }
     ]
   },
   "zonesSection": {
@@ -79,8 +154,14 @@
       {
         "index": "01",
         "image": "/assets/factory/production-workshop.jpg",
-        "alt": "湿巾生产车间",
-        "title": { "zh": "生产车间", "en": "Production Workshop" },
+        "alt": {
+          "zh": "湿巾生产车间",
+          "en": "Wet wipes production workshop"
+        },
+        "title": {
+          "zh": "生产车间",
+          "en": "Production Workshop"
+        },
         "body": {
           "zh": "围绕湿巾折叠、含液、包装和批次记录建立标准流程，支撑大批量稳定交付。",
           "en": "Standardized converting, liquid loading, packing, and batch records support stable high-volume delivery."
@@ -89,8 +170,14 @@
       {
         "index": "02",
         "image": "/assets/factory/liquid-preparation-room.jpg",
-        "alt": "配液室",
-        "title": { "zh": "配液室", "en": "Liquid Preparation" },
+        "alt": {
+          "zh": "配液室",
+          "en": "Liquid preparation room"
+        },
+        "title": {
+          "zh": "配液室",
+          "en": "Liquid Preparation"
+        },
         "body": {
           "zh": "按产品场景管理配方、加液和过程确认，让护理、消毒和工业擦拭形成可复用的液体体系。",
           "en": "Formula, dosing, and process checks are managed by use case, creating repeatable liquid systems for care, disinfection, and industrial wiping."
@@ -99,8 +186,14 @@
       {
         "index": "03",
         "image": "/assets/factory/water-treatment-room.jpg",
-        "alt": "制水车间",
-        "title": { "zh": "制水车间", "en": "Water Treatment" },
+        "alt": {
+          "zh": "制水车间",
+          "en": "Water treatment room"
+        },
+        "title": {
+          "zh": "制水车间",
+          "en": "Water Treatment"
+        },
         "body": {
           "zh": "制水系统为湿巾液体体系提供基础保障，帮助控制产品一致性和长期批次稳定性。",
           "en": "Water treatment provides the foundation for wipe liquid systems and helps control consistency across batches."
@@ -109,8 +202,14 @@
       {
         "index": "04",
         "image": "/assets/factory/laboratory.jpg",
-        "alt": "实验室",
-        "title": { "zh": "实验室", "en": "Laboratory" },
+        "alt": {
+          "zh": "实验室",
+          "en": "Laboratory"
+        },
+        "title": {
+          "zh": "实验室",
+          "en": "Laboratory"
+        },
         "body": {
           "zh": "实验室承担配方验证、性能测试和质量确认，支持从样品开发到量产导入。",
           "en": "Laboratories support formula validation, performance testing, and quality confirmation from sample development to mass production."
@@ -119,8 +218,14 @@
       {
         "index": "05",
         "image": "/assets/factory/warehouse.jpg",
-        "alt": "仓库",
-        "title": { "zh": "仓库", "en": "Warehouse" },
+        "alt": {
+          "zh": "仓库",
+          "en": "Warehouse"
+        },
+        "title": {
+          "zh": "仓库",
+          "en": "Warehouse"
+        },
         "body": {
           "zh": "仓储与批次管理衔接原料、成品和交付节奏，让客户项目有更清晰的供应链记录。",
           "en": "Warehousing and batch management connect materials, finished goods, and delivery rhythms with clearer supply-chain records."
@@ -138,8 +243,20 @@
       "en": "From Shenzhen factory to Huanggang manufacturing base."
     },
     "items": [
-      { "year": "2004", "body": { "zh": "11月公司与深圳工厂成立", "en": "Vinner Health and the Shenzhen factory were founded in November." } },
-      { "year": "2022", "body": { "zh": "深圳工厂生产转移至黄冈工厂，深圳作为总部办公室，保留行政部门", "en": "Production moved from Shenzhen to Huanggang; Shenzhen remained the headquarters office with administration functions." } }
+      {
+        "year": "2004",
+        "body": {
+          "zh": "11月公司与深圳工厂成立",
+          "en": "Vinner Health and the Shenzhen factory were founded in November."
+        }
+      },
+      {
+        "year": "2022",
+        "body": {
+          "zh": "深圳工厂生产转移至黄冈工厂，深圳作为总部办公室，保留行政部门",
+          "en": "Production moved from Shenzhen to Huanggang; Shenzhen remained the headquarters office with administration functions."
+        }
+      }
     ]
   }
 }
