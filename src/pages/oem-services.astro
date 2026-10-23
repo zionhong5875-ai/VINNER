@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
+import content from "../data/site/oemServices.json";
+import products from "../data/site/products.json" with { type: "json" };
+import { text, attrs, imageAttrs, localizedPath, ariaAttrs } from "../utils/i18n";
+import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js";
+import { searchConfig } from "../utils/search-config.mjs";
+import { absoluteUrl, schemaIds } from "../utils/schema";
+import { buildFaqSchema } from "../utils/productFaq.mjs";
+import "../styles/faq.css";
+import "../styles/oem-services.css";
+
+const language = Astro.locals.language === "en" ? "en" : "zh";
+const siteUrl = searchConfig.siteUrl;
+const pageUrl = absoluteUrl(localizedPath("/oem-services/", language), siteUrl);
+const ids = schemaIds(siteUrl);
+const serviceId = `${pageUrl}#service`;
+const links = {
+  oemProducts: { href: localizedPath("/products/series/oem-odm/", language), label: { zh: "OEM/ODM 产品页面", en: "Our OEM/ODM product page" } },
+  obmProducts: { href: localizedPath("/products/series/cleansing-care/", language), label: { zh: "清洁护理产品页面", en: "Our cleansing & care product page" } }
+};
+const schema = [
+  {
+    "@type": "Service",
+    "@id": serviceId,
+    name: language === "en" ? "Wet Wipes OEM/ODM Manufacturing Services" : "湿巾 OEM/ODM 定制制造服务",
+    serviceType: language === "en" ? "Wet wipes OEM/ODM manufacturing" : "湿巾 OEM/ODM 代工与定制开发",
+    description: text(content.meta.description, language),
+    url: pageUrl,
+    provider: { "@id": ids.organization },
+    mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
+    image: absoluteUrl(content.hero.image, siteUrl)
+  },
+  ...buildFaqSchema(content.faq.items, pageUrl, language, { idPrefix: "oem-faq", links })
+];
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description}
+  image={content.hero.image} imageAlt={content.hero.alt} imageWidth={content.hero.imageWidth} imageHeight={content.hero.imageHeight}
+  schema={schema} mainEntityId={serviceId}
+  pageProperties={{ hasPart: { "@id": `${pageUrl}#oem-faq` } }}
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "OEM 服务", en: "OEM Services" }, path: "/oem-services/" }
+  ]}
+>
+  <div class="oem-services-page" data-section-indicator-container>
+    <PageHero {...content.hero} light={false} />
+
+    <section class="oem-section oem-products" id="oem-products" aria-labelledby="oem-products-title">
+      <div class="oem-section-heading">
+        <p class="section-kicker" {...attrs(content.products.kicker)}>{text(content.products.kicker, language)}</p>
+        <h2 id="oem-products-title" {...attrs(content.products.title)}>{text(content.products.title, language)}</h2>
+      </div>
+      <div class="oem-product-grid">
+        {content.products.items.map(item => {
+          const line = products.lines.find(line => line.slug === item.productLine)!;
+          const meta = getProductLineMeta(line);
+          return (
+            <article class="oem-product-option">
+              <a class="oem-product-media" href={getProductLineHref(line, language)} {...ariaAttrs(item.cta)}>
+                <img src={meta.image} {...imageAttrs(meta.alt)} width={meta.imageWidth} height={meta.imageHeight} loading="lazy" decoding="async" />
+              </a>
+              <div class="oem-product-copy">
+                <h3 {...attrs(item.title)}>{text(item.title, language)}</h3>
+                <p><GlossaryLinkedText value={item.body} context="paragraph" /></p>
+                <a class="button button-dark" href={getProductLineHref(line, language)} {...attrs(item.cta)}>{text(item.cta, language)}</a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="oem-section" id="oem-moq" aria-labelledby="oem-moq-title">
+      <div class="oem-section-heading">
+        <p class="section-kicker" {...attrs(content.moq.kicker)}>{text(content.moq.kicker, language)}</p>
+        <h2 id="oem-moq-title" {...attrs(content.moq.title)}>{text(content.moq.title, language)}</h2>
+      </div>
+      <p class="oem-table-hint" id="oem-moq-hint" {...attrs(content.moq.scrollHint)}>{text(content.moq.scrollHint, language)}</p>
+      <div class="oem-table-scroll" role="region" tabindex="0" aria-labelledby="oem-moq-title" aria-describedby="oem-moq-hint" data-scroll-region="x">
+        <table class="oem-moq-table">
+          <caption class="sr-only" {...attrs(content.moq.title)}>{text(content.moq.title, language)}</caption>
+          <thead><tr>{content.moq.headers.map(header => <th scope="col" {...attrs(header)}>{text(header, language)}</th>)}</tr></thead>
+          <tbody>{content.moq.rows.map(row => (
+            <tr>
+              <th scope="row" {...attrs(row.format)}>{text(row.format, language)}</th>
+              <td {...attrs(row.size)}>{text(row.size, language)}</td>
+              <td class="oem-moq-number" {...attrs(row.minimum)}>{text(row.minimum, language)}</td>
+              <td><GlossaryLinkedText value={row.reason} context="paragraph" /></td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+      <p class="oem-moq-note"><GlossaryLinkedText value={content.moq.note} context="paragraph" /></p>
+    </section>
+
+    <section class="oem-section" id="oem-process" aria-labelledby="oem-process-title">
+      <div class="oem-section-heading">
+        <p class="section-kicker" {...attrs(content.process.kicker)}>{text(content.process.kicker, language)}</p>
+        <h2 id="oem-process-title" {...attrs(content.process.title)}>{text(content.process.title, language)}</h2>
+      </div>
+      <div class="oem-process-body">
+      <ol class="oem-process-flow">
+        {content.process.steps.map((step, index) => (
+          <li>
+            <span class="oem-process-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <h3 {...attrs(step.title)}>{text(step.title, language)}</h3>
+            <p><GlossaryLinkedText value={step.body} context="paragraph" /></p>
+          </li>
+        ))}
+      </ol>
+      <div class="oem-process-cta">
+        <a class="button button-accent" href="/contact/" {...attrs(content.process.cta)}>{text(content.process.cta, language)}</a>
+      </div>
+      </div>
+    </section>
+
+    <section class="oem-section faq-section oem-faq" id="oem-faq" aria-labelledby="oem-faq-title">
+      <div class="oem-section-heading">
+        <p class="section-kicker" {...attrs(content.faq.kicker)}>{text(content.faq.kicker, language)}</p>
+        <h2 id="oem-faq-title" {...attrs(content.faq.title)}>{text(content.faq.title, language)}</h2>
+      </div>
+      <FaqAccordion items={content.faq.items} links={links} glossaryAnswers numbered idPrefix="oem-faq" />
+    </section>
+  </div>
+</BaseLayout>

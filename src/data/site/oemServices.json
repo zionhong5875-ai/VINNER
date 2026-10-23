@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "title": {
+      "zh": "湿巾 OEM/ODM 服务：起订量与采购流程 | 维尼健康",
+      "en": "Wet Wipes OEM/ODM Services, MOQ & Ordering | VINNER"
+    },
+    "description": {
+      "zh": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+      "en": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "zh": "OEM / ODM",
+      "en": "OEM / ODM"
+    },
+    "title": {
+      "zh": "OEM 服务",
+      "en": "OEM Services"
+    },
+    "body": {
+      "zh": "从需求确认、样品开发到批量交付，为您的品牌提供湿巾定制制造服务。",
+      "en": "Custom wet wipes manufacturing for your brand, from requirements and sample development to production and delivery."
+    },
+    "image": "/assets/oem-hero.png",
+    "alt": {
+      "zh": "维尼健康 OEM 定制湿巾，青绿色软包装配白色翻盖",
+      "en": "VINNER OEM wet wipes in a teal flowpack with a white flip-top lid"
+    },
+    "imageWidth": 1535,
+    "imageHeight": 1025
+  },
+  "products": {
+    "kicker": {
+      "zh": "合作产品",
+      "en": "Product options"
+    },
+    "title": {
+      "zh": "从您的产品需求开始",
+      "en": "Start with your product needs"
+    },
+    "items": [
+      {
+        "productLine": "oem-odm",
+        "title": {
+          "zh": "OEM / ODM 定制产品",
+          "en": "OEM / ODM Custom Products"
+        },
+        "body": {
+          "zh": "查看我们常见（但不限于）提供的 OEM/ODM 湿巾产品。",
+          "en": "Explore some of the OEM/ODM wet wipe products we commonly offer, and more."
+        },
+        "cta": {
+          "zh": "查看 OEM/ODM 产品",
+          "en": "Explore OEM/ODM products"
+        }
+      },
+      {
+        "productLine": "carekeep",
+        "title": {
+          "zh": "自有品牌（OBM）产品",
+          "en": "Own-Brand (OBM) Products"
+        },
+        "body": {
+          "zh": "查看我们常见（但不限于）提供的自有品牌（OBM）湿巾产品。",
+          "en": "Explore some of our own-brand (OBM) wet wipe products available for distribution."
+        },
+        "cta": {
+          "zh": "查看清洁护理产品",
+          "en": "Explore cleansing & care products"
+        }
+      }
+    ]
+  },
+  "moq": {
+    "kicker": {
+      "zh": "标准起订量",
+      "en": "Minimum order quantities"
+    },
+    "title": {
+      "zh": "不同包装形式的标准起订量",
+      "en": "Standard MOQ by Packaging Format"
+    },
+    "headers": [
+      {
+        "zh": "湿巾包装形式",
+        "en": "Wet Wipes Packaging Format"
+      },
+      {
+        "zh": "常见规格",
+        "en": "Typical Pack Size"
+      },
+      {
+        "zh": "标准MOQ",
+        "en": "Standard MOQ"
+      },
+      {
+        "zh": "起订量的限制因素",
+        "en": "Why this MOQ applies"
+      }
+    ],
+    "rows": [
+      {
+        "format": {
+          "zh": "一次性单片袋装",
+          "en": "Single-Use Sachet"
+        },
+        "size": {
+          "zh": "1-2 片/包",
+          "en": "1–2 wipes/pack"
+        },
+        "minimum": {
+          "zh": "100,000-150,000包",
+          "en": "100,000–150,000 packs"
+        },
+        "reason": {
+          "zh": "定制湿巾包装卷膜（彩印复合包装膜）通常需要约150–300千克的最低印刷量。",
+          "en": "Custom printed packaging film typically requires a minimum print run of approximately 150–300 kg."
+        }
+      },
+      {
+        "format": {
+          "zh": "便携小包装/超迷你包装",
+          "en": "Pocket / Mini Pack"
+        },
+        "size": {
+          "zh": "8-20 片/包",
+          "en": "8–20 wipes/pack"
+        },
+        "minimum": {
+          "zh": "30,000-80,000包",
+          "en": "30,000–80,000 packs"
+        },
+        "reason": {
+          "zh": "定制湿巾包装卷膜（彩印复合包装膜）通常需要约150–300千克的最低印刷量。",
+          "en": "Custom printed packaging film typically requires a minimum print run of approximately 150–300 kg."
+        }
+      },
+      {
+        "format": {
+          "zh": "软包装加贴标",
+          "en": "Flowpack with Sticker"
+        },
+        "size": {
+          "zh": "30–80 片/包",
+          "en": "30–80 wipes/pack"
+        },
+        "minimum": {
+          "zh": "20,000包左右",
+          "en": "Around 20,000 packs"
+        },
+        "reason": {
+          "zh": "定制湿巾包装卷膜（彩印复合包装膜）通常需要约150–300千克的最低印刷量。",
+          "en": "Custom printed packaging film typically requires a minimum print run of approximately 150–300 kg."
+        }
+      },
+      {
+        "format": {
+          "zh": "软包装加翻盖",
+          "en": "Flowpack with Lid"
+        },
+        "size": {
+          "zh": "60–120 片/包",
+          "en": "60–120 wipes/pack"
+        },
+        "minimum": {
+          "zh": "20,000–30,000包",
+          "en": "20,000–30,000 packs"
+        },
+        "reason": {
+          "zh": "定制湿巾包装卷膜（彩印复合包装膜）通常需要约150–300千克的最低印刷量。同时，定制注塑翻盖通常约2-3万个起订。",
+          "en": "Custom printed packaging film typically requires a minimum print run of approximately 150–300 kg. Custom injection-molded lids also typically require an MOQ of approximately 20,000–30,000 units."
+        }
+      },
+      {
+        "format": {
+          "zh": "桶装",
+          "en": "Canister / Tub"
+        },
+        "size": {
+          "zh": "70–400 片/桶",
+          "en": "70–400 wipes/tub"
+        },
+        "minimum": {
+          "zh": "5,000–10,000桶",
+          "en": "5,000–10,000 tubs"
+        },
+        "reason": {
+          "zh": "主要受热收缩膜及不干胶标签最低印刷数量影响",
+          "en": "Mainly determined by the minimum print quantities for shrink film and pressure-sensitive labels."
+        }
+      },
+      {
+        "format": {
+          "zh": "桶装湿巾补充装",
+          "en": "Canister Refill Pack"
+        },
+        "size": {
+          "zh": "80–100 片/包",
+          "en": "80–100 wipes/pack"
+        },
+        "minimum": {
+          "zh": "20,000–30,000包",
+          "en": "20,000–30,000 packs"
+        },
+        "reason": {
+          "zh": "定制湿巾包装卷膜（彩印复合包装膜）通常需要约150–300千克的最低印刷量。",
+          "en": "Custom printed packaging film typically requires a minimum print run of approximately 150–300 kg."
+        }
+      }
+    ],
+    "scrollHint": {
+      "zh": "可横向滑动查看完整表格",
+      "en": "Scroll horizontally to view the full table"
+    },
+    "note": {
+      "zh": "以上为常规生产条件下的标准起订范围。实际起订量可能根据湿巾尺寸、无纺布材质、配方、包装尺寸、印刷要求及定制程度有所调整。",
+      "en": "The quantities above represent our standard ranges under normal production conditions. Actual MOQ may vary depending on wipe dimensions, substrate, formula, packaging size, printing requirements and level of customization."
+    }
+  },
+  "process": {
+    "kicker": {
+      "zh": "采购流程",
+      "en": "How we work"
+    },
+    "title": {
+      "zh": "标准采购流程",
+      "en": "Standard Purchasing Process"
+    },
+    "steps": [
+      {
+        "title": {
+          "zh": "需求确认",
+          "en": "Requirements Confirmation"
+        },
+        "body": {
+          "zh": "沟通产品类型、配方、材料、包装及订单数量等定制需求。同时，需明确产品是否需要指定测试与划分产品准入或合规职责。",
+          "en": "Our sales team will discuss your product type, formula, material, packaging, order quantity and other customization requirements. At this stage, we will also clarify any required testing, target-market regulatory pathway and the respective compliance responsibilities of each party."
+        }
+      },
+      {
+        "title": {
+          "zh": "样品开发",
+          "en": "Sample Development"
+        },
+        "body": {
+          "zh": "维尼健康OBM产品通常于1-2个工作日发出（库存充足时），OEM标准样品通常于3-5个工作日内完成；ODM（涉及配方开发和定制、材料或包装调整）样品通常需5–10个工作日（具体视项目开发难度而定）。",
+          "en": "OBM products are typically dispatched within 1–2 business days (If the inventory is sufficient).\n\nStandard OEM samples are generally completed within 3–5 business days.\n\nODM projects: (Involving formula development or customization, material changes or packaging adjustments) Samples typically require 5–10 business days, depending on project complexity."
+        }
+      },
+      {
+        "title": {
+          "zh": "订单确认",
+          "en": "Order Confirmation"
+        },
+        "body": {
+          "zh": "样品确认后，提供正式报价及合同，明确生产周期、付款条件和交付安排。",
+          "en": "Once the sample is approved, we will provide a formal quotation and contract specifying the production lead time, payment terms and delivery arrangements."
+        }
+      },
+      {
+        "title": {
+          "zh": "批量生产",
+          "en": "Mass Production"
+        },
+        "body": {
+          "zh": "按照已确认的样品和规格组织生产，并同步关键生产进度。（对于一个标准的项目而言，生产周期通常为30-45天左右）",
+          "en": "Production is carried out according to the approved sample and specifications, with key production progress communicated throughout the process.\n\nFor a standard project, the typical production lead time is approximately 30–45 days."
+        }
+      },
+      {
+        "title": {
+          "zh": "检验与交付",
+          "en": "Inspection & Delivery"
+        },
+        "body": {
+          "zh": "发货前完成质量检验与指定的内部测试或第三方测试，并根据需求安排海运、空运或快递，提供物流追踪信息。",
+          "en": "Before shipment, we complete the required quality inspections together with any specified in-house or third-party testing.\n\nShipping can be arranged by sea, air or courier according to your requirements, with tracking information provided where applicable."
+        }
+      }
+    ],
+    "cta": {
+      "zh": "我希望更进一步了解，与维尼健康开启合作。",
+      "en": "I’m ready to take the next step and work with the VINNER team."
+    }
+  },
+  "faq": {
+    "kicker": {
+      "zh": "合作答疑",
+      "en": "Working with VINNER"
+    },
+    "title": {
+      "zh": "常见问题",
+      "en": "Frequently Asked Questions"
+    },
+    "items": [
+      {
+        "question": {
+          "zh": "为什么不同包装形式的起订量不同？",
+          "en": "Why Does MOQ Vary by Packaging Format?"
+        },
+        "paragraphs": [
+          {
+            "zh": "如上述图表所示，最主要的限制是包装供应商对我们的起订量。",
+            "en": "As shown in the table above, one of the main factors determining MOQ is the minimum order requirement set by packaging suppliers."
+          },
+          {
+            "zh": "定制彩印复合包装膜（即袋装湿巾的包装袋）存在最低印刷量，通常需要达到约150–300千克才能安排制版和印刷。对于带塑料翻盖的包装，定制注塑翻盖通常需要约2-3万个起订。桶装产品的成品起订量相对较低（因为塑料桶的供应商通常会自行准备好常见规格的塑料桶模具，无需客户重复开模），但仍会受到标签、收缩膜MOQ以及潜在定制塑料桶的影响。",
+            "en": "Custom printed packaging film used for wet wipes typically requires a minimum print run of approximately 150–300 kg before plate making and printing can be arranged.\n\nFor packs with plastic lids, custom injection-molded lids usually require an MOQ of approximately 20,000–30,000 units.\n\nCanister products generally allow a lower finished-product MOQ because packaging suppliers often already have molds for commonly used canister sizes, so customers do not need to invest in new tooling. However, MOQ may still be affected by labels, shrink film and any custom canister requirements."
+          },
+          {
+            "zh": "以上为常规生产条件下的标准起订范围。实际起订量可能根据湿巾尺寸、无纺布材质、配方、包装尺寸、印刷要求及定制程度有所调整。",
+            "en": "The quantities above represent our standard ranges under normal production conditions. Actual MOQ may vary depending on wipe dimensions, substrate, formula, packaging size, printing requirements and level of customization."
+          },
+          {
+            "zh": "如果您暂时无法确定哪种包装形式更适合，维尼健康的业务团队可以根据您的目标采购数量和产品需求，为您推荐最具成本效益的方案。",
+            "en": "If you are unsure which packaging format is best for your project, our sales team can recommend the most cost-effective solution based on your target order volume and product requirements."
+          }
+        ]
+      },
+      {
+        "question": {
+          "zh": "我希望通过试单检验产品品质与市场表现，可以与维尼健康进行低于MOQ的试单吗？",
+          "en": "I Want to Test Product Quality and Market Demand First. Can I Place a Trial Order Below the Standard MOQ?"
+        },
+        "paragraphs": [
+          {
+            "zh": "完全没有问题。我们为客户考虑到了这一顾虑，因此我们的政策是：若试单的订单量低于MOQ，我们会额外向您收取一定的包装采购费用（正如上述表格所示，包装的MOQ是湿巾行业MOQ的最主要限制因素）。并在您后续的返单中以折扣的形式全额返还。",
+            "en": "Yes.\n\nWe understand that many customers prefer to validate product quality and market demand before committing to a full-scale order.\n\nFor trial orders below the standard MOQ, we may charge an additional packaging procurement fee, as packaging supplier MOQs are one of the main factors behind minimum order quantities in the wet wipes industry.\n\nThis additional packaging cost can be fully credited back in the form of a discount on your subsequent repeat order."
+          },
+          {
+            "zh": "我们深知，创新创业企业是经济繁荣与未来的根基。我们希望通过此政策支持中国与世界各地的中小企业、创业企业与对待首单较为谨慎的客户。",
+            "en": "We believe innovative businesses and growing companies play an important role in future economic growth. Through this policy, we aim to support SMEs, startups and customers around the world who prefer a more cautious approach to their first order."
+          }
+        ]
+      },
+      {
+        "question": {
+          "zh": "维尼健康的生产周期是多久？我的需求非常旺盛，维尼健康最高产能是多少？",
+          "en": "What Is Vinner Health's Production Lead Time and Maximum Capacity?"
+        },
+        "paragraphs": [
+          {
+            "zh": "对于一个标准的项目，维尼健康的生产周期为30-45天（原材料采购周期是主要瓶颈，实际维尼健康生产速度更短）。同时，维尼健康的最高产能是6-8个40呎高柜集装箱（视具体产品与排产情况而定）。",
+            "en": "For a standard project, the typical production lead time is approximately 30–45 days.\n\nRaw material procurement is usually the main factor affecting lead time, while the actual manufacturing process itself is considerably shorter.\n\nDepending on the product and production schedule, our maximum production capacity can reach approximately 6–8 × 40-foot high-cube containers."
+          }
+        ]
+      },
+      {
+        "question": {
+          "zh": "我有完整的配方，可以让维尼健康进行代工吗？我没有完整配方，只有项目需求，可以让维尼健康生产对应产品吗？",
+          "en": "I Already Have a Complete Formula. Can Vinner Health Manufacture It for Me? What If I Only Have a Product Concept and No Formula?"
+        },
+        "paragraphs": [
+          {
+            "zh": "两者均可。我们非常欢迎所有种类客户。无论您是已经在行业内非常成功并有成熟配方的公司，还是存在产品需求而没有配方的供应链/进出口公司，我们都希望能够竭诚为您服务。",
+            "en": "We welcome both types of clients.\n\nIf you already have a mature formula and product specification, we can manufacture according to your requirements.\n\nIf you only have a product concept, target application or performance requirements, our team can also support formula development, material selection and product development through our ODM capabilities.\n\nWe work with customers ranging from established industry brands with mature product specifications to importers, distributors and supply-chain companies developing new product lines."
+          }
+        ]
+      },
+      {
+        "question": {
+          "zh": "维尼健康能够生产什么类型的产品？维尼健康的自有品牌有哪些产品可供直接分销？",
+          "en": "What Types of Products Can Vinner Health Manufacture? Which Own-Brand Products Are Available for Direct Distribution?"
+        },
+        "paragraphs": [
+          {
+            "zh": "维尼健康能够生产全品类湿巾，覆盖包括但不限于：医疗感控、个人护理、物品清洁到工业擦拭等领域。我们在{{oemProducts}}列出了维尼健康提供的常见（但不限于）的OEM/ODM湿巾产品。",
+            "en": "Vinner is capable of manufacturing a broad range (almost all categories) of wet wipes across applications including healthcare infection prevention, personal care, surface cleaning and industrial wiping.\n\n{{oemProducts}} showcases some of the OEM/ODM wet wipe products we commonly offer, and more."
+          },
+          {
+            "zh": "同时，我们在{{obmProducts}}列出了维尼健康目前供客户进行分销的产品。",
+            "en": "{{obmProducts}} showcases VINNER own-brand products available for distribution."
+          }
+        ]
+      },
+      {
+        "question": {
+          "zh": "维尼健康为什么能够生产全品类湿巾？",
+          "en": "Why Is Vinner Health Able to Manufacture Such a Broad Range of Wet Wipes?"
+        },
+        "paragraphs": [
+          {
+            "zh": "从合规与资质上看，由于我们具有消毒产品、化妆品生产许可资质、国际通用医疗器械生产GMP资质（ISO13485）、国际通用化妆品生产GMP资质（ISO22716）、美国FDA化妆品生产GMP符合性证书（由Intertek签发）以及十万级GMP车间，能够覆盖绝大部分品类的湿巾生产规范。",
+            "en": "From a regulatory and manufacturing perspective, Vinner Health operates with manufacturing capabilities and certifications covering multiple product categories, including disinfection products, cosmetics, ISO 13485 medical device quality management, ISO 22716 cosmetics GMP, an FDA Cosmetic GMP compliance certificate issued by Intertek, and ISO Class 8 cleanroom facilities.\n\nThese capabilities allow us to support the manufacturing requirements of a wide range of wet wipes."
+          },
+          {
+            "zh": "从研发与生产经验上看，由于维尼健康具有超过20年各类湿巾生产和开发湿巾的经验，同时建立了内部研发与生化实验室。这些都令我们掌握了绝大部分品类湿巾的生产工艺与化学配方。",
+            "en": "From an R&D and manufacturing perspective, Vinner Health has accumulated more than 20 years of experience in wet wipes development and production and more than 30 patents related to wet wipe production, processes and formulas.\n\nWe also operate in-house R&D, microbiological and physicochemical laboratory capabilities. This experience and infrastructure enable us to develop and manufacture wet wipes across a broad range of applications, materials and formulation systems."
+          }
+        ]
+      }
+    ]
+  }
+}

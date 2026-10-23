@@ -17,7 +17,7 @@ export const searchRoutes = [
     path: `/resources/glossary/${term.slug}/`,
     englishPath: `/resources/glossary/${glossaryPublicSlug(term.slug, "en")}/`
   })),
-  ...["/", "/products/", "/about/vinner/", "/about/factory-qualification/", "/contact/", "/resources/", "/resources/all/", "/resources/blogs/", "/resources/news/", "/resources/files/", "/resources/glossary/"].map(path => ({ path })),
+  ...["/", "/products/", "/oem-services/", "/about/vinner/", "/about/factory-qualification/", "/contact/", "/resources/", "/resources/all/", "/resources/blogs/", "/resources/news/", "/resources/files/", "/resources/glossary/"].map(path => ({ path })),
   ...Object.entries(policies).map(([slug, policy]) => ({ path: `/${slug}/`, lastmod: modifiedDate(policy.updatedAt) })),
   ...products.lines.map(line => ({
     path: `/products/series/${getProductLinePublicSlug(line.slug, "zh")}/`,

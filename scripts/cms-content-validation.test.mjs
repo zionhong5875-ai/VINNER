@@ -64,6 +64,18 @@ test("allows a blog article with no optional sections", () => {
   assert.deepEqual(validateCmsContent(baseData()), []);
 });
 
+test("article link lists require valid destinations and bilingual labels", () => {
+  const data = baseData();
+  const section = { linkedParagraphs: [{ href: "https://example.test/", text: localized }] };
+  data.resources.blogs[0].sections = [section];
+  assert.deepEqual(validateCmsContent(data), []);
+  section.linkedParagraphs = [{ href: "", text: { zh: "只有中文" } }];
+  assert.match(validateCmsContent(data).join("\n"), /linkedParagraph.href/);
+  assert.match(validateCmsContent(data).join("\n"), /linkedParagraph.text/);
+  section.linkedParagraphs = "invalid";
+  assert.match(validateCmsContent(data).join("\n"), /linkedParagraphs: use a list/);
+});
+
 test("product FAQs accept 1–10 bilingual items and reject incomplete or oversized lists", () => {
   for (let count = 1; count <= 10; count++) {
     const data = baseData();

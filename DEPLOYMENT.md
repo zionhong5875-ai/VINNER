@@ -66,7 +66,7 @@ Decap CMS needs a GitHub repository and OAuth login. The repo is configured as:
 ```yaml
 backend:
   name: github
-  repo: zionhong5875-ai/KEEP-Website
+  repo: zionhong5875-ai/VINNER
   branch: main
   site_domain: vinnercare.com
   base_url: https://vinnercare.com

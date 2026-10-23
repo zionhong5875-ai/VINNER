@@ -151,6 +151,9 @@ const articleSchema = {
   title={title}
   description={description}
   image={item.image}
+  imageAlt={item.alt}
+  imageWidth={item.imageWidth}
+  imageHeight={item.imageHeight}
   ogType="article"
   pageType="ItemPage"
   breadcrumbs={[
@@ -181,7 +184,7 @@ const articleSchema = {
         <p class="resource-detail-summary"><GlossaryLinkedText value={item.body} context="hero" /></p>
       </div>
       <figure class="resource-detail-image">
-        <img src={item.image} {...imageAttrs(item.alt)} />
+        <img src={item.image} {...imageAttrs(item.alt)} width={item.imageWidth} height={item.imageHeight} fetchpriority="high" decoding="async" />
         <MediaCaption caption={item.imageCaption || item.title} />
       </figure>
     </header>
@@ -227,13 +230,13 @@ const articleSchema = {
                       </a>
                     </div>
                   )}
-                  {section.linkedParagraph && (
+                  {[...(section.linkedParagraph ? [section.linkedParagraph] : []), ...(section.linkedParagraphs || [])].map(linked => (
                     <p class="resource-linked-paragraph">
-                      <a href={section.linkedParagraph.href} {...attrs(section.linkedParagraph.text)}>
-                        {text(section.linkedParagraph.text)}
+                      <a href={linked.href} {...attrs(linked.text)}>
+                        {text(linked.text)}
                       </a>
                     </p>
-                  )}
+                  ))}
                   {Array.isArray(section.bullets) && (
                     <ul class="resource-article-list">
                       {section.bullets.map((bullet) => (

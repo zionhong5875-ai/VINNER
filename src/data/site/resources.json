@@ -26,6 +26,86 @@
   },
   "news": [
     {
+      "date": "2026.10.23 / News",
+      "title": {
+        "zh": "维尼健康（深圳）股份有限公司新网址说明",
+        "en": "New Website Address for Vinner (Shenzhen) Health Products Limited"
+      },
+      "body": {
+        "zh": "我司，维尼健康（深圳）股份有限公司及维尼健康（深圳）股份有限公司黄冈分公司，近日已完成官方网站升级，并启用新的官网域名。同时，原有网站及域名仍予以保留。",
+        "en": "Vinner (Shenzhen) Health Products Limited and its Huanggang Branch have recently completed an upgrade of the official company website and launched a new official domain. The existing websites and domains are being retained."
+      },
+      "slug": "vinner-new-official-website-address",
+      "image": "/assets/news/vinner-new-official-website.webp",
+      "imageWidth": 2000,
+      "imageHeight": 1501,
+      "alt": {
+        "zh": "维尼健康新官网公告主题图：湿巾生产设备与 vinnercare.com 字样",
+        "en": "VINNER wet wipes production equipment with vinnercare.com displayed on the new website announcement cover"
+      },
+      "imageCaption": {
+        "zh": "维尼健康新版国际官网：vinnercare.com",
+        "en": "VINNER’s new international website: vinnercare.com"
+      },
+      "meta": {
+        "title": {
+          "zh": "维尼健康启用新官网 vinnercare.com | 维尼健康",
+          "en": "VINNER’s New Official Website: vinnercare.com | VINNER"
+        },
+        "description": {
+          "zh": "维尼健康（深圳）股份有限公司及黄冈分公司已升级官网，启用新版国际官网 vinnercare.com。原有 vinnercare.cn、vinner-wipes.com 保留，员工邮箱后缀仍为 @vinnercare.cn。",
+          "en": "VINNER launches its upgraded international website at vinnercare.com. Existing domains are retained, and employee email addresses still end in @vinnercare.cn."
+        }
+      },
+      "repeatSummaryInBody": false,
+      "sections": [
+        {
+          "level": 1,
+          "heading": {
+            "zh": "官方网站及相关域名",
+            "en": "Official Websites and Domains"
+          },
+          "body": {
+            "zh": "目前，我司官方网站及相关域名如下：",
+            "en": "Our official websites and related domains are currently as follows:"
+          },
+          "linkedParagraphs": [
+            {
+              "href": "https://vinnercare.com/",
+              "text": {
+                "zh": "新公司官网（国际版）：vinnercare.com",
+                "en": "New company website (international): vinnercare.com"
+              }
+            },
+            {
+              "href": "https://vinnercare.cn/",
+              "text": {
+                "zh": "原公司官网（中国国内版）：vinnercare.cn",
+                "en": "Existing company website (China): vinnercare.cn"
+              }
+            },
+            {
+              "href": "https://vinner-wipes.com/",
+              "text": {
+                "zh": "原公司官网（国际版）：vinner-wipes.com",
+                "en": "Existing company website (international): vinner-wipes.com"
+              }
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "我们建议优先访问新版国际官网 vinnercare.com，以获取最新的公司及产品信息。",
+              "en": "We recommend visiting the new international website at vinnercare.com first for the latest company and product information."
+            },
+            {
+              "zh": "此外，我司员工电子邮箱后缀目前仍保持不变，统一为：@vinnercare.cn。",
+              "en": "Our employee email addresses remain unchanged and continue to use the @vinnercare.cn domain."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "date": "2026.08.24 / News",
       "title": {
         "zh": "维尼健康推出自主品牌清洁护理产品线：从床旁清洁到日常肌肤护理",

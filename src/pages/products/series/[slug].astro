@@ -188,6 +188,9 @@ const seriesSchema = [
       <p class="section-kicker" data-zh="系列定位" data-en="Series Position">系列定位</p>
       <h2 id="series-intro-title" {...attrs(meta.summary)}>{text(meta.summary)}</h2>
       <p><GlossaryLinkedText value={meta.detail} context="body" /></p>
+      {isOemLine && <div class="button-row" style="margin-top: 24px; justify-content: flex-start;">
+        <a class="button button-accent" href="/oem-services/" data-zh="了解 OEM 服务、起订量与采购流程" data-en="Explore OEM services, MOQ & ordering">了解 OEM 服务、起订量与采购流程</a>
+      </div>}
     </div>
     <div class="series-use-grid">
       {meta.uses.map((item) => (

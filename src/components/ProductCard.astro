@@ -35,20 +35,22 @@ const rows = isUpcoming ? [
       {hasDetails ? <a href={href}>{text(name, language)}</a> : <span {...attrs(name)}>{text(name, language)}</span>}
     </h3>
     {!hasDetails && !isUpcoming && <p class="series-development-copy" {...attrs(sku.body)}>{text(sku.body, language)}</p>}
-    <dl>
+    {rows.length > 0 && <dl>
       {rows.map((row) => (
         <div>
           <dt {...attrs(row.label)}>{text(row.label, language)}</dt>
           <dd {...attrs(row.value)}>{text(row.value, language)}</dd>
         </div>
       ))}
-    </dl>
+    </dl>}
     {hasDetails ? (
       <a class="sku-card-link" href={href} data-zh="查看详情" data-en="View details">{language === "en" ? "View details" : "查看详情"}</a>
     ) : isUpcoming ? (
       <span class="sku-card-link is-disabled" aria-disabled="true" data-zh="即将上市" data-en="COMING SOON">{language === "en" ? "COMING SOON" : "即将上市"}</span>
     ) : (
-      <a class="sku-card-link" href={localizedPath("/contact/", language)} data-zh="咨询定制开发" data-en="Discuss product development">{language === "en" ? "Discuss product development" : "咨询定制开发"}</a>
+      <div class="series-development-actions">
+        <a class="sku-card-link" href={localizedPath("/contact/", language)} data-zh="咨询定制开发" data-en="Discuss product development">{language === "en" ? "Discuss product development" : "咨询定制开发"}</a>
+      </div>
     )}
   </div>
 </article>
@@ -66,8 +68,8 @@ const rows = isUpcoming ? [
   .series-product-copy h3 a:hover,.series-product-copy h3 a:focus-visible { color:#007c7a; }
   .series-product-copy dl { display:grid; margin:auto 0 0; border-top:1px solid rgba(142,142,149,.48); font-size:15px; line-height:1.4; }
   .series-development-copy { font-size:15px; line-height:1.6; color:var(--color-slate-mist); margin:0 0 18px; }
-  .is-development .sku-card-link { margin-top:auto; }
-  .is-development .series-product-copy dl:empty { display:none; }
+  .series-development-actions { display:flex; justify-content:center; margin-top:auto; padding-top:22px; border-top:1px solid rgba(142,142,149,.48); }
+  .series-development-actions .sku-card-link { margin-top:0; }
   .series-product-copy dl div { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr); align-items:center; padding:8px 0; border-bottom:1px solid rgba(142,142,149,.48); }
   .series-product-copy dt,.series-product-copy dd { margin:0; min-width:0; }
   .series-product-copy dt { grid-column:1; font-weight:700; }

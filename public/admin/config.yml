@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: zionhong5875-ai/KEEP-Website
+  repo: zionhong5875-ai/VINNER
   branch: main
   site_domain: vinnercare.com
   base_url: https://vinnercare.com
@@ -176,6 +176,13 @@ article_section_field_definitions: &article_section_field_definitions
       - { label: 跳转链接, name: href, widget: string }
       - { label: 链接文字, name: text, <<: *i18n_textarea }
   - { label: 关联产品线 Slug, name: productLineSlug, widget: string, required: false }
+  - label: 多条文中链接
+    name: linkedParagraphs
+    widget: list
+    required: false
+    fields:
+      - { label: 跳转链接, name: href, widget: string }
+      - { label: 链接文字, name: text, <<: *i18n_textarea }
   - { label: 关联产品 Slug, name: productSlug, widget: string, required: false }
   - label: 子章节
     name: subsections
@@ -241,6 +248,7 @@ collections:
             fields:
               - { label: 首页, name: home, <<: *i18n_text }
               - { label: 产品, name: products, <<: *i18n_text }
+              - { label: OEM 服务, name: oemServices, <<: *i18n_text }
               - { label: 关于维尼, name: about, <<: *i18n_text }
               - { label: 工厂介绍, name: factory, <<: *i18n_text }
               - { label: 工厂资质, name: factoryQualification, <<: *i18n_text }
@@ -763,6 +771,82 @@ collections:
                   - { label: 缩略图, name: thumb, widget: image }
                   - { label: PDF 文件, name: href, widget: file }
 
+      - label: OEM 服务页面
+        name: oemServices
+        file: src/data/site/oemServices.json
+        format: json
+        fields:
+          - { label: SEO, name: meta, <<: *seo_fields }
+          - label: 首屏
+            name: hero
+            widget: object
+            fields:
+              - { label: 小标题, name: eyebrow, <<: *i18n_text }
+              - { label: 大标题, name: title, <<: *i18n_text }
+              - { label: 说明文字, name: body, <<: *i18n_textarea }
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, <<: *i18n_text }
+              - { label: 图片宽度, name: imageWidth, widget: number, value_type: int }
+              - { label: 图片高度, name: imageHeight, widget: number, value_type: int }
+          - label: 合作产品入口
+            name: products
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - label: 产品入口
+                name: items
+                widget: list
+                fields:
+                  - { label: 产品线, name: productLine, widget: select, options: [oem-odm, carekeep] }
+                  - { label: 标题, name: title, <<: *i18n_text }
+                  - { label: 说明, name: body, <<: *i18n_textarea }
+                  - { label: 按钮文字, name: cta, <<: *i18n_text }
+          - label: 包装与标准 MOQ
+            name: moq
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - { label: 表头, name: headers, <<: *bilingual_paragraphs, min: 4, max: 4 }
+              - label: 包装形式
+                name: rows
+                widget: list
+                fields:
+                  - { label: 包装形式, name: format, <<: *i18n_text }
+                  - { label: 常见规格, name: size, <<: *i18n_text }
+                  - { label: 标准 MOQ, name: minimum, <<: *i18n_text }
+                  - { label: 限制因素, name: reason, <<: *i18n_textarea }
+              - { label: 滑动提示, name: scrollHint, <<: *i18n_text }
+              - { label: 起订量说明, name: note, <<: *i18n_textarea }
+          - label: 采购流程
+            name: process
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - label: 步骤
+                name: steps
+                widget: list
+                fields:
+                  - { label: 步骤名称, name: title, <<: *i18n_text }
+                  - { label: 步骤说明, name: body, <<: *i18n_textarea }
+              - { label: 联系按钮文字, name: cta, <<: *i18n_text }
+          - label: 常见问题
+            name: faq
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - label: 问答
+                name: items
+                widget: list
+                min: 1
+                max: 10
+                fields:
+                  - { label: 问题, name: question, <<: *i18n_textarea }
+                  - { label: 回答段落, name: paragraphs, <<: *bilingual_paragraphs, hint: "可使用 {{oemProducts}} 或 {{obmProducts}} 插入相应产品页链接。" }
+
       - label: 联系页面
         name: contact
         file: src/data/site/contact.json
@@ -837,10 +921,16 @@ collections:
             fields:
               - { label: URL Slug, name: slug, widget: string }
               - { label: 日期/分类, name: date, widget: string }
+              - { label: 内容更新日期, name: updatedAt, widget: string, required: false, hint: "YYYY.MM.DD；仅实际修改内容后更新" }
               - { label: 标题, name: title, <<: *i18n_text }
               - { label: 摘要, name: body, <<: *i18n_textarea }
               - { label: 图片, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, <<: *i18n_text }
+              - { label: 图片说明, name: imageCaption, <<: *i18n_text, required: false }
+              - { label: 图片宽度, name: imageWidth, widget: number, value_type: int, required: false }
+              - { label: 图片高度, name: imageHeight, widget: number, value_type: int, required: false }
+              - { label: SEO 标题与描述, name: meta, <<: *seo_fields, required: false }
+              - { label: 正文重复显示首屏摘要, name: repeatSummaryInBody, widget: boolean, required: false, default: true }
               - { label: 金句/重点, name: quote, <<: *i18n_textarea, required: false }
               - label: 正文段落
                 name: sections

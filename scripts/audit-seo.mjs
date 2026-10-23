@@ -14,6 +14,7 @@ const glossary = JSON.parse(fs.readFileSync(new URL("../src/data/site/glossary.j
 const routes = [...new Set([
   "/",
   "/products/",
+  "/oem-services/",
   "/about/vinner/",
   "/about/factory-qualification/",
   "/contact/",

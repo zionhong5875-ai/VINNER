@@ -35,6 +35,10 @@
     "resources": {
       "zh": "资源",
       "en": "Resources"
+    },
+    "oemServices": {
+      "zh": "OEM 服务",
+      "en": "OEM Services"
     }
   },
   "footer": {

@@ -165,7 +165,7 @@ export function validateCmsContent({ home, products, resources, authors }) {
           errors.push(`${sectionPath}: section must be an object.`);
           continue;
         }
-        for (const field of ["paragraphs", "paragraphsAfter", "bullets", "subsections", "media"]) {
+        for (const field of ["paragraphs", "paragraphsAfter", "bullets", "subsections", "media", "linkedParagraphs"]) {
           if (section[field] !== undefined && !Array.isArray(section[field])) {
             errors.push(`${sectionPath}.${field}: use a list.`);
           }
@@ -199,8 +199,7 @@ export function validateCmsContent({ home, products, resources, authors }) {
             }
           }
         }
-        if (section.linkedParagraph !== undefined) {
-          const linked = section.linkedParagraph;
+        for (const linked of [...(section.linkedParagraph !== undefined ? [section.linkedParagraph] : []), ...(Array.isArray(section.linkedParagraphs) ? section.linkedParagraphs : [])]) {
           if (!linked || typeof linked !== "object" || Array.isArray(linked)) errors.push(`${sectionPath}.linkedParagraph: linked paragraph must be an object.`);
           else {
             if (!hasText(linked.href)) errors.push(`${sectionPath}.linkedParagraph.href: add a destination.`);
@@ -365,8 +364,30 @@ export function validateCurrentCmsContent() {
       inspectTranslations(entry, field);
     }
   };
-  for (const file of ["home", "products", "resources", "aboutVinner", "factory", "factoryQualification", "contact", "siteSettings"]) {
+  for (const file of ["home", "products", "resources", "aboutVinner", "factory", "factoryQualification", "contact", "siteSettings", "oemServices"]) {
     inspectTranslations(loadJson(`../src/data/site/${file}.json`), file);
+  }
+  const oem = loadJson("../src/data/site/oemServices.json");
+  validateLocalAssets(errors, oem, "oemServices");
+  const inspectOemTranslations = (value, source) => {
+    if (Array.isArray(value)) return value.forEach((entry, index) => inspectOemTranslations(entry, `${source}[${index}]`));
+    if (!value || typeof value !== "object") return;
+    if ("zh" in value || "en" in value) {
+      if (!hasBilingualText(value)) errors.push(`${source}: provide Chinese and English text.`);
+      else if (/\p{Script=Han}/u.test(value.en)) errors.push(`${source}.en: English content contains Chinese text.`);
+    } else Object.entries(value).forEach(([key, entry]) => inspectOemTranslations(entry, `${source}.${key}`));
+  };
+  inspectOemTranslations(oem, "oemServices");
+  if (oem.moq?.headers?.length !== 4 || !oem.moq.rows?.length) errors.push("oemServices.moq: provide four headers and at least one packaging row.");
+  if (!oem.process?.steps?.length) errors.push("oemServices.process.steps: provide at least one step.");
+  if (!oem.faq?.items?.length || oem.faq.items.length > 10) errors.push("oemServices.faq.items: provide 1–10 questions.");
+  for (const [index, item] of (oem.faq?.items || []).entries()) {
+    if (!hasBilingualText(item.question) || !item.paragraphs?.length) errors.push(`oemServices.faq.items[${index}]: provide a bilingual question and answer.`);
+    for (const paragraph of item.paragraphs || []) for (const language of ["zh", "en"]) {
+      for (const match of (paragraph[language] || "").matchAll(/\{\{(\w+)\}\}/g)) {
+        if (!["oemProducts", "obmProducts"].includes(match[1])) errors.push(`oemServices.faq.items[${index}]: unknown product link ${match[1]}.`);
+      }
+    }
   }
   const home = loadJson("../src/data/site/home.json");
   try { youtubeEmbed(home.company.videoSrc); }

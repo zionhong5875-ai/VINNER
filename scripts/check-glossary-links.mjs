@@ -56,6 +56,7 @@ const sourceFiles = [
   "src/data/site/factory.json",
   "src/data/site/factoryQualification.json",
   "src/data/site/products.json",
+  "src/data/site/oemServices.json",
   "src/data/site/resources.json",
   "src/data/legal/policies.json"
 ];

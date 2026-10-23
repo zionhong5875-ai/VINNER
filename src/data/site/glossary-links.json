@@ -32,7 +32,7 @@
     { "slug": "rollstock-flexible-packaging", "aliases": { "zh": ["卷膜包装"], "en": ["Rollstock Flexible Packaging", "Rollstock"] } },
     { "slug": "smeta-4-pillar-audit", "aliases": { "zh": ["SMETA 四支柱审核", "SMETA"], "en": ["SMETA 4-Pillar Audit", "SMETA 4-Pillar", "SMETA"] } },
     { "slug": "spunlace-nonwoven", "aliases": { "zh": ["水刺无纺布"], "en": ["Spunlace Nonwoven", "Hydroentangled Nonwoven"] } },
-    { "slug": "fda-cosmetic-gmp", "aliases": { "zh": ["美国 FDA 化妆品 GMP", "FDA 化妆品 GMP"], "en": ["U.S. FDA Cosmetic GMP", "FDA Cosmetic GMP"] } },
+    { "slug": "fda-cosmetic-gmp", "aliases": { "zh": ["美国 FDA 化妆品 GMP", "FDA 化妆品 GMP", "美国FDA化妆品生产GMP"], "en": ["U.S. FDA Cosmetic GMP", "FDA Cosmetic GMP"] } },
     { "slug": "wipe-folding", "aliases": { "zh": ["折叠方式"], "en": ["Wipe Folding", "Folding Pattern"] } },
     { "slug": "impregnation-liquid", "aliases": { "zh": ["配液"], "en": ["Wipe Solution", "Impregnation Liquid", "Liquid Preparation"] } },
     { "slug": "substrate", "aliases": { "zh": ["基材"], "en": ["Wipe Substrate", "Substrate"] } },

@@ -2523,7 +2523,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/70-percent-ipa-disinfectant-wipes.png",
+            "alt": {
+              "zh": "含醇消毒湿巾（70% 异丙醇）定制包装展示",
+              "en": "70% IPA Disinfectant Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-alcohol-free-surface-disinfectant-wipes",
@@ -2608,7 +2615,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/alcohol-free-surface-disinfectant-wipes.png",
+            "alt": {
+              "zh": "无醇物表消毒湿巾（季铵盐体系）定制包装展示",
+              "en": "Alcohol-Free Surface Disinfectant Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-sporicidal-paa-wipes",
@@ -2693,7 +2707,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/sporicidal-paa-wipes.png",
+            "alt": {
+              "zh": "除芽孢湿巾（PAA）定制包装展示",
+              "en": "Sporicidal PAA Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-hydrogen-peroxide-disinfectant-wipes",
@@ -2778,7 +2799,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/hydrogen-peroxide-disinfectant-wipes.png",
+            "alt": {
+              "zh": "过氧化氢消毒湿巾定制包装展示",
+              "en": "Hydrogen Peroxide Disinfectant Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-2-chg-antiseptic-wipes",
@@ -2863,7 +2891,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/2-percent-chg-antiseptic-wipes.png",
+            "alt": {
+              "zh": "人体除菌湿巾（2% 氯己定体系）定制包装展示",
+              "en": "2% CHG Antiseptic Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-chg-ipa-antiseptic-wipes",
@@ -2948,7 +2983,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/2-percent-chg-70-percent-ipa-antiseptic-wipes.png",
+            "alt": {
+              "zh": "复合醇除菌湿巾（2% 氯己定+70% 异丙醇）定制包装展示",
+              "en": "2% CHG + 70% IPA Antiseptic Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-compatible-dry-wipes",
@@ -3033,7 +3075,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/disinfectant-compatible-dry-wipes.png",
+            "alt": {
+              "zh": "擦拭干巾定制包装展示",
+              "en": "Disinfectant-Compatible Dry Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-rinse-free-bathing-wipes",
@@ -3118,7 +3167,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/rinse-free-bathing-wipes.png",
+            "alt": {
+              "zh": "免洗沐浴湿巾定制包装展示",
+              "en": "Rinse-Free Bathing Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-rinse-free-bathing-gloves",
@@ -3203,7 +3259,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/rinse-free-bathing-gloves.png",
+            "alt": {
+              "zh": "免洗沐浴手套定制包装展示",
+              "en": "Rinse-Free Bathing Gloves custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-rinse-free-shampoo-cap",
@@ -3288,7 +3351,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/rinse-free-shampoo-cap.png",
+            "alt": {
+              "zh": "免洗洗发浴帽定制包装展示",
+              "en": "Rinse-Free Shampoo Cap custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-rinse-free-shampoo-wipes",
@@ -3373,7 +3443,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/rinse-free-shampoo-wipes.png",
+            "alt": {
+              "zh": "免洗洗发湿巾定制包装展示",
+              "en": "Rinse-Free Shampoo Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-cream-care-wipes",
@@ -3458,7 +3535,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/cream-care-wipes.png",
+            "alt": {
+              "zh": "乳霜护理湿巾定制包装展示",
+              "en": "Continence Care Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-cooling-wipes",
@@ -3543,7 +3627,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/cooling-wipes.png",
+            "alt": {
+              "zh": "降温清凉湿巾定制包装展示",
+              "en": "Cooling Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-makeup-remover-wipes",
@@ -3628,7 +3719,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/makeup-remover-wipes.png",
+            "alt": {
+              "zh": "卸妆湿巾定制包装展示",
+              "en": "Makeup Remover Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-sneaker-cleaning-wipes",
@@ -3713,7 +3811,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/sneaker-cleaning-wipes.png",
+            "alt": {
+              "zh": "球鞋去污湿巾定制包装展示",
+              "en": "Sneaker Cleaning Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-pure-water-baby-wipes",
@@ -3798,7 +3903,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/pure-water-baby-wipes.png",
+            "alt": {
+              "zh": "婴儿纯水湿巾定制包装展示",
+              "en": "Pure Water Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-multi-purpose-industrial-dry-wipes",
@@ -3883,7 +3995,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/multi-purpose-industrial-dry-wipes.png",
+            "alt": {
+              "zh": "多用途工业擦拭干巾定制包装展示",
+              "en": "Multi-Purpose Industrial Dry Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-industrial-degreasing-wipes",
@@ -3968,7 +4087,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/industrial-degreasing-wipes.png",
+            "alt": {
+              "zh": "工业去污湿巾定制包装展示",
+              "en": "Industrial Degreasing Wipes custom packaging"
+            }
+          }
         },
         {
           "slug": "oem-cleanroom-cleaning-wipes",
@@ -4053,7 +4179,14 @@
             }
           ],
           "specs": [],
-          "downloads": []
+          "downloads": [],
+          "card": {
+            "image": "/assets/product-thumbnails/oem/cleanroom-cleaning-wipes.png",
+            "alt": {
+              "zh": "洁净室清洁湿巾定制包装展示",
+              "en": "Cleanroom Cleaning Wipes custom packaging"
+            }
+          }
         }
       ]
     }

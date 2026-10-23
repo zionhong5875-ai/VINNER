@@ -1,7 +1,7 @@
 ---
 import { text, htmlAttrs, attrs, imageAttrs } from "../utils/i18n";
 
-const { eyebrow, title, body, image, alt, light = true, contrast = false } = Astro.props;
+const { eyebrow, title, body, image, alt, imageWidth, imageHeight, light = true, contrast = false } = Astro.props;
 const classes = [
   "page-hero",
   light ? "page-hero-light" : "",
@@ -11,7 +11,7 @@ const classes = [
 ---
 
 <section class={classes} aria-labelledby="page-title">
-  {image && <img src={image} {...imageAttrs(alt)} />}
+  {image && <img src={image} {...imageAttrs(alt)} width={imageWidth} height={imageHeight} fetchpriority="high" decoding="async" />}
   {image && <div class="page-hero-scrim"></div>}
   <div>
     {eyebrow && <p class="eyebrow" {...attrs(eyebrow)}>{text(eyebrow)}</p>}

@@ -20,6 +20,12 @@
         "image": "/assets/about-hero.jpg"
       },
       {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
+      },
+      {
         "href": "/resources/do-wet-wipes-need-ce-marking-eu/",
         "title": "“你们有 CE 证书吗？”",
         "description": "采购欧盟市场湿巾前，先按预期用途区分化妆品、医疗器械与生物灭杀剂，了解CE标志及CPSR、PIF、CPNP、MDR和BPR对应的文件要求。",
@@ -110,6 +116,12 @@
         "image": "/assets/certifications/thumbs/iso13485-vinner.pdf.png"
       },
       {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
+      },
+      {
         "href": "/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
         "title": "面向美国市场的化妆品品牌代工厂合规检查清单",
         "description": "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
@@ -158,6 +170,12 @@
         "image": "/assets/about-hero.jpg"
       },
       {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
+      },
+      {
         "href": "/resources/do-wet-wipes-need-ce-marking-eu/",
         "title": "“你们有 CE 证书吗？”",
         "description": "采购欧盟市场湿巾前，先按预期用途区分化妆品、医疗器械与生物灭杀剂，了解CE标志及CPSR、PIF、CPNP、MDR和BPR对应的文件要求。",
@@ -202,6 +220,12 @@
         "title": "维尼健康（深圳）股份有限公司二十年湿巾研发与生产专家",
         "description": "了解维尼健康深圳总部与黄冈湿巾制造基地，包括研发生产流程、质量资质、核心产品、发展历史与合作伙伴。",
         "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
       },
       {
         "href": "/resources/do-wet-wipes-need-ce-marking-eu/",
@@ -288,6 +312,58 @@
         "image": "/assets/blog/blog3-cover.jpg"
       }
     ],
+    "flip-top-lid": [
+      {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
+      }
+    ],
+    "nonwoven-fabric": [
+      {
+        "href": "/oem-services/",
+        "title": "OEM 服务",
+        "description": "了解维尼健康湿巾 OEM/ODM 服务：不同包装形式的标准起订量、样品开发时间、五步采购流程、试单政策及常见问题，从配方和包装定制到批量生产与交付。",
+        "image": "/assets/oem-hero.png"
+      },
+      {
+        "href": "/products/vinnerlove-cream-care-wipes/",
+        "title": "VINNERLOVE 失禁护理湿巾",
+        "description": "VINNERLOVE 失禁护理乳霜湿巾适用于失禁护理、脆弱老年肌肤、皮肤褶皱、MASD 易感肌和压疮风险护理，通过一个简单步骤提供清洁、保湿、舒缓和屏障防护。",
+        "image": "/assets/carekeep/vlconcw25-pic1.png"
+      },
+      {
+        "href": "/products/vinnerlove-rinse-free-bathing-gloves/",
+        "title": "VINNERLOVE 免洗沐浴手套",
+        "description": "VINNERLOVE 免洗沐浴手套将免冲洗清洁护理液与手套式布料结合，便于护理人员在床旁完成更可控、更体面的全身清洁流程。",
+        "image": "/assets/carekeep/vlbbg8-pic1.png"
+      },
+      {
+        "href": "/products/vinnerlove-rinse-free-bathing-wipes/",
+        "title": "VINNERLOVE 免洗沐浴湿巾",
+        "description": "VINNERLOVE 免冲洗沐浴湿巾将身体清洁与皮肤保湿整合到一包 8 片的床旁沐浴方案，适合卧床、术后、老年护理、长期照护和旅行应急清洁。",
+        "image": "/assets/carekeep/vlbbw8-pic1.png"
+      },
+      {
+        "href": "/products/vinnerlove-rinse-free-shampoo-cap/",
+        "title": "VINNERLOVE 免洗洗发浴帽",
+        "description": "VINNERLOVE 免冲洗洗发浴帽适用于传统洗头不便的护理场景，可在卧姿或坐姿下完成头发与头皮清洁，减少取水、脸盆、毛巾和现场清理。",
+        "image": "/assets/carekeep/vlshmc1-pic1.png"
+      },
+      {
+        "href": "/resources/rinse-free-bathing-products-us-care-market/",
+        "title": "破局美国护理蓝海——医疗与养老市场免冲洗沐浴产品潜力深度洞察与合规解析",
+        "description": "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
+        "image": "/assets/blog/blog3-cover.jpg"
+      },
+      {
+        "href": "/resources/vinner-personal-cleansing-care-line/",
+        "title": "维尼健康推出自主品牌清洁护理产品线：从床旁清洁到日常肌肤护理",
+        "description": "了解 VINNER 面向住院、老年照护、新生儿与日常肌肤护理推出的免冲洗沐浴、洗发、失禁护理和婴儿湿巾产品。",
+        "image": "/assets/news/news3-cover.png"
+      }
+    ],
     "basis-weight": [
       {
         "href": "/products/homekeep-pure-water-baby-wipes/",
@@ -372,44 +448,6 @@
         "title": "VINNER 团队亮相 WHX Dubai 2026",
         "description": "回顾 VINNER 团队在 WHX Dubai 2026 展会与全球医疗健康客户围绕产品、项目和供应合作开展的交流。",
         "image": "/assets/news/whx-dubai-2026/vinner-whx-dubai-2026-main.jpg"
-      }
-    ],
-    "nonwoven-fabric": [
-      {
-        "href": "/products/vinnerlove-cream-care-wipes/",
-        "title": "VINNERLOVE 失禁护理湿巾",
-        "description": "VINNERLOVE 失禁护理乳霜湿巾适用于失禁护理、脆弱老年肌肤、皮肤褶皱、MASD 易感肌和压疮风险护理，通过一个简单步骤提供清洁、保湿、舒缓和屏障防护。",
-        "image": "/assets/carekeep/vlconcw25-pic1.png"
-      },
-      {
-        "href": "/products/vinnerlove-rinse-free-bathing-gloves/",
-        "title": "VINNERLOVE 免洗沐浴手套",
-        "description": "VINNERLOVE 免洗沐浴手套将免冲洗清洁护理液与手套式布料结合，便于护理人员在床旁完成更可控、更体面的全身清洁流程。",
-        "image": "/assets/carekeep/vlbbg8-pic1.png"
-      },
-      {
-        "href": "/products/vinnerlove-rinse-free-bathing-wipes/",
-        "title": "VINNERLOVE 免洗沐浴湿巾",
-        "description": "VINNERLOVE 免冲洗沐浴湿巾将身体清洁与皮肤保湿整合到一包 8 片的床旁沐浴方案，适合卧床、术后、老年护理、长期照护和旅行应急清洁。",
-        "image": "/assets/carekeep/vlbbw8-pic1.png"
-      },
-      {
-        "href": "/products/vinnerlove-rinse-free-shampoo-cap/",
-        "title": "VINNERLOVE 免洗洗发浴帽",
-        "description": "VINNERLOVE 免冲洗洗发浴帽适用于传统洗头不便的护理场景，可在卧姿或坐姿下完成头发与头皮清洁，减少取水、脸盆、毛巾和现场清理。",
-        "image": "/assets/carekeep/vlshmc1-pic1.png"
-      },
-      {
-        "href": "/resources/rinse-free-bathing-products-us-care-market/",
-        "title": "破局美国护理蓝海——医疗与养老市场免冲洗沐浴产品潜力深度洞察与合规解析",
-        "description": "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
-        "image": "/assets/blog/blog3-cover.jpg"
-      },
-      {
-        "href": "/resources/vinner-personal-cleansing-care-line/",
-        "title": "维尼健康推出自主品牌清洁护理产品线：从床旁清洁到日常肌肤护理",
-        "description": "了解 VINNER 面向住院、老年照护、新生儿与日常肌肤护理推出的免冲洗沐浴、洗发、失禁护理和婴儿湿巾产品。",
-        "image": "/assets/news/news3-cover.png"
       }
     ],
     "cpnp": [
@@ -598,6 +636,12 @@
         "image": "/assets/about-hero.jpg"
       },
       {
+        "href": "/en/oem-services/",
+        "title": "OEM Services",
+        "description": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs.",
+        "image": "/assets/oem-hero.png"
+      },
+      {
         "href": "/en/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
         "title": "Checklist for Cosmetic OEM/ODM Manufacturers Serving the U.S. Market",
         "description": "A practical checklist for evaluating MoCRA readiness, facility registration, quality systems, and supply capability in a U.S. cosmetics OEM/ODM partner.",
@@ -658,6 +702,12 @@
         "image": "/assets/about-hero.jpg"
       },
       {
+        "href": "/en/oem-services/",
+        "title": "OEM Services",
+        "description": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs.",
+        "image": "/assets/oem-hero.png"
+      },
+      {
         "href": "/en/resources/do-wet-wipes-need-ce-marking-eu/",
         "title": "“Do You Have a CE Certificate?”",
         "description": "Clarify EU wet-wipe classifications by intended use: cosmetics, medical devices or biocides, with CE marking and CPSR, PIF, CPNP, MDR and BPR documentation.",
@@ -682,6 +732,12 @@
         "title": "Vinner (Shenzhen) Health Products LimitedTwenty Years of Wipes R&D and Manufacturing Expertise",
         "description": "Explore VINNER's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners.",
         "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/en/oem-services/",
+        "title": "OEM Services",
+        "description": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs.",
+        "image": "/assets/oem-hero.png"
       },
       {
         "href": "/en/resources/do-wet-wipes-need-ce-marking-eu/",
@@ -728,6 +784,12 @@
         "title": "Vinner (Shenzhen) Health Products LimitedTwenty Years of Wipes R&D and Manufacturing Expertise",
         "description": "Explore VINNER's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners.",
         "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/en/oem-services/",
+        "title": "OEM Services",
+        "description": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs.",
+        "image": "/assets/oem-hero.png"
       },
       {
         "href": "/en/resources/do-wet-wipes-need-ce-marking-eu/",
@@ -854,6 +916,32 @@
         "image": "/assets/news/whx-dubai-2026/vinner-whx-dubai-2026-main.jpg"
       }
     ],
+    "substrate": [
+      {
+        "href": "/en/oem-services/",
+        "title": "OEM Services",
+        "description": "Explore VINNER wet wipes OEM/ODM services, packaging MOQs, sample development, the purchasing process, trial-order policy and manufacturing FAQs.",
+        "image": "/assets/oem-hero.png"
+      },
+      {
+        "href": "/en/products/series/oem-odm/",
+        "title": "OEM/ODM",
+        "description": "VINNER manufactures medical-device and surface disinfection wipes, baby wipes, skin care wipes, and innovative wipes like cooling or sneaker care wipes.",
+        "image": "/assets/oem-hero.png"
+      },
+      {
+        "href": "/en/products/vinnerlove-rinse-free-bathing-gloves/",
+        "title": "VINNERLOVE Rinse-free Bathing Gloves",
+        "description": "An 8-glove no-rinse bathing system that fits the hand for full-body bedside cleansing.",
+        "image": "/assets/carekeep/vlbbg8-pic1.png"
+      },
+      {
+        "href": "/en/resources/vinner-team-whx-dubai-2026/",
+        "title": "VINNER team joins WHX Dubai 2026",
+        "description": "See how VINNER met global healthcare customers at WHX Dubai 2026 to discuss products, projects, and supply partnerships.",
+        "image": "/assets/news/whx-dubai-2026/vinner-whx-dubai-2026-main.jpg"
+      }
+    ],
     "basis-weight": [
       {
         "href": "/en/products/homekeep-pure-water-baby-wipes/",
@@ -898,26 +986,6 @@
         "title": "HOMEKEEP Pure Water Wipes",
         "description": "Plant-based pure water wipes designed for newborns, sensitive skin, and gentle family cleansing.",
         "image": "/assets/carekeep/hkpww60-pic1.png"
-      }
-    ],
-    "substrate": [
-      {
-        "href": "/en/products/series/oem-odm/",
-        "title": "OEM/ODM",
-        "description": "VINNER manufactures medical-device and surface disinfection wipes, baby wipes, skin care wipes, and innovative wipes like cooling or sneaker care wipes.",
-        "image": "/assets/oem-hero.png"
-      },
-      {
-        "href": "/en/products/vinnerlove-rinse-free-bathing-gloves/",
-        "title": "VINNERLOVE Rinse-free Bathing Gloves",
-        "description": "An 8-glove no-rinse bathing system that fits the hand for full-body bedside cleansing.",
-        "image": "/assets/carekeep/vlbbg8-pic1.png"
-      },
-      {
-        "href": "/en/resources/vinner-team-whx-dubai-2026/",
-        "title": "VINNER team joins WHX Dubai 2026",
-        "description": "See how VINNER met global healthcare customers at WHX Dubai 2026 to discuss products, projects, and supply partnerships.",
-        "image": "/assets/news/whx-dubai-2026/vinner-whx-dubai-2026-main.jpg"
       }
     ],
     "nonwoven-fabric": [

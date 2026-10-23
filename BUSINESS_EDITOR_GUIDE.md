@@ -10,7 +10,7 @@ https://vinnercare.com/admin/
 
 1. 打开后台地址。
 2. 点击 `Login with GitHub`。
-3. 使用已被邀请到 `zionhong5875-ai/KEEP-Website` 仓库的 GitHub 账号登录。
+3. 使用已被邀请到 `zionhong5875-ai/VINNER` 仓库的 GitHub 账号登录。
 
 ## 修改首页文案和图片
 
@@ -52,6 +52,10 @@ https://vinnercare.com/admin/
 4. 在 `上传文件` 中选择 PDF 文件，建议使用英文小写和短横线命名，例如 `medikeep-alcohol-disinfectant-wipes-sds-en.pdf`。
 5. 如果资料只对应某个产品，也可以打开 `产品与 SKU`，在对应 SKU 的 `下载资源` 中上传文件。
 6. 点击 `Publish` 后，EdgeOne Pages 重新部署完成，用户就可以在网站上直接打开或下载资料。
+
+## 修改 OEM 服务页面
+
+进入 `官网内容 → OEM 服务页面`，可维护中英文 SEO、首屏、产品入口、包装 MOQ 表格、采购流程与 FAQ。产品入口图片自动调用对应产品线主图；FAQ 中可使用 `{{oemProducts}}` 和 `{{obmProducts}}` 插入产品页链接。页面正文自动关联已发布术语，FAQ 结构化数据与页面文案共用同一份内容。
 
 ## 图片上传建议
 
