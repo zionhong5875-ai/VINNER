@@ -178,18 +178,19 @@
         }
       },
       {
-        "title": "SEDEX 4P Audit",
+        "title": "SMETA 4-Pillar Audit Report",
         "description": {
-          "zh": "SEDEX 4P 审核报告",
-          "en": "SEDEX 4P Audit Report"
+          "zh": "SMETA 四支柱审计报告",
+          "en": "SMETA 4-Pillar Audit Report"
         },
         "href": "/assets/certifications/sedex-4p-audit-report-vinner.pdf",
         "thumb": "/assets/certifications/thumbs/sedex-4p-audit-report-vinner.pdf.png",
         "type": "Audit",
         "displayTitle": {
-          "zh": "SEDEX 4P 审核",
-          "en": "SEDEX 4P Audit"
+          "zh": "SMETA 四支柱审计报告",
+          "en": "SMETA 4-Pillar Audit Report"
         },
+        "glossaryTerm": "smeta-4-pillar-audit",
         "typeLabel": {
           "zh": "社会责任审核",
           "en": "Audit"
@@ -198,16 +199,17 @@
       {
         "title": "Global Security Verification",
         "description": {
-          "zh": "全球安全验证资料",
-          "en": "Global Security Verification documentation"
+          "zh": "全球供应链安全验证（GSV）资料",
+          "en": "Global Security Verification (GSV) documentation"
         },
         "href": "/assets/certifications/global-security-verification-vinner.pdf",
         "thumb": "/assets/certifications/thumbs/global-security-verification-vinner.pdf.png",
         "type": "Security",
         "displayTitle": {
           "zh": "全球供应链安全验证（GSV）",
-          "en": "Global Security Verification"
+          "en": "Global Security Verification (GSV)"
         },
+        "glossaryTerm": "gsv",
         "typeLabel": {
           "zh": "供应链安全",
           "en": "Security"

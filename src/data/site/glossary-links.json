@@ -30,7 +30,7 @@
     { "slug": "nonwoven-fabric", "aliases": { "zh": ["无纺布"], "en": ["Nonwoven Fabric", "Nonwoven"] } },
     { "slug": "resealable-label", "aliases": { "zh": ["拉贴"], "en": ["Resealable Label"] } },
     { "slug": "rollstock-flexible-packaging", "aliases": { "zh": ["卷膜包装"], "en": ["Rollstock Flexible Packaging", "Rollstock"] } },
-    { "slug": "smeta-4-pillar-audit", "aliases": { "zh": ["SMETA 四支柱审核", "SMETA"], "en": ["SMETA 4-Pillar Audit", "SMETA 4-Pillar", "SMETA"] } },
+    { "slug": "smeta-4-pillar-audit", "aliases": { "zh": ["SMETA 四支柱审计", "SMETA 四支柱审核", "SMETA 4P 审计报告", "SMETA 4P 审核报告", "SMETA 4P", "SEDEX 4P 审核报告", "SEDEX 4P 审核", "SEDEX 4P", "SMETA"], "en": ["SMETA 4-Pillar Audit", "SMETA 4-Pillar", "SMETA 4P Audit Report", "SMETA 4P Audit", "SMETA 4P", "SEDEX 4P Audit Report", "SEDEX 4P Audit", "SEDEX 4P", "SMETA"] } },
     { "slug": "spunlace-nonwoven", "aliases": { "zh": ["水刺无纺布"], "en": ["Spunlace Nonwoven", "Hydroentangled Nonwoven"] } },
     { "slug": "fda-cosmetic-gmp", "aliases": { "zh": ["美国 FDA 化妆品 GMP", "FDA 化妆品 GMP", "美国FDA化妆品生产GMP"], "en": ["U.S. FDA Cosmetic GMP", "FDA Cosmetic GMP"] } },
     { "slug": "wipe-folding", "aliases": { "zh": ["折叠方式"], "en": ["Wipe Folding", "Folding Pattern"] } },

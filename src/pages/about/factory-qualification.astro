@@ -5,6 +5,7 @@ import qualification from "../../data/site/factoryQualification.json" with { typ
 import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
 import { text, attrs, imageAttrs, localizedPath } from "../../utils/i18n";
 import { absoluteUrl, schemaIds, credentialAnchor, credentialId } from "../../utils/schema";
+import { glossaryPath } from "../../utils/glossary.mjs";
 
 const siteUrl = searchConfig.siteUrl;
 const language = Astro.locals.language || "zh";
@@ -74,17 +75,24 @@ const qualificationSchema = [
       <h2 id="certification-title" {...attrs(qualification.certificatesSection.title)}>{text(qualification.certificatesSection.title)}</h2>
     </div>
     <div class="certification-grid">
-      {qualification.certificatesSection.items.map((certificate) => (
-        <article class="certification-card" id={credentialAnchor(certificate)}>
-          <figure class="certification-thumb">
-            <img src={certificate.thumb} {...imageAttrs({ zh: `维尼健康${text(certificate.displayTitle || certificate.title, "zh")}资质文件预览`, en: `VINNER ${text(certificate.displayTitle || certificate.title, "en")} credential preview` })} loading="lazy" />
-          </figure>
-          <span {...attrs(certificate.typeLabel || certificate.type)}>{text(certificate.typeLabel || certificate.type)}</span>
-          <h3 {...attrs(certificate.displayTitle || certificate.title)}>{text(certificate.displayTitle || certificate.title)}</h3>
-          <p><GlossaryLinkedText value={certificate.description} context="body" /></p>
-          <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
-        </article>
-      ))}
+      {qualification.certificatesSection.items.map((certificate) => {
+        const title = certificate.displayTitle || certificate.title;
+        const glossaryTerm = "glossaryTerm" in certificate ? certificate.glossaryTerm : undefined;
+        return (
+          <article class="certification-card" id={credentialAnchor(certificate)}>
+            <figure class="certification-thumb">
+              <img src={certificate.thumb} {...imageAttrs({ zh: `维尼健康${text(title, "zh")}资质文件预览`, en: `VINNER ${text(title, "en")} credential preview` })} loading="lazy" />
+            </figure>
+            <span {...attrs(certificate.typeLabel || certificate.type)}>{text(certificate.typeLabel || certificate.type)}</span>
+            <h3>{glossaryTerm
+              ? <a class="credential-glossary-link" data-glossary-link={glossaryTerm} href={localizedPath(glossaryPath(glossaryTerm, language), language)} {...attrs(title)}>{text(title)}</a>
+              : <span {...attrs(title)}>{text(title)}</span>}
+            </h3>
+            <p><GlossaryLinkedText value={certificate.description} context="body" /></p>
+            <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
+          </article>
+        );
+      })}
     </div>
   </section>
 </BaseLayout>

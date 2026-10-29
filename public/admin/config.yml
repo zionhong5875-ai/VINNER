@@ -766,6 +766,7 @@ collections:
                   - { label: 标题, name: title, widget: string }
                   - { label: 类型, name: type, widget: string }
                   - { label: 双语展示标题, name: displayTitle, <<: *i18n_text }
+                  - { label: 关联术语 slug（选填）, name: glossaryTerm, widget: string, required: false }
                   - { label: 双语类型名称, name: typeLabel, <<: *i18n_text }
                   - { label: 说明, name: description, <<: *i18n_textarea }
                   - { label: 缩略图, name: thumb, widget: image }

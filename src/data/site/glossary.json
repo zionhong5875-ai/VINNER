@@ -852,12 +852,12 @@
     "slug": "smeta-4-pillar-audit",
     "category": "factory",
     "title": {
-      "zh": "SMETA 四支柱审核",
+      "zh": "SMETA 四支柱审计",
       "en": "SMETA 4-Pillar Audit"
     },
     "definition": {
       "zh": [
-        "Sedex 会员道德贸易审核 — 四支柱审核（Sedex Members’ Ethical Trade Audit (SMETA) — 4-Pillar Audit）",
+        "Sedex 会员道德贸易审计（SMETA）——四支柱审计（SMETA 4-Pillar Audit）",
         "SMETA 是 Sedex 建立的现场社会责任审核方法，用于通过标准化的方法评估供应链工作场所的劳动条件和负责任商业实践。[1]",
         "完整的 SMETA 4-Pillar Audit 覆盖四个主要领域：[1]",
         "Labour Standards — 劳工标准",
@@ -890,8 +890,8 @@
       "[2] Sedex, Introduction to SMETA."
     ],
     "summary": {
-      "zh": "SMETA 是 Sedex 建立的现场社会责任审核方法，用于通过标准化的方法评估供应链工作场所的劳动条件和负责任商业实践。",
-      "en": "SMETA is an on-site social audit methodology developed by Sedex. It uses a standardized approach to assess working conditions and responsible business practices at supply chain workplaces."
+      "zh": "SMETA 四支柱审计是 Sedex 会员道德贸易审计方法的完整范围，涵盖劳工、健康与安全、环境及商业道德；它是一种审计方法，不是认证。",
+      "en": "A SMETA 4-Pillar Audit is the full four-pillar scope of Sedex’s social audit methodology, covering labour, health and safety, environment, and business ethics. It is an audit methodology, not a certification."
     }
   },
   {

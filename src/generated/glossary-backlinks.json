@@ -144,10 +144,48 @@
     ],
     "gsv": [
       {
+        "href": "/about/factory-qualification/",
+        "title": "以完善合规体系，支持可靠的全球合作。",
+        "description": "了解维尼健康在质量管理、医疗器械与化妆品GMP、生产许可、环境与职业健康安全、社会责任及供应链安全方面的资质体系。",
+        "image": "/assets/certifications/thumbs/iso13485-vinner.pdf.png"
+      },
+      {
         "href": "/about/vinner/",
         "title": "维尼健康（深圳）股份有限公司二十年湿巾研发与生产专家",
         "description": "了解维尼健康深圳总部与黄冈湿巾制造基地，包括研发生产流程、质量资质、核心产品、发展历史与合作伙伴。",
         "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
+        "title": "面向美国市场的化妆品品牌代工厂合规检查清单",
+        "description": "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
+        "image": "/assets/factory/production-workshop.jpg"
+      },
+      {
+        "href": "/resources/rinse-free-bathing-products-us-care-market/",
+        "title": "破局美国护理蓝海——医疗与养老市场免冲洗沐浴产品潜力深度洞察与合规解析",
+        "description": "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
+        "image": "/assets/blog/blog3-cover.jpg"
+      }
+    ],
+    "smeta-4-pillar-audit": [
+      {
+        "href": "/about/factory-qualification/",
+        "title": "以完善合规体系，支持可靠的全球合作。",
+        "description": "了解维尼健康在质量管理、医疗器械与化妆品GMP、生产许可、环境与职业健康安全、社会责任及供应链安全方面的资质体系。",
+        "image": "/assets/certifications/thumbs/iso13485-vinner.pdf.png"
+      },
+      {
+        "href": "/about/vinner/",
+        "title": "维尼健康（深圳）股份有限公司二十年湿巾研发与生产专家",
+        "description": "了解维尼健康深圳总部与黄冈湿巾制造基地，包括研发生产流程、质量资质、核心产品、发展历史与合作伙伴。",
+        "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/resources/eu-forced-labour-regulation-preparation/",
+        "title": "欧盟强迫劳动条例实施在即：制造商与欧盟进口商应如何提前准备？",
+        "description": "解读欧盟《禁止强迫劳动产品条例》的适用范围、判断标准、进口商准备事项及供应商证据体系。",
+        "image": "/assets/blog/blog4/blog4-cover.jpeg"
       },
       {
         "href": "/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
@@ -284,32 +322,6 @@
         "title": "面向美国市场的化妆品品牌代工厂合规检查清单",
         "description": "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
         "image": "/assets/factory/production-workshop.jpg"
-      }
-    ],
-    "smeta-4-pillar-audit": [
-      {
-        "href": "/about/vinner/",
-        "title": "维尼健康（深圳）股份有限公司二十年湿巾研发与生产专家",
-        "description": "了解维尼健康深圳总部与黄冈湿巾制造基地，包括研发生产流程、质量资质、核心产品、发展历史与合作伙伴。",
-        "image": "/assets/about-hero.jpg"
-      },
-      {
-        "href": "/resources/eu-forced-labour-regulation-preparation/",
-        "title": "欧盟强迫劳动条例实施在即：制造商与欧盟进口商应如何提前准备？",
-        "description": "解读欧盟《禁止强迫劳动产品条例》的适用范围、判断标准、进口商准备事项及供应商证据体系。",
-        "image": "/assets/blog/blog4/blog4-cover.jpeg"
-      },
-      {
-        "href": "/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
-        "title": "面向美国市场的化妆品品牌代工厂合规检查清单",
-        "description": "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
-        "image": "/assets/factory/production-workshop.jpg"
-      },
-      {
-        "href": "/resources/rinse-free-bathing-products-us-care-market/",
-        "title": "破局美国护理蓝海——医疗与养老市场免冲洗沐浴产品潜力深度洞察与合规解析",
-        "description": "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
-        "image": "/assets/blog/blog3-cover.jpg"
       }
     ],
     "flip-top-lid": [
@@ -694,6 +706,38 @@
         "image": "/assets/blog/blog3-cover.jpg"
       }
     ],
+    "smeta-4-pillar-audit": [
+      {
+        "href": "/en/about/factory-qualification/",
+        "title": "Compliance built for reliable global partnerships.",
+        "description": "Explore VINNER's qualifications in quality management, GMP, manufacturing licensing, environmental and occupational safety, social responsibility, and supply-chain security.",
+        "image": "/assets/certifications/thumbs/iso13485-vinner.pdf.png"
+      },
+      {
+        "href": "/en/about/vinner/",
+        "title": "Vinner (Shenzhen) Health Products LimitedTwenty Years of Wipes R&D and Manufacturing Expertise",
+        "description": "Explore VINNER's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners.",
+        "image": "/assets/about-hero.jpg"
+      },
+      {
+        "href": "/en/resources/eu-forced-labour-regulation-preparation/",
+        "title": "The EU Forced Labour Regulation Is Coming: How Manufacturers and EU Importers Can Prepare Early",
+        "description": "An overview of the EU Forced Labour Regulation, its scope, forced-labour indicators, importer preparation and supplier evidence.",
+        "image": "/assets/blog/blog4/blog4-cover.jpeg"
+      },
+      {
+        "href": "/en/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
+        "title": "Checklist for Cosmetic OEM/ODM Manufacturers Serving the U.S. Market",
+        "description": "A practical checklist for evaluating MoCRA readiness, facility registration, quality systems, and supply capability in a U.S. cosmetics OEM/ODM partner.",
+        "image": "/assets/factory/production-workshop.jpg"
+      },
+      {
+        "href": "/en/resources/rinse-free-bathing-products-us-care-market/",
+        "title": "Breaking into the U.S. Care Blue Ocean—An In-Depth Insight into the Potential and Compliance of Rinse-Free Bathing Products in Healthcare and Elderly Care",
+        "description": "Explore demand for rinse-free bathing products in U.S. healthcare and elderly care, including infection control, procurement, compliance, and dignity.",
+        "image": "/assets/blog/blog3-cover.jpg"
+      }
+    ],
     "gmp": [
       {
         "href": "/en/about/vinner/",
@@ -868,32 +912,6 @@
         "title": "CLEANSING & CARE",
         "description": "Gentle cleansing and care with no-rinse efficiency and comfort. Includes no-rinse bathing wipes, bathing gloves, shampoo caps, continence care wipes, and pure water wipes.",
         "image": "/assets/vinner-personal-care-wet-wipes-wide.webp"
-      }
-    ],
-    "smeta-4-pillar-audit": [
-      {
-        "href": "/en/about/vinner/",
-        "title": "Vinner (Shenzhen) Health Products LimitedTwenty Years of Wipes R&D and Manufacturing Expertise",
-        "description": "Explore VINNER's Shenzhen headquarters and Huanggang wet wipes factory, including R&D, manufacturing, qualifications, products, history, and partners.",
-        "image": "/assets/about-hero.jpg"
-      },
-      {
-        "href": "/en/resources/eu-forced-labour-regulation-preparation/",
-        "title": "The EU Forced Labour Regulation Is Coming: How Manufacturers and EU Importers Can Prepare Early",
-        "description": "An overview of the EU Forced Labour Regulation, its scope, forced-labour indicators, importer preparation and supplier evidence.",
-        "image": "/assets/blog/blog4/blog4-cover.jpeg"
-      },
-      {
-        "href": "/en/resources/how-to-choose-compliant-us-cosmetics-oem-supplier/",
-        "title": "Checklist for Cosmetic OEM/ODM Manufacturers Serving the U.S. Market",
-        "description": "A practical checklist for evaluating MoCRA readiness, facility registration, quality systems, and supply capability in a U.S. cosmetics OEM/ODM partner.",
-        "image": "/assets/factory/production-workshop.jpg"
-      },
-      {
-        "href": "/en/resources/rinse-free-bathing-products-us-care-market/",
-        "title": "Breaking into the U.S. Care Blue Ocean—An In-Depth Insight into the Potential and Compliance of Rinse-Free Bathing Products in Healthcare and Elderly Care",
-        "description": "Explore demand for rinse-free bathing products in U.S. healthcare and elderly care, including infection control, procurement, compliance, and dignity.",
-        "image": "/assets/blog/blog3-cover.jpg"
       }
     ],
     "sds-msds": [
